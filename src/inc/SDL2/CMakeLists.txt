@@ -1,10 +1,8 @@
-add_library(SDL SDL.h)
+# add_library(SDL SDL.h SDL_image.h)
 
-set_property(TARGET SDL PROPERTY CXX_STANDARD 17)
+# set_target_properties(SDL PROPERTIES LINKER_LANGUAGE CXX)
+# set_property(TARGET SDL PROPERTY CXX_STANDARD 20)
 
-target_include_directories(SDL PUBLIC
-  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/..>
-  $<INSTALL_INTERFACE:include>
-)
+include_directories("./SDL.h")
+include_directories("./SDL_image.h")
 
-install(TARGETS SDL)

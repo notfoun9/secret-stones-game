@@ -1,8 +1,8 @@
 #ifndef Game_hpp
 #define Game_hpp
 
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_image.h>
+#include "../../src/inc/SDL2/SDL.h"
+#include "../../src/inc/SDL2/SDL_image.h"
 #include <iostream>
 #include <thread>
 #include <chrono>
