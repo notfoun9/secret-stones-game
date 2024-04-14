@@ -1,3 +1,5 @@
+#pragma once
+
 #ifndef Game_hpp
 #define Game_hpp
 
@@ -14,18 +16,20 @@ public:
 
     void init(const char* title, int xPos, int yPos, int widht, int height, bool fullscreen);
     
-    void handleEvents();
+    void handleEvents(); 
     void update();
     void render();
     void clean();
-
+    
     bool running();
 
+    void toggleFullscreen();
 private:
     int counter = 0;
     bool isRunning;
     SDL_Window *window;
     SDL_Renderer *renderer;
+    bool fullscreen_ = 0;
 } ;
 
 

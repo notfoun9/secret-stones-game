@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles /Users/maksim/Study/C++/gameTest/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /Users/maksim/Study/C++/gameTest/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles /Users/maksim/Study/C++/gameTest/build/libraries/texture_manager//CMakeFiles/progress.marks
+	cd /Users/maksim/Study/C++/gameTest/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/texture_manager/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /Users/maksim/Study/C++/gameTest/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/texture_manager/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,57 +148,56 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /Users/maksim/Study/C++/gameTest/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/texture_manager/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /Users/maksim/Study/C++/gameTest/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/texture_manager/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/maksim/Study/C++/gameTest/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named game
+# Convenience name for target.
+libraries/texture_manager/CMakeFiles/texture_manager.dir/rule:
+	cd /Users/maksim/Study/C++/gameTest/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/texture_manager/CMakeFiles/texture_manager.dir/rule
+.PHONY : libraries/texture_manager/CMakeFiles/texture_manager.dir/rule
 
-# Build rule for target.
-game: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game
-.PHONY : game
-
-# fast build rule for target.
-game/fast:
-	$(MAKE) $(MAKESILENT) -f libraries/game/CMakeFiles/game.dir/build.make libraries/game/CMakeFiles/game.dir/build
-.PHONY : game/fast
-
-#=============================================================================
-# Target rules for targets named texture_manager
-
-# Build rule for target.
-texture_manager: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 texture_manager
+# Convenience name for target.
+texture_manager: libraries/texture_manager/CMakeFiles/texture_manager.dir/rule
 .PHONY : texture_manager
 
 # fast build rule for target.
 texture_manager/fast:
-	$(MAKE) $(MAKESILENT) -f libraries/texture_manager/CMakeFiles/texture_manager.dir/build.make libraries/texture_manager/CMakeFiles/texture_manager.dir/build
+	cd /Users/maksim/Study/C++/gameTest/build && $(MAKE) $(MAKESILENT) -f libraries/texture_manager/CMakeFiles/texture_manager.dir/build.make libraries/texture_manager/CMakeFiles/texture_manager.dir/build
 .PHONY : texture_manager/fast
 
-#=============================================================================
-# Target rules for targets named main
+texture_manager.o: texture_manager.cpp.o
+.PHONY : texture_manager.o
 
-# Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
-.PHONY : main
+# target to build an object file
+texture_manager.cpp.o:
+	cd /Users/maksim/Study/C++/gameTest/build && $(MAKE) $(MAKESILENT) -f libraries/texture_manager/CMakeFiles/texture_manager.dir/build.make libraries/texture_manager/CMakeFiles/texture_manager.dir/texture_manager.cpp.o
+.PHONY : texture_manager.cpp.o
 
-# fast build rule for target.
-main/fast:
-	$(MAKE) $(MAKESILENT) -f executables/CMakeFiles/main.dir/build.make executables/CMakeFiles/main.dir/build
-.PHONY : main/fast
+texture_manager.i: texture_manager.cpp.i
+.PHONY : texture_manager.i
+
+# target to preprocess a source file
+texture_manager.cpp.i:
+	cd /Users/maksim/Study/C++/gameTest/build && $(MAKE) $(MAKESILENT) -f libraries/texture_manager/CMakeFiles/texture_manager.dir/build.make libraries/texture_manager/CMakeFiles/texture_manager.dir/texture_manager.cpp.i
+.PHONY : texture_manager.cpp.i
+
+texture_manager.s: texture_manager.cpp.s
+.PHONY : texture_manager.s
+
+# target to generate assembly for a file
+texture_manager.cpp.s:
+	cd /Users/maksim/Study/C++/gameTest/build && $(MAKE) $(MAKESILENT) -f libraries/texture_manager/CMakeFiles/texture_manager.dir/build.make libraries/texture_manager/CMakeFiles/texture_manager.dir/texture_manager.cpp.s
+.PHONY : texture_manager.cpp.s
 
 # Help Target
 help:
@@ -212,9 +211,10 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... game"
-	@echo "... main"
 	@echo "... texture_manager"
+	@echo "... texture_manager.o"
+	@echo "... texture_manager.i"
+	@echo "... texture_manager.s"
 .PHONY : help
 
 
@@ -226,6 +226,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/maksim/Study/C++/gameTest/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -795,8 +795,11 @@ libraries/game/CMakeFiles/game.dir/game.cpp.o: /Users/maksim/Study/C++/gameTest/
   /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_video.h \
   /Users/maksim/Study/C++/gameTest/src/inc/SDL2/begin_code.h \
   /Users/maksim/Study/C++/gameTest/src/inc/SDL2/close_code.h \
-  /Users/maksim/Study/C++/gameTest/libraries/game/game.hpp
+  /Users/maksim/Study/C++/gameTest/libraries/game/game.hpp \
+  /Users/maksim/Study/C++/gameTest/libraries/texture_manager/texture_manager.hpp
 
+
+/Users/maksim/Study/C++/gameTest/libraries/texture_manager/texture_manager.hpp:
 
 /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_timer.h:
 

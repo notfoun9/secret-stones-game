@@ -1,6 +1,6 @@
 libraries/game/CMakeFiles/game.dir/game.cpp.o: \
   /Users/maksim/Study/C++/gameTest/libraries/game/game.cpp \
-  /Users/maksim/Study/C++/gameTest/libraries/game/game.hpp \
+  /Users/maksim/Study/C++/gameTest/libraries/game/../game/game.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/game/../../src/inc/SDL2/SDL.h \
   /Users/maksim/Study/C++/gameTest/libraries/game/../../src/inc/SDL2/SDL_main.h \
   /Users/maksim/Study/C++/gameTest/libraries/game/../../src/inc/SDL2/SDL_stdinc.h \
@@ -793,4 +793,5 @@ libraries/game/CMakeFiles/game.dir/game.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/nl_types.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/_types/_nl_item.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__bsd_locale_defaults.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/thread
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/thread \
+  /Users/maksim/Study/C++/gameTest/libraries/game/../texture_manager/texture_manager.hpp

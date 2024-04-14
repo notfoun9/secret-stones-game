@@ -1,6 +1,8 @@
-#include "game.hpp"
+#include <game/game.hpp>
+#include <texture_manager/texture_manager.hpp>
 
 SDL_Texture* playerTex;
+SDL_Rect srcR, destR;
 
 Game::Game() {
 
@@ -16,12 +18,12 @@ void Game::init(const char* title, int xPos, int yPos, int width, int height, bo
     }
 
     if (SDL_Init(SDL_INIT_EVERYTHING) == 0) {
-        std::cout << "Subsystems initialised!..." << std::endl;
+        // std::cout << "Subsystems initialised!..." << std::endl;
 
         window = SDL_CreateWindow(title, xPos, yPos, width, height, flags);
-        if (window) {
-            std::cout << "Winow created!" << std::endl;
-        }
+        // if (window) {
+        //     std::cout << "Winow created!" << std::endl;
+        // }
 
         renderer = SDL_CreateRenderer(window, -1, 0);
         if (renderer) {
@@ -30,9 +32,7 @@ void Game::init(const char* title, int xPos, int yPos, int width, int height, bo
         }
         isRunning = true;
 
-        SDL_Surface* tmpSurface = IMG_Load("../../assets/player.png");
-        playerTex = SDL_CreateTextureFromSurface(renderer, tmpSurface);
-        SDL_FreeSurface(tmpSurface);
+        playerTex = TextureManager::LoadTexture("../../assets/player.png", renderer);
     }
     else {
         isRunning = false;
@@ -41,25 +41,34 @@ void Game::init(const char* title, int xPos, int yPos, int width, int height, bo
 
 void Game::handleEvents() {
     SDL_Event event;
-    SDL_PollEvent(&event);
-    switch (event.type) {
-        case (SDL_QUIT) : {
+    while (SDL_PollEvent(&event)) {
+        if (event.type == SDL_QUIT) {
             isRunning = false;
-            break;
-        }
-        default : {
-            break;
+            return;
         }
     }
+    const Uint8 *keystates = SDL_GetKeyboardState(NULL);
+    if (keystates[SDL_SCANCODE_ESCAPE]) {
+        isRunning = false;
+        return;
+    }
+    if (keystates[SDL_SCANCODE_F12]) toggleFullscreen();
+
 }
 
 void Game::update() {
-    std::cout << counter++ << std::endl;
+
+    counter++;
+    destR.h = 64;
+    destR.w = 64;
+    destR.x = counter;
+
+    std::cout << counter << std::endl;
 }
 
 void Game::render() {
     SDL_RenderClear(renderer);
-    SDL_RenderCopy(renderer, playerTex, NULL, NULL);
+    SDL_RenderCopy(renderer, playerTex, NULL, &destR);
     SDL_RenderPresent(renderer);
 }
 
@@ -72,4 +81,9 @@ void Game::clean() {
 
 bool Game::running() {
     return isRunning;
+}
+
+void Game::toggleFullscreen() {
+    fullscreen_ = !fullscreen_;
+    (fullscreen_) ? SDL_SetWindowFullscreen(window, 1) : SDL_SetWindowFullscreen(window, 0);
 }

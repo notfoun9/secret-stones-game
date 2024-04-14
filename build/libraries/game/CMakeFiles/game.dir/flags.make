@@ -4,7 +4,7 @@
 # compile CXX with /Library/Developer/CommandLineTools/usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/maksim/Study/C++/gameTest/libraries/game/..
+CXX_INCLUDES = -I/Users/maksim/Study/C++/gameTest/libraries/game/.. -I/Users/maksim/Study/C++/gameTest/libraries/texture_manager/..
 
 CXX_FLAGSarm64 = -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0
 

@@ -17,6 +17,13 @@
 /Users/maksim/Study/C++/gameTest/build/libraries/game/CMakeFiles/install.dir
 /Users/maksim/Study/C++/gameTest/build/libraries/game/CMakeFiles/install/local.dir
 /Users/maksim/Study/C++/gameTest/build/libraries/game/CMakeFiles/install/strip.dir
+/Users/maksim/Study/C++/gameTest/build/libraries/texture_manager/CMakeFiles/texture_manager.dir
+/Users/maksim/Study/C++/gameTest/build/libraries/texture_manager/CMakeFiles/edit_cache.dir
+/Users/maksim/Study/C++/gameTest/build/libraries/texture_manager/CMakeFiles/rebuild_cache.dir
+/Users/maksim/Study/C++/gameTest/build/libraries/texture_manager/CMakeFiles/list_install_components.dir
+/Users/maksim/Study/C++/gameTest/build/libraries/texture_manager/CMakeFiles/install.dir
+/Users/maksim/Study/C++/gameTest/build/libraries/texture_manager/CMakeFiles/install/local.dir
+/Users/maksim/Study/C++/gameTest/build/libraries/texture_manager/CMakeFiles/install/strip.dir
 /Users/maksim/Study/C++/gameTest/build/executables/CMakeFiles/main.dir
 /Users/maksim/Study/C++/gameTest/build/executables/CMakeFiles/edit_cache.dir
 /Users/maksim/Study/C++/gameTest/build/executables/CMakeFiles/rebuild_cache.dir
