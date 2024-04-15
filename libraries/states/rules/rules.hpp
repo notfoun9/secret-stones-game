@@ -3,10 +3,10 @@
 #include <game/game.hpp>
 #include <game_objects/game_object.hpp>
 
-class Menu {
+class Rules {
 public:
-    Menu(SDL_Renderer* renderer, SDL_Window* window, Game* thisGame);
-    ~Menu();
+    Rules(SDL_Renderer* renderer, SDL_Window* window, Game* thisGame);
+    ~Rules();
     
     void Run();
     
@@ -15,9 +15,9 @@ public:
     void Render();
 
     Mouse* mouse = new Mouse();
+    Button* goBack;
 
-    enum ButtonNames {START, RULES, EXIT};
-    Button* button[3];
+    GameObject* rules;
 private:
     SDL_Renderer* renderer;
     SDL_Window* window;

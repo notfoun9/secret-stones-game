@@ -3,6 +3,7 @@
 Menu::Menu(SDL_Renderer* renderer_, SDL_Window* window_, Game* thisGame_) : renderer(renderer_), window(window_), thisGame(thisGame_) {}
 Menu::~Menu() {
     delete button[START];
+    delete mouse;
 }
 
 
@@ -10,17 +11,22 @@ void Menu::Run() {
     const int FPS = 60;
     const int frameDelay = 1000 / FPS;
 
-    button[START] = new Button("../../assets/menuButton.png");
+    button[START] = new Button("../../assets/menuButton.png", "../../assets/activeStartButton.png");
     button[START]->setBoarders(2, 16, 62, 22); // ~ 3 : 1
     button[START]->setPos(350, 150, 380, 125);
 
-    // button[OPTIONS] = new Button(...)
-    // button[EXIT] = new Button(...)
+    button[RULES] = new Button("../../assets/rulesButton.png", "../../assets/activeRulesButton.png");
+    button[RULES]->setBoarders(0, 0, 60, 22);
+    button[RULES]->setPos(350, 300, 380, 125);
+
+    button[EXIT] = new Button("../../assets/exitButton.png", "../../assets/activeExitButton.png");
+    button[EXIT]->setBoarders(0, 0, 116, 44);
+    button[EXIT]->setPos(350, 450, 380, 125);
 
     uint32_t frameStart;
     int frameTime;
 
-    while (inMenu) {
+    while (thisGame->inMenu) {
         frameStart = SDL_GetTicks();
 
         HandleEvents();
@@ -39,7 +45,7 @@ void Menu::HandleEvents() {
     while (SDL_PollEvent(&event)) {
         switch (event.type) {
             case SDL_QUIT : {
-                inMenu = 0;
+                thisGame->inMenu = 0;
                 thisGame->quit();
                 return;
             }
@@ -47,6 +53,18 @@ void Menu::HandleEvents() {
                 if (event.button.button == SDL_BUTTON_LEFT) {
                     if (button[START]->selected) {
                         std::cout << "BINGOOOOOOO" << std::endl;
+                        return;
+                    }
+                    if (button[RULES]->selected) {
+                        std::cout << "open rules" << std::endl;
+                        thisGame->inMenu = 0;
+                        thisGame->inRules = 1;
+                        return;
+                    }
+                    if (button[EXIT]->selected) {
+                        thisGame->inMenu = 0;
+                        thisGame->quit();
+                        std::cout << "exit!" << std::endl;
                         return;
                     }
                 }
@@ -57,7 +75,7 @@ void Menu::HandleEvents() {
 
     const Uint8 *keystates = SDL_GetKeyboardState(NULL);
     if (keystates[SDL_SCANCODE_ESCAPE]) {
-        inMenu = 0;
+        thisGame->inMenu = 0;
         thisGame->quit();
     }
     if (keystates[SDL_SCANCODE_F12]) thisGame->toggleFullscreen();
@@ -67,16 +85,18 @@ void Menu::HandleEvents() {
 }
 
 void Menu::Update() {
-    counter++;
-    button[START]->checkSelected(mouse);
-    button[START]->Update();
+    for (Button* but : button) {
+        but->checkSelected(mouse);
+        but->Update();
+    }
     mouse->Update();
-    std::cout << counter << std::endl;
 }
 
 void Menu::Render() {
     SDL_RenderClear(renderer);
-    button[START]->Render();
+    for (Button* but : button) {
+        but->Render();
+    }
     mouse->Render();
     SDL_RenderPresent(renderer);
 }

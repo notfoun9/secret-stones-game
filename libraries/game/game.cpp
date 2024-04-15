@@ -1,9 +1,12 @@
 #include <game/game.hpp>
 #include <texture_manager/texture_manager.hpp>
 #include <game_objects/game_object.hpp>
+
 #include <states/menu/menu.hpp>
+#include <states/rules/rules.hpp>
 
 Menu* mainMenu;
+Rules* rules;
 
 SDL_Renderer* Game::renderer = nullptr;
 
@@ -28,30 +31,33 @@ void Game::init(const char* title, int xPos, int yPos, int width, int height, bo
         }
         isRunning = true;
         mainMenu = new Menu(renderer, window, this);
+        rules = new Rules(renderer, window, this);
     }
     else {
         isRunning = false;
     }
 }
-// TextureManager::LoadTexture("../../assets/player.png", renderer);
 
 void Game::handleEvents() {
     while (inMenu) {
         mainMenu->Run();
+    }
+    while (inRules) {
+        rules->Run();
     }
     // while (inParty) {
 
     // }
 }
 
-void Game::update() {
-    std::cout << "Out of state!" << std::endl;
-}
+// void Game::update() {
+//     std::cout << "Out of state!" << std::endl;
+// }
 
-void Game::render() {
-    SDL_RenderClear(renderer);
-    SDL_RenderPresent(renderer);
-}
+// void Game::render() {
+//     SDL_RenderClear(renderer);
+//     SDL_RenderPresent(renderer);
+// }
 
 void Game::clean() {
     delete mainMenu;

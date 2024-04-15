@@ -25,12 +25,15 @@ class Mouse;
 
 class Button : public GameObject {
 public:
-    Button(const char* textureSheet);
+    Button(const char* defaultStateTexture, const char* selectedStateTexture);
     ~Button() = default;
 
     void Update();
     void checkSelected(Mouse* mouse);
     bool selected = 0;
+private:
+    SDL_Texture* defaultStateTexture = nullptr;
+    SDL_Texture* selectedStateTexture = nullptr;
 } ;
 
 class Mouse : public GameObject {

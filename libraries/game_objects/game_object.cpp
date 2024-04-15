@@ -10,10 +10,10 @@ void GameObject::Update() {
 
 void Button::Update() {
     if (selected) {
-        objTexture = TextureManager::LoadTexture("../../assets/activeStartButton.png");
+        objTexture = selectedStateTexture;
     }
     else {
-        objTexture = TextureManager::LoadTexture("../../assets/menuButton.png");
+        objTexture = defaultStateTexture;
     }
 }
 
@@ -21,8 +21,9 @@ void GameObject::Render() {
     SDL_RenderCopy(Game::renderer, objTexture, &srcRect, &destRect);
 }
 
-Button::Button(const char* textureSheet) {
-    objTexture = TextureManager::LoadTexture(textureSheet);
+Button::Button (const char* defaultTexture, const char* selectedTexture) {
+    defaultStateTexture = TextureManager::LoadTexture(defaultTexture);
+    selectedStateTexture = TextureManager::LoadTexture(selectedTexture);
 }
 
 void GameObject::setPos(int x1, int y1, int x2, int y2) {
