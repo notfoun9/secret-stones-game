@@ -5,17 +5,42 @@
 
 class GameObject {
 public:
-    GameObject(const char* textureSheet, int x, int y);
-    ~GameObject() = default;
+    GameObject() = default;
+    GameObject(const char* textureSheet);
+    virtual ~GameObject() = default;
 
-    void Update();
-    void Render();
+    virtual void Update();
+    virtual void Render();
 
-private:
-    int xPos;
-    int yPos;
+    void setBoarders(int x1, int y1, int x2, int y2);
+    void setPos(int x1, int y1, int x2, int y2);
+protected:
 
-    SDL_Texture* objTexture;
+    SDL_Texture* objTexture = nullptr;
     SDL_Rect srcRect;
     SDL_Rect destRect;
 } ;
+
+class Mouse;
+
+class Button : public GameObject {
+public:
+    Button(const char* textureSheet);
+    ~Button() = default;
+
+    void Update();
+    void checkSelected(Mouse* mouse);
+private:
+    bool selected = 0;
+} ;
+
+class Mouse : public GameObject {
+public:
+    Mouse();
+    ~Mouse() = default;
+
+    void Render() override;
+
+    SDL_Rect cursor;
+    SDL_Rect tip;
+} ; 

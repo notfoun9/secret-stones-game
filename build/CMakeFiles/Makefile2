@@ -261,7 +261,7 @@ src/inc/SDL2/clean:
 # Target rules for target libraries/game/CMakeFiles/game.dir
 
 # All Build rule for target.
-libraries/game/CMakeFiles/game.dir/all: libraries/game_objects/CMakeFiles/game_objects.dir/all
+libraries/game/CMakeFiles/game.dir/all: libraries/states/menu/CMakeFiles/menu.dir/all
 	$(MAKE) $(MAKESILENT) -f libraries/game/CMakeFiles/game.dir/build.make libraries/game/CMakeFiles/game.dir/depend
 	$(MAKE) $(MAKESILENT) -f libraries/game/CMakeFiles/game.dir/build.make libraries/game/CMakeFiles/game.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/gameTest/build/CMakeFiles --progress-num=1,2 "Built target game"
@@ -287,7 +287,7 @@ libraries/game/CMakeFiles/game.dir/clean:
 # Target rules for target libraries/game_objects/CMakeFiles/game_objects.dir
 
 # All Build rule for target.
-libraries/game_objects/CMakeFiles/game_objects.dir/all: libraries/states/menu/CMakeFiles/menu.dir/all
+libraries/game_objects/CMakeFiles/game_objects.dir/all:
 	$(MAKE) $(MAKESILENT) -f libraries/game_objects/CMakeFiles/game_objects.dir/build.make libraries/game_objects/CMakeFiles/game_objects.dir/depend
 	$(MAKE) $(MAKESILENT) -f libraries/game_objects/CMakeFiles/game_objects.dir/build.make libraries/game_objects/CMakeFiles/game_objects.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/gameTest/build/CMakeFiles --progress-num=3,4 "Built target game_objects"
@@ -295,7 +295,7 @@ libraries/game_objects/CMakeFiles/game_objects.dir/all: libraries/states/menu/CM
 
 # Build rule for subdir invocation for target.
 libraries/game_objects/CMakeFiles/game_objects.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/game_objects/CMakeFiles/game_objects.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles 0
 .PHONY : libraries/game_objects/CMakeFiles/game_objects.dir/rule
@@ -339,6 +339,7 @@ libraries/texture_manager/CMakeFiles/texture_manager.dir/clean:
 # Target rules for target libraries/states/menu/CMakeFiles/menu.dir
 
 # All Build rule for target.
+libraries/states/menu/CMakeFiles/menu.dir/all: libraries/game_objects/CMakeFiles/game_objects.dir/all
 libraries/states/menu/CMakeFiles/menu.dir/all: libraries/texture_manager/CMakeFiles/texture_manager.dir/all
 	$(MAKE) $(MAKESILENT) -f libraries/states/menu/CMakeFiles/menu.dir/build.make libraries/states/menu/CMakeFiles/menu.dir/depend
 	$(MAKE) $(MAKESILENT) -f libraries/states/menu/CMakeFiles/menu.dir/build.make libraries/states/menu/CMakeFiles/menu.dir/build
@@ -347,7 +348,7 @@ libraries/states/menu/CMakeFiles/menu.dir/all: libraries/texture_manager/CMakeFi
 
 # Build rule for subdir invocation for target.
 libraries/states/menu/CMakeFiles/menu.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/states/menu/CMakeFiles/menu.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles 0
 .PHONY : libraries/states/menu/CMakeFiles/menu.dir/rule
@@ -366,6 +367,7 @@ libraries/states/menu/CMakeFiles/menu.dir/clean:
 
 # All Build rule for target.
 executables/CMakeFiles/main.dir/all: libraries/game/CMakeFiles/game.dir/all
+executables/CMakeFiles/main.dir/all: libraries/game_objects/CMakeFiles/game_objects.dir/all
 executables/CMakeFiles/main.dir/all: libraries/texture_manager/CMakeFiles/texture_manager.dir/all
 	$(MAKE) $(MAKESILENT) -f executables/CMakeFiles/main.dir/build.make executables/CMakeFiles/main.dir/depend
 	$(MAKE) $(MAKESILENT) -f executables/CMakeFiles/main.dir/build.make executables/CMakeFiles/main.dir/build

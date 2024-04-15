@@ -29,7 +29,7 @@ public:
 private:
     SDL_Window *window;
 
-    bool isRunning;
+    bool isRunning = 1;
     bool inMenu = 1;
     bool inParty = 1;
     bool fullscreen_ = 0;

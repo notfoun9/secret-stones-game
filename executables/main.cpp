@@ -12,8 +12,10 @@ int main() {
     int frameTime;
 
     game = new Game();
-    game->init("Secret Stones", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 640, false);
+    game->init("Secret Stones", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1080, 720, false);
     while (game->running()) {
+        SDL_ShowCursor(false);
+        
         frameStart = SDL_GetTicks();
 
         game->handleEvents();

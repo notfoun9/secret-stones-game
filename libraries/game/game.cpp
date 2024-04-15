@@ -3,8 +3,6 @@
 #include <game_objects/game_object.hpp>
 #include <states/menu/menu.hpp>
 
-GameObject* player;
-GameObject* player2;
 Menu* mainMenu;
 
 SDL_Renderer* Game::renderer = nullptr;
@@ -41,10 +39,9 @@ void Game::handleEvents() {
     while (inMenu) {
         mainMenu->Run();
     }
-    while (inParty) {
+    // while (inParty) {
 
-    }
-    if (!isRunning ) return;
+    // }
 }
 
 void Game::update() {

@@ -798,4 +798,6 @@ libraries/states/menu/CMakeFiles/menu.dir/menu.cpp.o
  /Users/maksim/Study/C++/gameTest/src/inc/SDL2/begin_code.h
  /Users/maksim/Study/C++/gameTest/src/inc/SDL2/close_code.h
  /Users/maksim/Study/C++/gameTest/libraries/game/game.hpp
+ /Users/maksim/Study/C++/gameTest/libraries/game_objects/game_object.hpp
+ /Users/maksim/Study/C++/gameTest/libraries/texture_manager/texture_manager.hpp
 
