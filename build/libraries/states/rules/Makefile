@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles /Users/maksim/Study/C++/gameTest/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /Users/maksim/Study/C++/gameTest/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles /Users/maksim/Study/C++/gameTest/build/libraries/states/rules//CMakeFiles/progress.marks
+	cd /Users/maksim/Study/C++/gameTest/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/states/rules/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /Users/maksim/Study/C++/gameTest/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/states/rules/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,96 +148,56 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /Users/maksim/Study/C++/gameTest/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/states/rules/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /Users/maksim/Study/C++/gameTest/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/states/rules/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/maksim/Study/C++/gameTest/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named game
+# Convenience name for target.
+libraries/states/rules/CMakeFiles/rules.dir/rule:
+	cd /Users/maksim/Study/C++/gameTest/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/states/rules/CMakeFiles/rules.dir/rule
+.PHONY : libraries/states/rules/CMakeFiles/rules.dir/rule
 
-# Build rule for target.
-game: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game
-.PHONY : game
-
-# fast build rule for target.
-game/fast:
-	$(MAKE) $(MAKESILENT) -f libraries/game/CMakeFiles/game.dir/build.make libraries/game/CMakeFiles/game.dir/build
-.PHONY : game/fast
-
-#=============================================================================
-# Target rules for targets named game_objects
-
-# Build rule for target.
-game_objects: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game_objects
-.PHONY : game_objects
-
-# fast build rule for target.
-game_objects/fast:
-	$(MAKE) $(MAKESILENT) -f libraries/game_objects/CMakeFiles/game_objects.dir/build.make libraries/game_objects/CMakeFiles/game_objects.dir/build
-.PHONY : game_objects/fast
-
-#=============================================================================
-# Target rules for targets named texture_manager
-
-# Build rule for target.
-texture_manager: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 texture_manager
-.PHONY : texture_manager
-
-# fast build rule for target.
-texture_manager/fast:
-	$(MAKE) $(MAKESILENT) -f libraries/texture_manager/CMakeFiles/texture_manager.dir/build.make libraries/texture_manager/CMakeFiles/texture_manager.dir/build
-.PHONY : texture_manager/fast
-
-#=============================================================================
-# Target rules for targets named menu
-
-# Build rule for target.
-menu: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 menu
-.PHONY : menu
-
-# fast build rule for target.
-menu/fast:
-	$(MAKE) $(MAKESILENT) -f libraries/states/menu/CMakeFiles/menu.dir/build.make libraries/states/menu/CMakeFiles/menu.dir/build
-.PHONY : menu/fast
-
-#=============================================================================
-# Target rules for targets named rules
-
-# Build rule for target.
-rules: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rules
+# Convenience name for target.
+rules: libraries/states/rules/CMakeFiles/rules.dir/rule
 .PHONY : rules
 
 # fast build rule for target.
 rules/fast:
-	$(MAKE) $(MAKESILENT) -f libraries/states/rules/CMakeFiles/rules.dir/build.make libraries/states/rules/CMakeFiles/rules.dir/build
+	cd /Users/maksim/Study/C++/gameTest/build && $(MAKE) $(MAKESILENT) -f libraries/states/rules/CMakeFiles/rules.dir/build.make libraries/states/rules/CMakeFiles/rules.dir/build
 .PHONY : rules/fast
 
-#=============================================================================
-# Target rules for targets named main
+rules.o: rules.cpp.o
+.PHONY : rules.o
 
-# Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
-.PHONY : main
+# target to build an object file
+rules.cpp.o:
+	cd /Users/maksim/Study/C++/gameTest/build && $(MAKE) $(MAKESILENT) -f libraries/states/rules/CMakeFiles/rules.dir/build.make libraries/states/rules/CMakeFiles/rules.dir/rules.cpp.o
+.PHONY : rules.cpp.o
 
-# fast build rule for target.
-main/fast:
-	$(MAKE) $(MAKESILENT) -f executables/CMakeFiles/main.dir/build.make executables/CMakeFiles/main.dir/build
-.PHONY : main/fast
+rules.i: rules.cpp.i
+.PHONY : rules.i
+
+# target to preprocess a source file
+rules.cpp.i:
+	cd /Users/maksim/Study/C++/gameTest/build && $(MAKE) $(MAKESILENT) -f libraries/states/rules/CMakeFiles/rules.dir/build.make libraries/states/rules/CMakeFiles/rules.dir/rules.cpp.i
+.PHONY : rules.cpp.i
+
+rules.s: rules.cpp.s
+.PHONY : rules.s
+
+# target to generate assembly for a file
+rules.cpp.s:
+	cd /Users/maksim/Study/C++/gameTest/build && $(MAKE) $(MAKESILENT) -f libraries/states/rules/CMakeFiles/rules.dir/build.make libraries/states/rules/CMakeFiles/rules.dir/rules.cpp.s
+.PHONY : rules.cpp.s
 
 # Help Target
 help:
@@ -251,12 +211,10 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... game"
-	@echo "... game_objects"
-	@echo "... main"
-	@echo "... menu"
 	@echo "... rules"
-	@echo "... texture_manager"
+	@echo "... rules.o"
+	@echo "... rules.i"
+	@echo "... rules.s"
 .PHONY : help
 
 
@@ -268,6 +226,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/maksim/Study/C++/gameTest/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
