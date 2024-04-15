@@ -1,1 +1,0 @@
-file(COPY player.png DESTINATION ${CMAKE_BINARY_DIR}/assets)

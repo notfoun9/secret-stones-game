@@ -5,7 +5,7 @@
 
 class TextureManager {
 public:
-    [[nodiscard]] static SDL_Texture* LoadTexture(const char *fileName, SDL_Renderer* ren);
+    [[nodiscard]] static SDL_Texture* LoadTexture(const char *fileName);
 } ;
 
 #endif

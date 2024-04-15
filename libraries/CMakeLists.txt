@@ -1,2 +1,4 @@
 add_subdirectory(game)
+add_subdirectory(game_objects)
 add_subdirectory(texture_manager)
+add_subdirectory(states)

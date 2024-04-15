@@ -22,13 +22,16 @@ public:
     void clean();
     
     bool running();
+    void quit();
 
     void toggleFullscreen();
+    static SDL_Renderer *renderer;
 private:
-    int counter = 0;
-    bool isRunning;
     SDL_Window *window;
-    SDL_Renderer *renderer;
+
+    bool isRunning;
+    bool inMenu = 1;
+    bool inParty = 1;
     bool fullscreen_ = 0;
 } ;
 

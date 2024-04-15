@@ -15,6 +15,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/Users/maksim/Study/C++/gameTest/executables/CMakeLists.txt"
   "/Users/maksim/Study/C++/gameTest/libraries/CMakeLists.txt"
   "/Users/maksim/Study/C++/gameTest/libraries/game/CMakeLists.txt"
+  "/Users/maksim/Study/C++/gameTest/libraries/game_objects/CMakeLists.txt"
+  "/Users/maksim/Study/C++/gameTest/libraries/states/CMakeLists.txt"
+  "/Users/maksim/Study/C++/gameTest/libraries/states/menu/CMakeLists.txt"
   "/Users/maksim/Study/C++/gameTest/libraries/texture_manager/CMakeLists.txt"
   "/Users/maksim/Study/C++/gameTest/src/CMakeLists.txt"
   "/Users/maksim/Study/C++/gameTest/src/inc/CMakeLists.txt"
@@ -53,7 +56,10 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "libraries/CMakeFiles/CMakeDirectoryInformation.cmake"
   "libraries/game/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "libraries/game_objects/CMakeFiles/CMakeDirectoryInformation.cmake"
   "libraries/texture_manager/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "libraries/states/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "libraries/states/menu/CMakeFiles/CMakeDirectoryInformation.cmake"
   "executables/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/inc/CMakeFiles/CMakeDirectoryInformation.cmake"
@@ -64,6 +70,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "libraries/game/CMakeFiles/game.dir/DependInfo.cmake"
+  "libraries/game_objects/CMakeFiles/game_objects.dir/DependInfo.cmake"
   "libraries/texture_manager/CMakeFiles/texture_manager.dir/DependInfo.cmake"
+  "libraries/states/menu/CMakeFiles/menu.dir/DependInfo.cmake"
   "executables/CMakeFiles/main.dir/DependInfo.cmake"
   )

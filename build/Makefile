@@ -175,6 +175,19 @@ game/fast:
 .PHONY : game/fast
 
 #=============================================================================
+# Target rules for targets named game_objects
+
+# Build rule for target.
+game_objects: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game_objects
+.PHONY : game_objects
+
+# fast build rule for target.
+game_objects/fast:
+	$(MAKE) $(MAKESILENT) -f libraries/game_objects/CMakeFiles/game_objects.dir/build.make libraries/game_objects/CMakeFiles/game_objects.dir/build
+.PHONY : game_objects/fast
+
+#=============================================================================
 # Target rules for targets named texture_manager
 
 # Build rule for target.
@@ -186,6 +199,19 @@ texture_manager: cmake_check_build_system
 texture_manager/fast:
 	$(MAKE) $(MAKESILENT) -f libraries/texture_manager/CMakeFiles/texture_manager.dir/build.make libraries/texture_manager/CMakeFiles/texture_manager.dir/build
 .PHONY : texture_manager/fast
+
+#=============================================================================
+# Target rules for targets named menu
+
+# Build rule for target.
+menu: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 menu
+.PHONY : menu
+
+# fast build rule for target.
+menu/fast:
+	$(MAKE) $(MAKESILENT) -f libraries/states/menu/CMakeFiles/menu.dir/build.make libraries/states/menu/CMakeFiles/menu.dir/build
+.PHONY : menu/fast
 
 #=============================================================================
 # Target rules for targets named main
@@ -213,7 +239,9 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... game"
+	@echo "... game_objects"
 	@echo "... main"
+	@echo "... menu"
 	@echo "... texture_manager"
 .PHONY : help
 
