@@ -30,7 +30,6 @@ public:
 
     void Update();
     void checkSelected(Mouse* mouse);
-private:
     bool selected = 0;
 } ;
 

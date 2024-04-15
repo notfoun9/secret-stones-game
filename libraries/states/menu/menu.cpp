@@ -43,6 +43,14 @@ void Menu::HandleEvents() {
                 thisGame->quit();
                 return;
             }
+            case SDL_MOUSEBUTTONUP : {
+                if (event.button.button == SDL_BUTTON_LEFT) {
+                    if (button[START]->selected) {
+                        std::cout << "BINGOOOOOOO" << std::endl;
+                        return;
+                    }
+                }
+            }
             default : break;
         }
     }
