@@ -79,9 +79,10 @@ void Rules::Update() {
 
 void Rules::Render() {
     SDL_RenderClear(renderer);
+    rules->Render();
+
     goBack->Render();
     mouse->Render();
-    rules->Render();
     SDL_RenderPresent(renderer);
 }
 

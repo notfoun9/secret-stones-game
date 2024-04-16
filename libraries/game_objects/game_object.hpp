@@ -9,7 +9,10 @@ class Button;
 class Mouse;
 class Field;
 class Tile;
-
+class Card;
+class Hand;
+class Deck;
+class Pull;
 
 
 class GameObject {
@@ -90,4 +93,55 @@ private:
 
     int activeColor = color1;
     SDL_Texture** activeSide = &side1;
+} ;
+
+class Card : public GameObject {
+public: 
+    Card();
+    ~Card();
+
+    virtual void Update();
+    void checkSelected(Mouse* mouse);
+    bool selected = 0;
+
+    enum colors {GREEN, WHITE, BLUE, PURPLE, RED, ORANGE, BLACK, YELLOW};
+private:
+
+} ;
+
+class Hand : public GameObject {
+public: 
+    Hand();
+    ~Hand();
+
+    void Fill();
+
+    Card* cardsInHand[4];
+private:
+    Deck* deck;
+    short size = 0;
+} ;
+
+class Deck : public GameObject {
+public:
+    Deck();
+    ~Deck();
+
+    void Shuffle();
+
+    Card* cardsInDeck[4];
+private:
+    Pull* pull;
+    short size = 0;
+} ;
+
+class Pull : public GameObject {
+public:
+    Pull();
+    ~Pull();
+
+    Card* points_1[8];
+    Card* points_2[4];
+    Card* points_3[3];
+    Card* points_5[1];
 } ;

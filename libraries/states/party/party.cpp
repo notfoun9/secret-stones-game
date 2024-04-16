@@ -2,8 +2,14 @@
 #include <vector>
 
 Party::Party(SDL_Renderer* renderer_, SDL_Window* window_, Game* thisGame_) : renderer(renderer_), window(window_), thisGame(thisGame_) {
+    exitButton->setBoarders(0, 0, 34, 11);
+    exitButton->setPos(50, 600, 220, 80);
+
+    note->setBoarders(0,0,149, 280);
+    note->setPos(30, 30, 189, 310);
 }
 Party::~Party() {
+    delete exitButton;
     delete field;
     delete mouse;
 }
@@ -11,7 +17,7 @@ Party::~Party() {
 
 void Party::Run() {
     field = new Field();
-    
+
     std::cout << "running" << '\n';
     const int FPS = 60;
     const int frameDelay = 1000 / FPS;
@@ -41,6 +47,21 @@ void Party::HandleEvents() {
                 thisGame->quit();
                 return;
             }
+            case SDL_MOUSEBUTTONUP : {
+                if (event.button.button == SDL_BUTTON_LEFT) {
+                    if (exitButton->selected) {
+                        std::cout << "to menu from party" << std::endl;
+                        thisGame->inParty = 0;
+                        thisGame->inMenu = 1;
+                        return;
+                    }
+                    for (Tile* t : field->positions) {
+                        if (SDL_HasIntersection(&(mouse->tip), &(t->destRect))) {
+                            t->Flip();
+                        }
+                    }
+                }
+            }
             default : break;
         }
     }
@@ -57,12 +78,17 @@ void Party::HandleEvents() {
 }
 
 void Party::Update() {
-    // field->Update();
+    exitButton->checkSelected(mouse);
+    exitButton->Update();
+    field->Update();
     mouse->Update();
 }
 
 void Party::Render() {
     SDL_RenderClear(renderer);
+    note->Render();
+
+    exitButton->Render();
     field->Render();
     mouse->Render();
     SDL_RenderPresent(renderer);

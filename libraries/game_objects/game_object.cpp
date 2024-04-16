@@ -70,15 +70,15 @@ Field::Field() {
 
     constructRandomField();
 
-    positions[0]->setPos(0,0,64,64);
-    positions[1]->setPos(64,0,64,64);
-    positions[2]->setPos(128,0,64,64);
-    positions[3]->setPos(0,64,64,64);
-    positions[4]->setPos(64,64,64,64);
-    positions[5]->setPos(128,64,64,64);
-    positions[6]->setPos(0,128,64,64);
-    positions[7]->setPos(64,128,64,64);
-    positions[8]->setPos(128,128,64,64);
+    positions[0]->setPos(280,30,150,150);
+    positions[1]->setPos(430,30,150,150);
+    positions[2]->setPos(580,30,150,150);
+    positions[3]->setPos(280,180,150,150);
+    positions[4]->setPos(430,180,150,150);
+    positions[5]->setPos(580,180,150,150);
+    positions[6]->setPos(280,330,150,150);
+    positions[7]->setPos(430,330,150,150);
+    positions[8]->setPos(580,330,150,150);
 }
 Field::~Field() {
     for (Tile* t : allTiles) {
