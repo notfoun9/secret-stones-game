@@ -2,9 +2,12 @@
 #include <vector>
 
 Party::Party(SDL_Renderer* renderer_, SDL_Window* window_, Game* thisGame_) : renderer(renderer_), window(window_), thisGame(thisGame_) {
+    field = new Field();
+    exitButton = new Button("../../assets/goBackButton.png", "../../assets/activeGoBack.png");;
     exitButton->setBoarders(0, 0, 34, 11);
     exitButton->setPos(50, 600, 220, 80);
 
+    note = new GameObject("../../assets/note.png");
     note->setBoarders(0,0,149, 280);
     note->setPos(30, 30, 189, 310);
 }
@@ -16,8 +19,9 @@ Party::~Party() {
 
 
 void Party::Run() {
-    field = new Field();
-
+    if (field) {
+        field->constructRandomField();
+    }
     std::cout << "running" << '\n';
     const int FPS = 60;
     const int frameDelay = 1000 / FPS;

@@ -1,6 +1,14 @@
 #include <rules/rules.hpp>
 
-Rules::Rules(SDL_Renderer* renderer_, SDL_Window* window_, Game* thisGame_) : renderer(renderer_), window(window_), thisGame(thisGame_) {}
+Rules::Rules(SDL_Renderer* renderer_, SDL_Window* window_, Game* thisGame_) : renderer(renderer_), window(window_), thisGame(thisGame_) {
+    goBack = new Button("../../assets/goBackButton.png", "../../assets/activeGoBack.png");
+    goBack->setBoarders(0, 0, 34, 11);
+    goBack->setPos(430, 600, 220, 80);
+
+    rules = new GameObject("../../assets/rules.png");
+    rules->setBoarders(0, 0, 934, 392);
+    rules->setPos(100, 100, 880, 420);
+}
 Rules::~Rules() {
     delete goBack;
     delete mouse;
@@ -11,14 +19,6 @@ Rules::~Rules() {
 void Rules::Run() {
     const int FPS = 60;
     const int frameDelay = 1000 / FPS;
-
-    goBack = new Button("../../assets/goBackButton.png", "../../assets/activeGoBack.png");
-    goBack->setBoarders(0, 0, 34, 11);
-    goBack->setPos(430, 600, 220, 80);
-
-    rules = new GameObject("../../assets/rules.png");
-    rules->setBoarders(0, 0, 934, 392);
-    rules->setPos(100, 100, 880, 420);
 
     uint32_t frameStart;
     int frameTime;

@@ -69,16 +69,6 @@ Field::Field() {
     allTiles[BLA_YEL_1] = new Tile("../../assets/bla.png", "../../assets/yel.png", BLACK, YELLOW);
 
     constructRandomField();
-
-    positions[0]->setPos(280,30,150,150);
-    positions[1]->setPos(430,30,150,150);
-    positions[2]->setPos(580,30,150,150);
-    positions[3]->setPos(280,180,150,150);
-    positions[4]->setPos(430,180,150,150);
-    positions[5]->setPos(580,180,150,150);
-    positions[6]->setPos(280,330,150,150);
-    positions[7]->setPos(430,330,150,150);
-    positions[8]->setPos(580,330,150,150);
 }
 Field::~Field() {
     for (Tile* t : allTiles) {
@@ -92,7 +82,7 @@ void Field::Update() {
 }
 void Field::Render() {
     for (Tile* t : positions) {
-        SDL_RenderCopy(Game::renderer, t->GetActiveSide(), &(t->srcRect), &(t->destRect));
+        SDL_RenderCopy(Game::renderer, t->GetActiveSide(), NULL, &(t->destRect));
     }
 }
 void Field::constructRandomField() {
@@ -116,8 +106,17 @@ void Field::constructRandomField() {
         } );
     for (int i = 0; i < 9; ++i) {
         positions[i] = seq[i].second;
-        positions[i]->setBoarders(0,0,64,64);
     }
+
+    positions[0]->setPos(280,30,150,150);
+    positions[1]->setPos(430,30,150,150);
+    positions[2]->setPos(580,30,150,150);
+    positions[3]->setPos(280,180,150,150);
+    positions[4]->setPos(430,180,150,150);
+    positions[5]->setPos(580,180,150,150);
+    positions[6]->setPos(280,330,150,150);
+    positions[7]->setPos(430,330,150,150);
+    positions[8]->setPos(580,330,150,150);
 }   
 
 

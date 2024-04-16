@@ -15,9 +15,9 @@ public:
     void Render();
 
     Mouse* mouse = new Mouse();
-    GameObject* note = new GameObject("../../assets/note.png");
+    GameObject* note;
 private:
-    Button* exitButton = new Button("../../assets/goBackButton.png", "../../assets/activeGoBack.png");;
+    Button* exitButton;
 
     int Score = 0;
     Field* field = nullptr;

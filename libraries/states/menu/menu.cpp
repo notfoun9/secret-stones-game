@@ -1,18 +1,6 @@
 #include <menu/menu.hpp>
 
-Menu::Menu(SDL_Renderer* renderer_, SDL_Window* window_, Game* thisGame_) : renderer(renderer_), window(window_), thisGame(thisGame_) {}
-Menu::~Menu() {
-    delete button[START];
-    delete button[RULES];
-    delete button[EXIT];
-    delete mouse;
-}
-
-
-void Menu::Run() {
-    const int FPS = 60;
-    const int frameDelay = 1000 / FPS;
-
+Menu::Menu(SDL_Renderer* renderer_, SDL_Window* window_, Game* thisGame_) : renderer(renderer_), window(window_), thisGame(thisGame_) {
     button[START] = new Button("../../assets/menuButton.png", "../../assets/activeStartButton.png");
     button[START]->setBoarders(2, 16, 62, 22); // ~ 3 : 1
     button[START]->setPos(350, 150, 380, 125);
@@ -24,6 +12,19 @@ void Menu::Run() {
     button[EXIT] = new Button("../../assets/exitButton.png", "../../assets/activeExitButton.png");
     button[EXIT]->setBoarders(0, 0, 116, 44);
     button[EXIT]->setPos(350, 450, 380, 125);
+
+}
+Menu::~Menu() {
+    delete button[START];
+    delete button[RULES];
+    delete button[EXIT];
+    delete mouse;
+}
+
+
+void Menu::Run() {
+    const int FPS = 60;
+    const int frameDelay = 1000 / FPS;
 
     uint32_t frameStart;
     int frameTime;

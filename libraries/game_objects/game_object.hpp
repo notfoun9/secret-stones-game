@@ -68,8 +68,8 @@ public:
     enum Tiles {GR_WH_1, GR_WH_2, GR_WH_3, BLU_PUR_1, BLU_PUR_2, BLU_PUR_3, RED_OR_1, RED_OR_2, BLA_YEL_1};
     enum colors {GREEN, WHITE, BLUE, PURPLE, RED, ORANGE, BLACK, YELLOW};
     Tile* positions[9];
-private:
     void constructRandomField();
+private:
 
     Tile* allTiles[9];
 } ;
