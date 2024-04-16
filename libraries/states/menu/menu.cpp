@@ -3,6 +3,8 @@
 Menu::Menu(SDL_Renderer* renderer_, SDL_Window* window_, Game* thisGame_) : renderer(renderer_), window(window_), thisGame(thisGame_) {}
 Menu::~Menu() {
     delete button[START];
+    delete button[RULES];
+    delete button[EXIT];
     delete mouse;
 }
 
@@ -52,7 +54,9 @@ void Menu::HandleEvents() {
             case SDL_MOUSEBUTTONUP : {
                 if (event.button.button == SDL_BUTTON_LEFT) {
                     if (button[START]->selected) {
-                        std::cout << "BINGOOOOOOO" << std::endl;
+                        std::cout << "startParty" << std::endl;
+                        thisGame->inMenu = 0;
+                        thisGame->inParty = 1;
                         return;
                     }
                     if (button[RULES]->selected) {

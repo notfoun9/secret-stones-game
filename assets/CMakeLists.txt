@@ -14,3 +14,12 @@ file(COPY goBackButton.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
 file(COPY activeGoBack.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
 
 file(COPY rules.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
+
+file(COPY bla.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
+file(COPY blu.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
+file(COPY gr.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
+file(COPY or.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
+file(COPY pur.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
+file(COPY red.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
+file(COPY wh.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
+file(COPY yel.png DESTINATION ${CMAKE_BINARY_DIR}/assets)

@@ -214,6 +214,19 @@ menu/fast:
 .PHONY : menu/fast
 
 #=============================================================================
+# Target rules for targets named party
+
+# Build rule for target.
+party: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 party
+.PHONY : party
+
+# fast build rule for target.
+party/fast:
+	$(MAKE) $(MAKESILENT) -f libraries/states/party/CMakeFiles/party.dir/build.make libraries/states/party/CMakeFiles/party.dir/build
+.PHONY : party/fast
+
+#=============================================================================
 # Target rules for targets named rules
 
 # Build rule for target.
@@ -255,6 +268,7 @@ help:
 	@echo "... game_objects"
 	@echo "... main"
 	@echo "... menu"
+	@echo "... party"
 	@echo "... rules"
 	@echo "... texture_manager"
 .PHONY : help

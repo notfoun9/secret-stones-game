@@ -17,8 +17,6 @@ public:
     void init(const char* title, int xPos, int yPos, int widht, int height, bool fullscreen);
     
     void handleEvents(); 
-    // void update();
-    // void render();
     void clean();
     
     bool running();

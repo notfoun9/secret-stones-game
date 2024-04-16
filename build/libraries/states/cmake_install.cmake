@@ -44,6 +44,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("/Users/maksim/Study/C++/gameTest/build/libraries/states/party/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("/Users/maksim/Study/C++/gameTest/build/libraries/states/rules/cmake_install.cmake")
 endif()
 

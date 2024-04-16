@@ -4,9 +4,11 @@
 
 #include <states/menu/menu.hpp>
 #include <states/rules/rules.hpp>
+#include <states/party/party.hpp>
 
 Menu* mainMenu;
 Rules* rules;
+Party* party;
 
 SDL_Renderer* Game::renderer = nullptr;
 
@@ -29,9 +31,12 @@ void Game::init(const char* title, int xPos, int yPos, int width, int height, bo
             SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
             std::cout << "Renderer created!" << std::endl;
         }
+        
         isRunning = true;
+
         mainMenu = new Menu(renderer, window, this);
         rules = new Rules(renderer, window, this);
+        party = new Party(renderer, window, this);
     }
     else {
         isRunning = false;
@@ -45,19 +50,10 @@ void Game::handleEvents() {
     while (inRules) {
         rules->Run();
     }
-    // while (inParty) {
-
-    // }
+    while (inParty) {
+        party->Run();
+    }
 }
-
-// void Game::update() {
-//     std::cout << "Out of state!" << std::endl;
-// }
-
-// void Game::render() {
-//     SDL_RenderClear(renderer);
-//     SDL_RenderPresent(renderer);
-// }
 
 void Game::clean() {
     delete mainMenu;
