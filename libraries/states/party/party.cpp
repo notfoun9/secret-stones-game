@@ -10,8 +10,14 @@ Party::Party(SDL_Renderer* renderer_, SDL_Window* window_, Game* thisGame_) : re
     note = new GameObject("../../assets/note.png");
     note->setBoarders(0,0,149, 280);
     note->setPos(30, 30, 189, 310);
+
+    pull = new Pull;
+    deck = new Deck(pull);
+    trash = new Trash();
+    hand = new Hand(deck, trash);
 }
 Party::~Party() {
+    delete pull;
     delete exitButton;
     delete field;
     delete mouse;
@@ -60,7 +66,7 @@ void Party::HandleEvents() {
                         return;
                     }
                     for (Tile* t : field->positions) {
-                        if (SDL_HasIntersection(&(mouse->tip), &(t->destRect))) {
+                        if (t->selected) {
                             t->Flip();
                         }
                     }
@@ -82,9 +88,9 @@ void Party::HandleEvents() {
 }
 
 void Party::Update() {
-    exitButton->checkSelected(mouse);
-    exitButton->Update();
-    field->Update();
+    exitButton->Update(mouse);
+    field->Update(mouse);
+    hand->Update(mouse);
     mouse->Update();
 }
 
@@ -94,6 +100,7 @@ void Party::Render() {
 
     exitButton->Render();
     field->Render();
+    hand->Render();
     mouse->Render();
     SDL_RenderPresent(renderer);
 }

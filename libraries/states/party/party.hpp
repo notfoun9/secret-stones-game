@@ -25,4 +25,9 @@ private:
     SDL_Renderer* renderer;
     SDL_Window* window;
     Game* thisGame;
+
+    Pull* pull;
+    Deck* deck;
+    Trash* trash;
+    Hand* hand;
 } ;

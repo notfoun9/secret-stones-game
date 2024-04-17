@@ -24,3 +24,5 @@ file(COPY pur.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
 file(COPY red.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
 file(COPY wh.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
 file(COPY yel.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
+
+file(COPY blankCard.png DESTINATION ${CMAKE_BINARY_DIR}/assets)

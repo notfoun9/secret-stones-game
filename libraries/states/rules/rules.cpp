@@ -72,8 +72,7 @@ void Rules::HandleEvents() {
 }
 
 void Rules::Update() {
-    goBack->checkSelected(mouse);
-    goBack->Update();
+    goBack->Update(mouse);
     mouse->Update();
 }
 

@@ -8,6 +8,11 @@
 #include <iostream>
 #include <thread>
 #include <chrono>
+#include <vector>
+#include <stack>
+#include <unordered_set>
+#include <unordered_map>
+#include <algorithm>
 
 class Game {
 public:

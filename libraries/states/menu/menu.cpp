@@ -91,8 +91,7 @@ void Menu::HandleEvents() {
 
 void Menu::Update() {
     for (Button* but : button) {
-        but->checkSelected(mouse);
-        but->Update();
+        but->Update(mouse);
     }
     mouse->Update();
 }
