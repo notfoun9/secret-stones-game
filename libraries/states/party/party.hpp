@@ -1,6 +1,7 @@
 #pragma once
 
 #include <game/game.hpp>
+#include <turn/turn.hpp>
 #include <game_objects/game_object.hpp>
 
 class Party {
@@ -13,12 +14,17 @@ public:
     void HandleEvents();
     void Update();
     void Render();
-
+    void StartNewParty();
     Mouse* mouse = new Mouse();
-    GameObject* note;
 private:
     Button* exitButton;
+    Button* endTurnButton;
+    Switch* dropGetButton;
 
+    GameObject* note;
+    Turn* currentTurn;;
+
+    int badTurns = 0;
     int Score = 0;
     Field* field = nullptr;
 

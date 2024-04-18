@@ -39,7 +39,4 @@ private:
     bool isRunning = 1;
     bool fullscreen_ = 0;
 } ;
-
-
-
 #endif 

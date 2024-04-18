@@ -25,4 +25,10 @@ file(COPY red.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
 file(COPY wh.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
 file(COPY yel.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
 
-file(COPY blankCard.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
+file(COPY selectedBlankCard.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
+file(COPY unselectedBlankCard.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
+
+file(COPY endTurnButton.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
+file(COPY activeEndTurnButton.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
+file(COPY activeDropGetButton.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
+file(COPY dropGetButton.png DESTINATION ${CMAKE_BINARY_DIR}/assets)

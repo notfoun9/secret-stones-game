@@ -22,10 +22,10 @@ void GameObject::Render() {
 void GameObject::Update() {}
 
 
-Button::Button (const char* defaultTexture, const char* selectedTexture) {
-    defaultStateTexture = TextureManager::LoadTexture(defaultTexture);
-    selectedStateTexture = TextureManager::LoadTexture(selectedTexture);
-}
+Button::Button (const char* defaultTexture, const char* selectedTexture) : 
+    defaultStateTexture(TextureManager::LoadTexture(defaultTexture)), 
+    selectedStateTexture(TextureManager::LoadTexture(selectedTexture)) {}
+
 void Button::Update(Mouse* mouse) {
     checkSelected(mouse);
     if (selected) {
@@ -44,7 +44,28 @@ void Button::checkSelected(Mouse* mouse) {
     }
 }
 
+Switch::Switch(const char* defaultStateTexture_, const char* selectedStateTexture) :
+    defaultStateTexture(TextureManager::LoadTexture(defaultStateTexture_)),
+    activetateTexture(TextureManager::LoadTexture(selectedStateTexture)) {}
 
+bool Switch::checkSelected(Mouse* mouse) {
+    if (SDL_HasIntersection(&(mouse->tip), &destRect)) return true;
+    return false;
+}
+void Switch::Update(Mouse* mouse) {
+    if (active) {
+        objTexture = activetateTexture;
+    }
+    else {
+        objTexture = defaultStateTexture;
+    }
+} 
+void Switch::Click() {
+    active = !active;
+}
+void Switch::Deselect() {
+    active = 0;
+}
 
 Mouse::Mouse() {
     objTexture = TextureManager::LoadTexture("../../assets/mouses.png");
@@ -146,18 +167,24 @@ void Tile::Select() {
 }
 
 Pull::Pull() {
+    std::cout << "Pull has cards: " << '\n';
     for (int i = 0; i < 8; ++i) {
-        points_1[i] = new Card("../../assets/blankCard.png","../../assets/blankCard.png");
+        points_1[i] = new Card("../../assets/unselectedBlankCard.png","../../assets/selectedBlankCard.png");
+        std::cout << points_1[i] << '\n'; 
     }
     for (int i = 0; i < 4; ++i) {
-        points_2[i] = new Card("../../assets/blankCard.png","../../assets/blankCard.png");
+        points_2[i] = new Card("../../assets/unselectedBlankCard.png","../../assets/selectedBlankCard.png");
+        std::cout << points_2[i] << '\n';
     }
     for (int i = 0; i < 3; ++i) {
-        points_3[i] = new Card("../../assets/blankCard.png","../../assets/blankCard.png");
+        points_3[i] = new Card("../../assets/unselectedBlankCard.png","../../assets/selectedBlankCard.png");
+        std::cout << points_3[i] << '\n';
     }
     for (int i = 0; i < 1; ++i) {
-        points_5[i] = new Card("../../assets/blankCard.png","../../assets/blankCard.png");
+        points_5[i] = new Card("../../assets/unselectedBlankCard.png","../../assets/selectedBlankCard.png");
+        std::cout << points_5[i] << '\n';
     }
+    std::cout << '\n';
 }
 Pull::~Pull() {
     for (auto card : points_1) {
@@ -179,6 +206,8 @@ Card* Pull::Take1() {
     while (takenCards.find(points_1[cardNo]) != takenCards.end()) {
         cardNo = rand() % 8;
     }
+    takenCards.insert(points_1[cardNo]);
+    std::cout << points_1[cardNo] << "isTaken" << '\n';
     return points_1[cardNo];
 }
 Card* Pull::Take2() {
@@ -187,6 +216,8 @@ Card* Pull::Take2() {
     while (takenCards.find(points_2[cardNo]) != takenCards.end()) {
         cardNo = rand() % 4;
     }
+    takenCards.insert(points_2[cardNo]);
+    std::cout << points_2[cardNo] << "isTaken" << '\n';
     return points_2[cardNo];    
 }
 Card* Pull::Take3() {
@@ -195,6 +226,8 @@ Card* Pull::Take3() {
     while (takenCards.find(points_3[cardNo]) != takenCards.end()) {
         cardNo = rand() % 3;
     }
+    takenCards.insert(points_3[cardNo]);
+    std::cout << points_3[cardNo] << "isTaken" << '\n';
     return points_3[cardNo];    
 }
 Card* Pull::Take5() {
@@ -203,6 +236,8 @@ Card* Pull::Take5() {
     while (takenCards.find(points_5[cardNo]) != takenCards.end()) {
         cardNo = rand() % 1;
     }
+    takenCards.insert(points_5[cardNo]);
+    std::cout << points_5[cardNo] << "isTaken" << '\n';
     return points_5[cardNo];    
 }
 
@@ -218,10 +253,12 @@ Deck::Deck(Pull* pull) {
     std::sort(cards.begin(), cards.end(), [](std::pair<int, Card*> a, std::pair<int, Card*> b) {
         return a.first > b.first;
     } );
+    std::cout << "Deck has Cards: " << '\n';
     for (auto card : cards) {
-        std::cout << card.first << '\n';
+        std::cout << card.second << '\n';
         cardsInDeck.push(card.second);
     }
+    std::cout << '\n';
 }
 Deck::Deck(Trash* trash) {
     while (!trash->Empty()) {
@@ -233,10 +270,14 @@ Card* Deck::Take() {
     
     Card* card = cardsInDeck.top();
     cardsInDeck.pop();
+    std::cout << "Card taken from deck is " << card << '\n';
     return card;
 }
 bool Deck::Empty() {
     return cardsInDeck.empty();
+}
+int Deck::Size() {
+    return cardsInDeck.size();
 }
 
 void Trash::Clear() {
@@ -253,66 +294,86 @@ Card* Trash::Take() {
 bool Trash::Empty() {
     return cards.empty();
 }
+int Trash::Size() {
+    return cards.size();
+}
 
 Hand::Hand(Deck* deck_, Trash* trash_) : trash(trash_), deck(deck_), size(4) {
     for (int i = 0; i < size; ++i) {
         cardsInHand.push_back(deck->Take());
     }
 }
-void Hand::Push() {
-    int numOfcards = cardsInHand.size();
+// void Hand::Push() {
+//     int numOfcards = cardsInHand.size();
+//     int nullpts = 0;
+//     for (auto card : cardsInHand) {
+//         if (card == nullptr) ++nullpts;
+//     }
+//     if (nullpts > 0) {
+//         for (int i = 0, j = numOfcards; i < j; ++i, --j) {
+//             while (cardsInHand[i] != nullptr && i < j) ++i;
+//             while (cardsInHand[j] == nullptr && i < j) --j;
+//             if (i < j) std::swap(cardsInHand[i], cardsInHand[j]);
+//             std::cout << "reached123" << '\n';
+//         }
+//     }
+//     size = numOfcards - nullpts;
+//     cardsInHand.resize(std::max(int(size), 4));
+// }
+void Hand::Fill() {
     int nullpts = 0;
     for (auto card : cardsInHand) {
         if (card == nullptr) ++nullpts;
     }
-    if (numOfcards > 4 && nullpts > 0) {
-        for (int i = 0, j = size; i < j; ) {
-            while (cardsInHand[i] != nullptr) ++i;
-            while (cardsInHand[j] == nullptr) --j;
-            std::swap(cardsInHand[i], cardsInHand[j]);
-        }
-    }
-    cardsInHand.resize(std::max(numOfcards - nullpts, 0));
-    size = cardsInHand.size();
-}
-void Hand::Fill() {
-    Push();
-    if (size < 4 && deck->Empty()) {
-        delete deck;
-        deck = new Deck(trash);
-    }
-    if (size < 4) {
+    size -= nullpts;
+    // if (size < 4 && deck->Empty() && !trash->Empty()) {
+    //     delete deck;
+    //     deck = new Deck(trash);
+    // }
+    if (size < 4 && (!deck->Empty() || !trash->Empty())) {
         size = 4;
-        for (Card* card : cardsInHand) {
-            if (card == nullptr && !deck->Empty()) {
-                card = deck->Take();
+        for (int i = 0; i < 4; ++i) {
+            if (!cardsInHand[i] && !deck->Empty()) {
+                cardsInHand[i] = deck->Take();
             }
         }
     }
 }
 void Hand::Update(Mouse* mouse) {
     if (size == 4) {
-        if (cardsInHand[0]) {
-            cardsInHand[0]->setPos(0, 0, 64, 96);
-        }
-        if (cardsInHand[1]) {
-            cardsInHand[1]->setPos(64, 0, 64, 96);
-        }
-        if (cardsInHand[2]) {
-            cardsInHand[2]->setPos(128, 0, 64, 96);
-        }
-        if (cardsInHand[3]) {
-            cardsInHand[3]->setPos(192, 0, 64, 96);
+        for (int i = 0; i < 4; ++i) {
+            if (cardsInHand[i]) {
+                cardsInHand[i]->setPos(350 + 128 * i, 488, 128, 192);
+            }
         }
     }
-    // for (auto card : cardsInHand) {
-    //     card->Update(mouse);
-    // }
+    for (auto card : cardsInHand) {
+        if (card) card->Update(mouse);
+    }
 }
 void Hand::Render() {
     for (auto card : cardsInHand) {
-        // std::cout << card->destRect.x << ' ' << card->destRect.y << ' ' << 
-        card->Render();
+        if (card) card->Render();
+    }
+}
+void Hand::Remove(Card* card_) {
+    for (Card* &card : cardsInHand) {
+        if (card == card_) {
+            std::cout << "Card " << card << "is now nullptr" << '\n';
+            card = nullptr;
+            return;
+        }
+    }
+
+}
+void Hand::CheckClicks() {
+    for (Card* card : cardsInHand) {
+        if (card) {
+            if (card->selected) {
+                card->clicked = 1;
+                return;
+            }
+        }
     }
 }
 
@@ -321,4 +382,17 @@ Card::Card(const char* defaultTexture, const char* selectedTexture) {
     defaultStateTexture = TextureManager::LoadTexture(defaultTexture);
     selectedStateTexture = TextureManager::LoadTexture(selectedTexture);
     objTexture = defaultStateTexture;
+}
+void Card::Drop(Trash* trash) {
+    trash->Add(this);
+}
+void Card::Update(Mouse* mouse) {
+    checkSelected(mouse);
+    if (selected) {
+        objTexture = selectedStateTexture;
+    }
+    else {
+        objTexture = defaultStateTexture;
+    }
+    clicked = 0;
 }

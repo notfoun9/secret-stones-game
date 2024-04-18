@@ -801,4 +801,5 @@ libraries/game/CMakeFiles/game.dir/game.cpp.o: \
   /Users/maksim/Study/C++/gameTest/libraries/game/../game_objects/game_object.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/game/../states/menu/menu.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/game/../states/rules/rules.hpp \
-  /Users/maksim/Study/C++/gameTest/libraries/game/../states/party/party.hpp
+  /Users/maksim/Study/C++/gameTest/libraries/game/../states/party/party.hpp \
+  /Users/maksim/Study/C++/gameTest/libraries/states/party/turn/../turn/turn.hpp

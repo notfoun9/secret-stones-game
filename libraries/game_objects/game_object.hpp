@@ -33,7 +33,6 @@ protected:
     SDL_Texture* objTexture = nullptr;
 } ;
 
-
 class Button : public GameObject {
 public:
     Button() = default;
@@ -46,6 +45,22 @@ public:
 protected:
     SDL_Texture* defaultStateTexture = nullptr;
     SDL_Texture* selectedStateTexture = nullptr;
+} ;
+
+class Switch : public GameObject {
+public:
+    Switch(const char* defaultStateTexture, const char* selectedStateTexture);
+    ~Switch() = default;
+
+    bool checkSelected(Mouse* mouse);
+    void Deselect();
+    virtual void Update(Mouse* mouse);
+    void Click();
+private:
+    bool active = 0;
+
+    SDL_Texture* defaultStateTexture = nullptr;
+    SDL_Texture* activetateTexture = nullptr;
 } ;
 
 class Mouse : public GameObject {
@@ -104,7 +119,9 @@ public:
     ~Card() = default;
     bool Usable(Field* field);
     void Drop(Trash* trash);
+    void Update(Mouse* mouse);
 
+    bool clicked = 0;
     enum colors {GREEN, WHITE, BLUE, PURPLE, RED, ORANGE, BLACK, YELLOW};
     int num = 0;
 } ;
@@ -115,12 +132,14 @@ public:
     ~Hand() = default;
 
     void Render();
+    void CheckClicks();
     void Update(Mouse* mouse);
     void Fill();
     void addCard();
     void Push();
-private:
+    void Remove(Card* card);
     std::vector<Card*> cardsInHand;
+private:
     Deck* deck;
     Trash* trash;
     short size = 0;
@@ -132,6 +151,7 @@ public:
     Deck(Trash*);
     ~Deck() = default;
 
+    int Size();
     bool Empty();
     Card* Take();
 private:
@@ -147,6 +167,7 @@ public:
     void Add(Card* card);
     Card* Take();
     bool Empty();
+    int Size();
 private:
     std::vector<Card*> cards;
 } ;

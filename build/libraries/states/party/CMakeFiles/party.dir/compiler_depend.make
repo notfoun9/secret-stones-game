@@ -748,6 +748,7 @@ libraries/states/party/CMakeFiles/party.dir/party.cpp.o: /Users/maksim/Study/C++
   /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include/stdint.h \
   /Users/maksim/Study/C++/gameTest/libraries/states/party/party.hpp \
+  /Users/maksim/Study/C++/gameTest/libraries/states/party/turn/turn.hpp \
   /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL.h \
   /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_assert.h \
   /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_atomic.h \
@@ -808,6 +809,8 @@ libraries/states/party/CMakeFiles/party.dir/party.cpp.o: /Users/maksim/Study/C++
 
 /Users/maksim/Study/C++/gameTest/src/inc/SDL2/close_code.h:
 
+/Users/maksim/Study/C++/gameTest/src/inc/SDL2/begin_code.h:
+
 /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_timer.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__concepts/class_or_enum.h:
@@ -857,6 +860,8 @@ libraries/states/party/CMakeFiles/party.dir/party.cpp.o: /Users/maksim/Study/C++
 /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_audio.h:
 
 /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_assert.h:
+
+/Users/maksim/Study/C++/gameTest/libraries/states/party/turn/turn.hpp:
 
 /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include/stddef.h:
 
@@ -1687,8 +1692,6 @@ libraries/states/party/CMakeFiles/party.dir/party.cpp.o: /Users/maksim/Study/C++
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__config_site:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/_types/_uint64_t.h:
-
-/Users/maksim/Study/C++/gameTest/src/inc/SDL2/begin_code.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__chrono/file_clock.h:
 

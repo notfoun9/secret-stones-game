@@ -749,6 +749,7 @@ libraries/states/party/CMakeFiles/party.dir/party.cpp.o
  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include/stddef.h
  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include/stdint.h
  /Users/maksim/Study/C++/gameTest/libraries/states/party/party.hpp
+ /Users/maksim/Study/C++/gameTest/libraries/states/party/turn/turn.hpp
  /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL.h
  /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_assert.h
  /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_atomic.h

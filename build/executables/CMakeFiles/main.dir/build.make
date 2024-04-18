@@ -96,10 +96,12 @@ executables/bin/main: libraries/game/libgame.a
 executables/bin/main: libraries/states/menu/libmenu.a
 executables/bin/main: libraries/states/rules/librules.a
 executables/bin/main: libraries/states/party/libparty.a
+executables/bin/main: libraries/states/party/turn/libturn.a
 executables/bin/main: libraries/game/libgame.a
 executables/bin/main: libraries/states/menu/libmenu.a
 executables/bin/main: libraries/states/rules/librules.a
 executables/bin/main: libraries/states/party/libparty.a
+executables/bin/main: libraries/states/party/turn/libturn.a
 executables/bin/main: libraries/texture_manager/libtexture_manager.a
 executables/bin/main: libraries/game_objects/libgame_objects.a
 executables/bin/main: executables/CMakeFiles/main.dir/link.txt

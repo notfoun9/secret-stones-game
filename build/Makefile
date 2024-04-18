@@ -227,6 +227,19 @@ party/fast:
 .PHONY : party/fast
 
 #=============================================================================
+# Target rules for targets named turn
+
+# Build rule for target.
+turn: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 turn
+.PHONY : turn
+
+# fast build rule for target.
+turn/fast:
+	$(MAKE) $(MAKESILENT) -f libraries/states/party/turn/CMakeFiles/turn.dir/build.make libraries/states/party/turn/CMakeFiles/turn.dir/build
+.PHONY : turn/fast
+
+#=============================================================================
 # Target rules for targets named rules
 
 # Build rule for target.
@@ -271,6 +284,7 @@ help:
 	@echo "... party"
 	@echo "... rules"
 	@echo "... texture_manager"
+	@echo "... turn"
 .PHONY : help
 
 
