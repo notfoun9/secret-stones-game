@@ -2,8 +2,9 @@
 #include <vector>
 
 void Party::StartNewParty() {
+    pull->ClearTaken();
     field->constructRandomField();
-    delete pull;
+    std::cout << "Field Constructed" << '\n';
     delete deck;
     delete trash;
     delete hand;
@@ -15,18 +16,20 @@ void Party::StartNewParty() {
     dropGetButton->setBoarders(0,0,64,20);
     dropGetButton->setPos(780, 400, 250, 80);
     }
-    pull = new Pull;
     deck = new Deck(pull);
+    std::cout << "Deck constructed" << '\n';
     trash = new Trash();
+    std::cout << "Trash constructed" << '\n';
     hand = new Hand(deck, trash);
+    std::cout << "Hand constructed" << '\n';
     mouse = new Mouse();
+    std::cout << "Mouse constructed" << '\n';
 
     currentTurn = new Turn(field, deck, trash, hand, mouse);
     badTurns = 0;
-    
 }
 
-Party::Party(SDL_Renderer* renderer_, SDL_Window* window_, Game* thisGame_) : renderer(renderer_), window(window_), thisGame(thisGame_) {
+Party::Party(SDL_Renderer* renderer_, SDL_Window* window_, Game* thisGame_, Pull* pull_) : renderer(renderer_), window(window_), thisGame(thisGame_), pull(pull_) {
     exitButton = new Button("../../assets/goBackButton.png", "../../assets/activeGoBack.png");;
     exitButton->setBoarders(0, 0, 34, 11);
     exitButton->setPos(30, 30, 220, 80);
@@ -44,7 +47,6 @@ Party::Party(SDL_Renderer* renderer_, SDL_Window* window_, Game* thisGame_) : re
     dropGetButton->setPos(780, 400, 250, 80);
 
     field = new Field();
-    pull = new Pull;
     deck = new Deck(pull);
     trash = new Trash();
     hand = new Hand(deck, trash);
@@ -52,7 +54,6 @@ Party::Party(SDL_Renderer* renderer_, SDL_Window* window_, Game* thisGame_) : re
     currentTurn = new Turn(field, deck, trash, hand, mouse);
 }
 Party::~Party() {
-    delete pull;
     delete deck;
     delete trash;
     delete hand;

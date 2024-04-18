@@ -9,6 +9,7 @@
 Menu* mainMenu;
 Rules* rules;
 Party* party;
+Pull* pull;
 
 SDL_Renderer* Game::renderer = nullptr;
 
@@ -36,7 +37,8 @@ void Game::init(const char* title, int xPos, int yPos, int width, int height, bo
 
         mainMenu = new Menu(renderer, window, this);
         rules = new Rules(renderer, window, this);
-        party = new Party(renderer, window, this);
+        pull = new Pull();
+        party = new Party(renderer, window, this, pull);
     }
     else {
         isRunning = false;

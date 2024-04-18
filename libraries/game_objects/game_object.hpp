@@ -181,7 +181,7 @@ public:
     Card* Take2();
     Card* Take3();
     Card* Take5();
-
+    void ClearTaken();
 private:
     std::unordered_set<Card*> takenCards;
 

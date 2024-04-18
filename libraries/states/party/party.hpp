@@ -6,7 +6,7 @@
 
 class Party {
 public:
-    Party(SDL_Renderer* renderer, SDL_Window* window, Game* thisGame);
+    Party(SDL_Renderer* renderer, SDL_Window* window, Game* thisGame, Pull* pull);
     ~Party();
     
     void Run();
