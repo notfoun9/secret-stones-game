@@ -78,15 +78,15 @@ void Mouse::Render() {
 }
 
 Field::Field() {
-    allTiles[GR_WH_1] = new Tile("../../assets/gr.png", "../../assets/wh.png", GREEN, WHITE);
-    allTiles[GR_WH_2] = new Tile("../../assets/gr.png", "../../assets/wh.png", GREEN, WHITE);
-    allTiles[GR_WH_3] = new Tile("../../assets/gr.png", "../../assets/wh.png", GREEN, WHITE);
-    allTiles[BLU_PUR_1] = new Tile("../../assets/blu.png", "../../assets/pur.png", BLUE, PURPLE);
-    allTiles[BLU_PUR_2] = new Tile("../../assets/blu.png", "../../assets/pur.png", BLUE, PURPLE);
-    allTiles[BLU_PUR_3] = new Tile("../../assets/blu.png", "../../assets/pur.png", BLUE, PURPLE);
-    allTiles[RED_OR_1] = new Tile("../../assets/red.png", "../../assets/or.png", RED, ORANGE);
-    allTiles[RED_OR_2] = new Tile("../../assets/red.png", "../../assets/or.png", RED, ORANGE);
-    allTiles[BLA_YEL_1] = new Tile("../../assets/bla.png", "../../assets/yel.png", BLACK, YELLOW);
+    allTiles[GR_WH_1] = new Tile("../../assets/deselectedGreen.png", "../../assets/selectedGreen.png", "../../assets/deselectedWhite.png","../../assets/selectedWhite.png",  GREEN, WHITE);
+    allTiles[GR_WH_2] = new Tile("../../assets/deselectedGreen.png", "../../assets/selectedGreen.png", "../../assets/deselectedWhite.png","../../assets/selectedWhite.png", GREEN, WHITE);
+    allTiles[GR_WH_3] = new Tile("../../assets/deselectedGreen.png", "../../assets/selectedGreen.png", "../../assets/deselectedWhite.png","../../assets/selectedWhite.png", GREEN, WHITE);
+    allTiles[BLU_PUR_1] = new Tile("../../assets/deselectedBlue.png", "../../assets/selectedBlue.png", "../../assets/deselectedPurple.png","../../assets/selectedPurple.png", BLUE, PURPLE);
+    allTiles[BLU_PUR_2] = new Tile("../../assets/deselectedBlue.png", "../../assets/selectedBlue.png", "../../assets/deselectedPurple.png","../../assets/selectedPurple.png", BLUE, PURPLE);
+    allTiles[BLU_PUR_3] = new Tile("../../assets/deselectedBlue.png", "../../assets/selectedBlue.png", "../../assets/deselectedPurple.png","../../assets/selectedPurple.png", BLUE, PURPLE);
+    allTiles[RED_OR_1] = new Tile("../../assets/deselectedRed.png", "../../assets/selectedRed.png", "../../assets/deselectedOrange.png","../../assets/selectedOrange.png", RED, ORANGE);
+    allTiles[RED_OR_2] = new Tile("../../assets/deselectedRed.png", "../../assets/selectedRed.png", "../../assets/deselectedOrange.png","../../assets/selectedOrange.png", RED, ORANGE);
+    allTiles[BLA_YEL_1] = new Tile("../../assets/deselectedBlack.png", "../../assets/selectedBlack.png", "../../assets/deselectedYellow.png","../../assets/selectedYellow.png", BLACK, YELLOW);
 
     constructRandomField();
 }
@@ -96,6 +96,15 @@ Field::~Field() {
     }
 }
 void Field::Update(Mouse* mouse) {
+    positions[0]->setPos(280,30,150,150);
+    positions[1]->setPos(430,30,150,150);
+    positions[2]->setPos(580,30,150,150);
+    positions[3]->setPos(280,180,150,150);
+    positions[4]->setPos(430,180,150,150);
+    positions[5]->setPos(580,180,150,150);
+    positions[6]->setPos(280,330,150,150);
+    positions[7]->setPos(430,330,150,150);
+    positions[8]->setPos(580,330,150,150);
     for (Tile* t : positions) {
         t->Update(mouse);
     }
@@ -138,16 +147,23 @@ void Field::constructRandomField() {
     positions[7]->setPos(430,330,150,150);
     positions[8]->setPos(580,330,150,150);
 }   
+void Field::SwapCards(int i, int j) {
+    Tile* tmp = positions[i];
+    positions[i] = positions[j];
+    positions[j] = tmp;
+}
 
-Tile::Tile(const char* side1_, const char* side2_, int color1_, int color2_) : color1(color1_), color2(color2_) {
-    side1 = TextureManager::LoadTexture(side1_);
-    side2 = TextureManager::LoadTexture(side2_);
+Tile::Tile(const char* deSide1_, const char* side1_, const char* deSide2_, const char* side2_, int color1_, int color2_) 
+: color1(color1_), color2(color2_) {
+    side1 = {TextureManager::LoadTexture(deSide1_), TextureManager::LoadTexture(side1_)};
+    side2 = {TextureManager::LoadTexture(deSide2_), TextureManager::LoadTexture(side2_)};
 }
 int Tile::GetActiveColor() {
     return activeColor;
 }
 SDL_Texture* Tile::GetActiveSide() {
-    return *activeSide;
+    if (selected) return activeSide->second;
+    return activeSide->first;
 }  
 void Tile::Update(Mouse* mouse) {
     checkSelected(mouse);
@@ -370,16 +386,6 @@ void Hand::Remove(Card* card_) {
     }
 
 }
-void Hand::CheckClicks() {
-    for (Card* card : cardsInHand) {
-        if (card) {
-            if (card->selected) {
-                card->clicked = 1;
-                return;
-            }
-        }
-    }
-}
 
 Card::Card(const char* defaultTexture, const char* selectedTexture) {
     srcRect = {0,0, 127, 192};
@@ -398,5 +404,4 @@ void Card::Update(Mouse* mouse) {
     else {
         objTexture = defaultStateTexture;
     }
-    clicked = 0;
 }

@@ -12,6 +12,7 @@ public:
     void Run();
     
     void HandleEvents();
+    void HandleMouseLeftClick();
     void Update();
     void Render();
     void StartNewParty();

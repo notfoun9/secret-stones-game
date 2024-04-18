@@ -98,40 +98,7 @@ void Party::HandleEvents() {
                 return;
             }
             case SDL_MOUSEBUTTONUP : {
-                if (event.button.button == SDL_BUTTON_LEFT) {
-                    if (exitButton->selected) {
-                        std::cout << "to menu from party" << std::endl;
-                        thisGame->inParty = 0;
-                        thisGame->inMenu = 1;
-                        return;
-                    }
-                    if (endTurnButton->selected) {
-                        std::cout << "End turn" << '\n';
-                        if (!currentTurn->GoodTurn()) {
-                            ++badTurns;
-                        }
-                        delete currentTurn;
-                        if (badTurns > 4) {
-                            std::cout << "GAME OVER" << '\n';
-                        }
-                        currentTurn = new Turn(field, deck, trash, hand, mouse);
-                        hand->Fill();
-                        dropGetButton->Deselect();
-                        return;
-                    }
-                    if (dropGetButton->checkSelected(mouse)) {
-                        dropGetButton->Click();
-                        currentTurn->ToogleWaitForDrop();
-                        return;
-                    }
-                    hand->CheckClicks();
-                    for (Tile* t : field->positions) {
-                        if (t->selected) {
-                            t->Flip();
-                            return;
-                        }
-                    }
-                }
+                HandleMouseLeftClick();
             }
             default : break;
         }
@@ -144,13 +111,39 @@ void Party::HandleEvents() {
     if (keystates[SDL_SCANCODE_F12]) thisGame->toggleFullscreen();
     SDL_GetMouseState(&(mouse->cursor.x), &(mouse->cursor.y));
     SDL_GetMouseState(&(mouse->tip.x), &(mouse->tip.y));
+}
 
+void Party::HandleMouseLeftClick() {
+    if (exitButton->selected) {
+        std::cout << "to menu from party" << std::endl;
+        thisGame->inParty = 0;
+        thisGame->inMenu = 1;
+        return;
+    }
+    if (endTurnButton->selected) {
+        std::cout << "End turn" << '\n';
+        if (!currentTurn->GoodTurn()) {
+            ++badTurns;
+        }
+        delete currentTurn;
+        if (badTurns > 4) {
+            std::cout << "GAME OVER" << '\n';
+        }
+        currentTurn = new Turn(field, deck, trash, hand, mouse);
+        hand->Fill();
+        dropGetButton->Deselect();
+        return;
+    }
+    if (dropGetButton->checkSelected(mouse)) {
+        dropGetButton->Click();
+        currentTurn->ToogleWaitForDrop();
+        return;
+    }
     currentTurn->HandleEvents();
 }
 
 void Party::Update() {
     exitButton->Update(mouse);
-    currentTurn->Update();
     dropGetButton->Update(mouse);
 
     endTurnButton->Update(mouse);

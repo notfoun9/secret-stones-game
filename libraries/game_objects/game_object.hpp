@@ -81,6 +81,7 @@ public:
 
     void Update(Mouse* mouse);
     void Render();
+    void SwapCards(int i, int j);
 
     enum Tiles {GR_WH_1, GR_WH_2, GR_WH_3, BLU_PUR_1, BLU_PUR_2, BLU_PUR_3, RED_OR_1, RED_OR_2, BLA_YEL_1};
     enum colors {GREEN, WHITE, BLUE, PURPLE, RED, ORANGE, BLACK, YELLOW};
@@ -93,7 +94,7 @@ private:
 
 class Tile : public Button {
 public:
-    Tile(const char* side1, const char* side2, int colintor1, int color2);
+    Tile(const char* deSide1, const char* side1, const char* deSide2, const char* side2, int color1, int color2);
     ~Tile() = default;
 
     int GetActiveColor();
@@ -104,13 +105,13 @@ public:
     void Select();
 
 private:
-    SDL_Texture* side1 = nullptr;
-    SDL_Texture* side2 = nullptr;
+    std::pair<SDL_Texture*, SDL_Texture*> side1 = {nullptr, nullptr};
+    std::pair<SDL_Texture*, SDL_Texture*> side2 = {nullptr, nullptr};
     int color1;
     int color2;
 
     int activeColor = color1;
-    SDL_Texture** activeSide = &side1;
+    std::pair<SDL_Texture*, SDL_Texture*>* activeSide = &side1;
 } ;
 
 class Card : public Button {
@@ -121,7 +122,6 @@ public:
     void Drop(Trash* trash);
     void Update(Mouse* mouse);
 
-    bool clicked = 0;
     enum colors {GREEN, WHITE, BLUE, PURPLE, RED, ORANGE, BLACK, YELLOW};
     int num = 0;
 } ;
