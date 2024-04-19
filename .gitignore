@@ -2,3 +2,6 @@
 .DS_Store
 .DSstore
 .vscode
+
+/out
+/.vs
