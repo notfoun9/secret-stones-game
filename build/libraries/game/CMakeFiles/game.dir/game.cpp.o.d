@@ -799,7 +799,7 @@ libraries/game/CMakeFiles/game.dir/game.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/unordered_set \
   /Users/maksim/Study/C++/gameTest/libraries/game/../texture_manager/texture_manager.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/game/../game_objects/game_objects.hpp \
-  /Users/maksim/Study/C++/gameTest/libraries/game/../pull/pull.hpp \
+  /Users/maksim/Study/C++/gameTest/libraries/game_objects/pull/../pull/pull.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/game/../conditions/conditions.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/game/../states/rules/rules.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/game/../states/menu/menu.hpp \

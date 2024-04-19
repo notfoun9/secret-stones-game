@@ -17,6 +17,7 @@ public:
     void Update();
     void Render();
     void StartNewParty();
+    void EndDropAction();
 private:
     Mouse* mouse;
     Button* exitButton;
@@ -24,6 +25,8 @@ private:
     Switch* dropGetButton;
 
     GameObject* note;
+    SDL_Texture* strikes[4];
+    SDL_Rect strikesDest = {860, 515, 140, 140};
     Turn* currentTurn;
 
     int badTurns = 0;

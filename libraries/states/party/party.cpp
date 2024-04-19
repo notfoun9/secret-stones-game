@@ -19,13 +19,18 @@ void Party::StartNewParty() {
 }
 
 Party::Party(SDL_Renderer* renderer_, SDL_Window* window_, Game* thisGame_, Pull* pull_) : renderer(renderer_), window(window_), thisGame(thisGame_), pull(pull_) {
+    strikes[0] = TextureManager::LoadTexture("../../assets/strikes0.png");
+    strikes[1] = TextureManager::LoadTexture("../../assets/strikes1.png");
+    strikes[2] = TextureManager::LoadTexture("../../assets/strikes2.png");
+    strikes[3] = TextureManager::LoadTexture("../../assets/strikes3.png");
+
     exitButton = new Button("../../assets/goBackButton.png", "../../assets/activeGoBack.png");;
     exitButton->setBoarders(0, 0, 34, 11);
     exitButton->setPos(30, 30, 220, 80);
 
     note = new GameObject("../../assets/note.png");
     note->setBoarders(0,0,149, 280);
-    note->setPos(30, 140, 189, 310);
+    note->setPos(30, 140, 189, 340);
 
     endTurnButton = new Button("../../assets/endTurnButton.png", "../../assets/activeEndTurnButton.png");
     endTurnButton->setBoarders(0, 0, 64, 18);
@@ -33,7 +38,7 @@ Party::Party(SDL_Renderer* renderer_, SDL_Window* window_, Game* thisGame_, Pull
 
     dropGetButton = new Switch("../../assets/dropGetButton.png", "../../assets/activeDropGetButton.png");
     dropGetButton->setBoarders(0,0,64,20);
-    dropGetButton->setPos(780, 400, 250, 80);
+    dropGetButton->setPos(30, 500, 250, 80);
 
     mouse = new Mouse();
     field = new Field();
@@ -48,6 +53,7 @@ Party::~Party() {
     delete trash;
     delete hand;
 
+    for (auto s : strikes) delete s;
     delete currentTurn;
     delete exitButton;
     delete field;
@@ -111,11 +117,12 @@ void Party::HandleMouseLeftClick() {
     if (endTurnButton->selected) {
         std::cout << "End turn" << '\n';
         if (!(currentTurn->GoodTurn())) {
+            std::cout << "Turn Is Bad" << '\n';
             ++badTurns;
         }
-        delete currentTurn;
         if (hand->Empty() && deck->Empty() && trash->Empty()) {
             std::cout << "YOU WIN!" << '\n';
+            thisGame->isWin = 1;
             thisGame->inGameOver = 1;
             thisGame->inParty = 0;
         }
@@ -124,6 +131,7 @@ void Party::HandleMouseLeftClick() {
             thisGame->inGameOver = 1;
             thisGame->inParty = 0;
         }
+        delete currentTurn;
         currentTurn = new Turn(field, deck, trash, hand, mouse);
         hand->Fill();
         dropGetButton->Deselect();
@@ -152,11 +160,14 @@ void Party::Update() {
 
 void Party::Render() {
     SDL_RenderClear(renderer);
+
+    if (badTurns < 4) SDL_RenderCopy(Game::renderer, strikes[badTurns], NULL, &strikesDest);
     dropGetButton->Render();
     note->Render();
     endTurnButton->Render();
     exitButton->Render();
 
+    trash->Render();
     deck->Render();
     field->Render();
     hand->Render();
@@ -164,3 +175,6 @@ void Party::Render() {
     SDL_RenderPresent(renderer);
 }
 
+void Party::EndDropAction() {
+    dropGetButton->Deselect();
+}

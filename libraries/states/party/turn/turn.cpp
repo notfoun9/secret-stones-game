@@ -28,8 +28,6 @@ void Turn::HandleDropAction() {
             hand->Remove(card);
             card->Drop(trash);
             ++actionsAvailable;
-            std::cout << "Card is dropped" << '\n';
-            std::cout << "Actions left: " << actionsAvailable << '\n';
             return;
         }
     }

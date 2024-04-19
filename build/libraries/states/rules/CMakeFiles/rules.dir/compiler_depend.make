@@ -747,6 +747,7 @@ libraries/states/rules/CMakeFiles/rules.dir/rules.cpp.o: /Users/maksim/Study/C++
   /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include/stdarg.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include/stdint.h \
+  /Users/maksim/Study/C++/gameTest/libraries/game_objects/pull/pull.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/states/rules/rules.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/conditions/conditions.hpp \
   /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL.h \
@@ -802,17 +803,16 @@ libraries/states/rules/CMakeFiles/rules.dir/rules.cpp.o: /Users/maksim/Study/C++
   /Users/maksim/Study/C++/gameTest/src/inc/SDL2/close_code.h \
   /Users/maksim/Study/C++/gameTest/libraries/game/game.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/game_objects/game_objects.hpp \
-  /Users/maksim/Study/C++/gameTest/libraries/pull/pull.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/texture_manager/texture_manager.hpp
 
 
 /Users/maksim/Study/C++/gameTest/libraries/texture_manager/texture_manager.hpp:
 
-/Users/maksim/Study/C++/gameTest/libraries/pull/pull.hpp:
-
 /Users/maksim/Study/C++/gameTest/src/inc/SDL2/close_code.h:
 
 /Users/maksim/Study/C++/gameTest/src/inc/SDL2/begin_code.h:
+
+/Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_video.h:
 
 /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_timer.h:
 
@@ -1960,6 +1960,8 @@ libraries/states/rules/CMakeFiles/rules.dir/rules.cpp.o: /Users/maksim/Study/C++
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/ranges_reverse_copy.h:
 
+/Users/maksim/Study/C++/gameTest/libraries/game_objects/pull/pull.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/ranges_replace_if.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/stable_sort.h:
@@ -1999,8 +2001,6 @@ libraries/states/rules/CMakeFiles/rules.dir/rules.cpp.o: /Users/maksim/Study/C++
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/for_each.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__memory/construct_at.h:
-
-/Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_video.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/binary_search.h:
 

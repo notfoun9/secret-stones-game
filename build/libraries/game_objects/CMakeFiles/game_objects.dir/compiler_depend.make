@@ -747,7 +747,6 @@ libraries/game_objects/CMakeFiles/game_objects.dir/game_object.cpp.o: /Users/mak
   /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include/stdarg.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include/stdint.h \
-  /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_image.h \
   /Users/maksim/Study/C++/gameTest/libraries/conditions/conditions.hpp \
   /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL.h \
   /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_assert.h \
@@ -802,13 +801,14 @@ libraries/game_objects/CMakeFiles/game_objects.dir/game_object.cpp.o: /Users/mak
   /Users/maksim/Study/C++/gameTest/src/inc/SDL2/close_code.h \
   /Users/maksim/Study/C++/gameTest/libraries/game/game.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/game_objects/game_objects.hpp \
-  /Users/maksim/Study/C++/gameTest/libraries/pull/pull.hpp \
-  /Users/maksim/Study/C++/gameTest/libraries/texture_manager/texture_manager.hpp
+  /Users/maksim/Study/C++/gameTest/libraries/texture_manager/texture_manager.hpp \
+  /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_image.h \
+  /Users/maksim/Study/C++/gameTest/libraries/game_objects/pull/pull.hpp
 
+
+/Users/maksim/Study/C++/gameTest/libraries/game_objects/pull/pull.hpp:
 
 /Users/maksim/Study/C++/gameTest/libraries/texture_manager/texture_manager.hpp:
-
-/Users/maksim/Study/C++/gameTest/libraries/pull/pull.hpp:
 
 /Users/maksim/Study/C++/gameTest/src/inc/SDL2/close_code.h:
 

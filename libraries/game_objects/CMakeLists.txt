@@ -1,3 +1,5 @@
+add_subdirectory(pull)
+
 add_library(game_objects game_object.cpp game_objects.hpp)
 
 set_property(TARGET game_objects PROPERTY CXX_STANDARD 20)

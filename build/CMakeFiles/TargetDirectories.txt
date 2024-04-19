@@ -24,6 +24,13 @@
 /Users/maksim/Study/C++/gameTest/build/libraries/game_objects/CMakeFiles/install.dir
 /Users/maksim/Study/C++/gameTest/build/libraries/game_objects/CMakeFiles/install/local.dir
 /Users/maksim/Study/C++/gameTest/build/libraries/game_objects/CMakeFiles/install/strip.dir
+/Users/maksim/Study/C++/gameTest/build/libraries/game_objects/pull/CMakeFiles/pull.dir
+/Users/maksim/Study/C++/gameTest/build/libraries/game_objects/pull/CMakeFiles/edit_cache.dir
+/Users/maksim/Study/C++/gameTest/build/libraries/game_objects/pull/CMakeFiles/rebuild_cache.dir
+/Users/maksim/Study/C++/gameTest/build/libraries/game_objects/pull/CMakeFiles/list_install_components.dir
+/Users/maksim/Study/C++/gameTest/build/libraries/game_objects/pull/CMakeFiles/install.dir
+/Users/maksim/Study/C++/gameTest/build/libraries/game_objects/pull/CMakeFiles/install/local.dir
+/Users/maksim/Study/C++/gameTest/build/libraries/game_objects/pull/CMakeFiles/install/strip.dir
 /Users/maksim/Study/C++/gameTest/build/libraries/texture_manager/CMakeFiles/texture_manager.dir
 /Users/maksim/Study/C++/gameTest/build/libraries/texture_manager/CMakeFiles/edit_cache.dir
 /Users/maksim/Study/C++/gameTest/build/libraries/texture_manager/CMakeFiles/rebuild_cache.dir
@@ -72,13 +79,6 @@
 /Users/maksim/Study/C++/gameTest/build/libraries/states/gameOver/CMakeFiles/install.dir
 /Users/maksim/Study/C++/gameTest/build/libraries/states/gameOver/CMakeFiles/install/local.dir
 /Users/maksim/Study/C++/gameTest/build/libraries/states/gameOver/CMakeFiles/install/strip.dir
-/Users/maksim/Study/C++/gameTest/build/libraries/pull/CMakeFiles/pull.dir
-/Users/maksim/Study/C++/gameTest/build/libraries/pull/CMakeFiles/edit_cache.dir
-/Users/maksim/Study/C++/gameTest/build/libraries/pull/CMakeFiles/rebuild_cache.dir
-/Users/maksim/Study/C++/gameTest/build/libraries/pull/CMakeFiles/list_install_components.dir
-/Users/maksim/Study/C++/gameTest/build/libraries/pull/CMakeFiles/install.dir
-/Users/maksim/Study/C++/gameTest/build/libraries/pull/CMakeFiles/install/local.dir
-/Users/maksim/Study/C++/gameTest/build/libraries/pull/CMakeFiles/install/strip.dir
 /Users/maksim/Study/C++/gameTest/build/libraries/conditions/CMakeFiles/conditions.dir
 /Users/maksim/Study/C++/gameTest/build/libraries/conditions/CMakeFiles/edit_cache.dir
 /Users/maksim/Study/C++/gameTest/build/libraries/conditions/CMakeFiles/rebuild_cache.dir

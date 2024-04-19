@@ -188,6 +188,19 @@ game_objects/fast:
 .PHONY : game_objects/fast
 
 #=============================================================================
+# Target rules for targets named pull
+
+# Build rule for target.
+pull: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pull
+.PHONY : pull
+
+# fast build rule for target.
+pull/fast:
+	$(MAKE) $(MAKESILENT) -f libraries/game_objects/pull/CMakeFiles/pull.dir/build.make libraries/game_objects/pull/CMakeFiles/pull.dir/build
+.PHONY : pull/fast
+
+#=============================================================================
 # Target rules for targets named texture_manager
 
 # Build rule for target.
@@ -264,19 +277,6 @@ gameOver: cmake_check_build_system
 gameOver/fast:
 	$(MAKE) $(MAKESILENT) -f libraries/states/gameOver/CMakeFiles/gameOver.dir/build.make libraries/states/gameOver/CMakeFiles/gameOver.dir/build
 .PHONY : gameOver/fast
-
-#=============================================================================
-# Target rules for targets named pull
-
-# Build rule for target.
-pull: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pull
-.PHONY : pull
-
-# fast build rule for target.
-pull/fast:
-	$(MAKE) $(MAKESILENT) -f libraries/pull/CMakeFiles/pull.dir/build.make libraries/pull/CMakeFiles/pull.dir/build
-.PHONY : pull/fast
 
 #=============================================================================
 # Target rules for targets named conditions

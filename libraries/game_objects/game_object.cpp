@@ -20,6 +20,9 @@ void GameObject::Render() {
     SDL_RenderCopy(Game::renderer, objTexture, &srcRect, &destRect);
 }
 void GameObject::Update() {}
+SDL_Texture* GameObject::GetTexture() {
+    return objTexture;
+}
 
 
 Button::Button (const char* defaultTexture, const char* selectedTexture) : 
@@ -94,15 +97,15 @@ Field::~Field() {
     }
 }
 void Field::Update(Mouse* mouse) {
-    positions[0]->setPos(280,30,150,150);
-    positions[1]->setPos(430,30,150,150);
-    positions[2]->setPos(580,30,150,150);
-    positions[3]->setPos(280,180,150,150);
-    positions[4]->setPos(430,180,150,150);
-    positions[5]->setPos(580,180,150,150);
-    positions[6]->setPos(280,330,150,150);
-    positions[7]->setPos(430,330,150,150);
-    positions[8]->setPos(580,330,150,150);
+    positions[0]->setPos(300,30,150,150);
+    positions[1]->setPos(450,30,150,150);
+    positions[2]->setPos(600,30,150,150);
+    positions[3]->setPos(300,180,150,150);
+    positions[4]->setPos(450,180,150,150);
+    positions[5]->setPos(600,180,150,150);
+    positions[6]->setPos(300,330,150,150);
+    positions[7]->setPos(450,330,150,150);
+    positions[8]->setPos(600,330,150,150);
     for (Tile* t : positions) {
         t->Update(mouse);
     }
@@ -136,15 +139,15 @@ void Field::constructRandomField() {
         positions[i] = seq[i].second;
     }
 
-    positions[0]->setPos(280,30,150,150);
-    positions[1]->setPos(430,30,150,150);
-    positions[2]->setPos(580,30,150,150);
-    positions[3]->setPos(280,180,150,150);
-    positions[4]->setPos(430,180,150,150);
-    positions[5]->setPos(580,180,150,150);
-    positions[6]->setPos(280,330,150,150);
-    positions[7]->setPos(430,330,150,150);
-    positions[8]->setPos(580,330,150,150);
+    positions[0]->setPos(300,30,150,150);
+    positions[1]->setPos(450,30,150,150);
+    positions[2]->setPos(600,30,150,150);
+    positions[3]->setPos(300,180,150,150);
+    positions[4]->setPos(450,180,150,150);
+    positions[5]->setPos(600,180,150,150);
+    positions[6]->setPos(300,330,150,150);
+    positions[7]->setPos(450,330,150,150);
+    positions[8]->setPos(600,330,150,150);
 }   
 void Field::SwapCards(int i, int j) {
     Tile* tmp = positions[i];
@@ -196,8 +199,8 @@ void Tile::Unclick() {
 
 Deck::Deck(Pull* pull) {   
     objTexture = TextureManager::LoadTexture("../../assets/deck.png");
-    setBoarders(0,0, 192, 128);
-    setPos(830, 494, 220, 128);
+    setBoarders(0,0, 128, 192);
+    setPos(760, 283, 128, 192); 
     srand(time(0));
     std::vector<std::pair<int, Card*>> cards;
     for (int i = 0; i < 8; ++i) {
@@ -220,7 +223,7 @@ Deck::Deck(Pull* pull) {
     }
     std::cout << '\n';
 }
-Deck::Deck(Trash* trash) {
+void Deck::Fill(Trash* trash) {
     while (!trash->Empty()) {
         cardsInDeck.push(trash->Take());
     }
@@ -242,6 +245,10 @@ void Deck::Render() {
     if (!Empty()) SDL_RenderCopy(Game::renderer, objTexture, &srcRect, &destRect);
 }
 
+Trash::Trash() {
+    setBoarders(0,0, 128, 192);
+    setPos(900, 190, 128, 192);
+}
 void Trash::Clear() {
     cards.clear();
 }
@@ -259,43 +266,35 @@ bool Trash::Empty() {
 int Trash::Size() {
     return cards.size();
 }
+void Trash::Render() {
+    if (!Empty()) {
+        objTexture = cards.back()->GetTexture();
+        SDL_RenderCopy(Game::renderer, objTexture, &srcRect, &destRect);
+    }
+}
 
 Hand::Hand(Deck* deck_, Trash* trash_) : trash(trash_), deck(deck_), size(4) {
     for (int i = 0; i < size; ++i) {
         cardsInHand.push_back(deck->Take());
     }
 }
-// void Hand::Push() {
-//     int numOfcards = cardsInHand.size();
-//     int nullpts = 0;
-//     for (auto card : cardsInHand) {
-//         if (card == nullptr) ++nullpts;
-//     }
-//     if (nullpts > 0) {
-//         for (int i = 0, j = numOfcards; i < j; ++i, --j) {
-//             while (cardsInHand[i] != nullptr && i < j) ++i;
-//             while (cardsInHand[j] == nullptr && i < j) --j;
-//             if (i < j) std::swap(cardsInHand[i], cardsInHand[j]);
-//             std::cout << "reached123" << '\n';
-//         }
-//     }
-//     size = numOfcards - nullpts;
-//     cardsInHand.resize(std::max(int(size), 4));
-// }
+
 void Hand::Fill() {
     int nullpts = 0;
     for (auto card : cardsInHand) {
         if (card == nullptr) ++nullpts;
     }
     size -= nullpts;
-    // if (size < 4 && deck->Empty() && !trash->Empty()) {
-    //     delete deck;
-    //     deck = new Deck(trash);
-    // }
     if (size < 4 && (!deck->Empty() || !trash->Empty())) {
         size = 4;
         for (int i = 0; i < 4; ++i) {
-            if (!cardsInHand[i] && !deck->Empty()) {
+            if (deck->Empty() && trash->Empty()) {
+                return;
+            }
+            if (deck->Empty()) {
+                deck->Fill(trash);
+            }
+            if (!cardsInHand[i]) {
                 cardsInHand[i] = deck->Take();
             }
         }
@@ -321,7 +320,6 @@ void Hand::Render() {
 void Hand::Remove(Card* card_) {
     for (Card* &card : cardsInHand) {
         if (card == card_) {
-            std::cout << "Card " << card << "is now nullptr" << '\n';
             card = nullptr;
             return;
         }

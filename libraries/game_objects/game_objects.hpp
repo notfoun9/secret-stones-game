@@ -27,6 +27,7 @@ public:
 
     virtual void setBoarders(int x1, int y1, int x2, int y2);
     void setPos(int x1, int y1, int x2, int y2);
+    SDL_Texture* GetTexture();
     SDL_Rect srcRect;
     SDL_Rect destRect;
 protected:
@@ -156,7 +157,6 @@ private:
 class Deck : public GameObject {
 public:
     Deck(Pull* pull);
-    Deck(Trash*);
     ~Deck() = default;
     
     void Render();
@@ -164,15 +164,17 @@ public:
     int Size();
     bool Empty();
     Card* Take();
+    void Fill(Trash* trash);
 private:
     std::stack<Card*> cardsInDeck;
 } ;
 
 class Trash : public GameObject {
 public:
-    Trash() = default;
+    Trash();
     ~Trash() = default;
 
+    void Render();
     void Clear();
     void Add(Card* card);
     Card* Take();

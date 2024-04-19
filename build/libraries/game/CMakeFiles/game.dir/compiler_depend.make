@@ -801,24 +801,24 @@ libraries/game/CMakeFiles/game.dir/game.cpp.o: /Users/maksim/Study/C++/gameTest/
   /Users/maksim/Study/C++/gameTest/libraries/conditions/conditions.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/game/game.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/game_objects/game_objects.hpp \
-  /Users/maksim/Study/C++/gameTest/libraries/pull/pull.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/states/gameOver/gameOver.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/states/menu/menu.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/states/party/party.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/states/rules/rules.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/texture_manager/texture_manager.hpp \
+  /Users/maksim/Study/C++/gameTest/libraries/game_objects/pull/pull.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/states/party/turn/turn.hpp
 
 
 /Users/maksim/Study/C++/gameTest/libraries/states/party/turn/turn.hpp:
+
+/Users/maksim/Study/C++/gameTest/libraries/game_objects/pull/pull.hpp:
 
 /Users/maksim/Study/C++/gameTest/libraries/texture_manager/texture_manager.hpp:
 
 /Users/maksim/Study/C++/gameTest/libraries/states/rules/rules.hpp:
 
 /Users/maksim/Study/C++/gameTest/libraries/states/party/party.hpp:
-
-/Users/maksim/Study/C++/gameTest/libraries/pull/pull.hpp:
 
 /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_timer.h:
 

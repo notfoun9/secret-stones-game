@@ -47,3 +47,8 @@ file(COPY endTurnButton.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
 file(COPY activeEndTurnButton.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
 file(COPY activeDropGetButton.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
 file(COPY dropGetButton.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
+
+file(COPY strikes0.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
+file(COPY strikes1.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
+file(COPY strikes2.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
+file(COPY strikes3.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
