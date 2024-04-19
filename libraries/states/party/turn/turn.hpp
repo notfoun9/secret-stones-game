@@ -1,6 +1,7 @@
 #pragma once
 
-#include <game_objects/game_objects.hpp>
+#include <card/card.hpp>
+#include <field/field.hpp>
 
 class Turn {
 public:

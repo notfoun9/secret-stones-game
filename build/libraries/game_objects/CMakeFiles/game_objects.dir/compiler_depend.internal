@@ -804,5 +804,7 @@ libraries/game_objects/CMakeFiles/game_objects.dir/game_object.cpp.o
  /Users/maksim/Study/C++/gameTest/libraries/game_objects/game_objects.hpp
  /Users/maksim/Study/C++/gameTest/libraries/texture_manager/texture_manager.hpp
  /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_image.h
+ /Users/maksim/Study/C++/gameTest/libraries/game_objects/field/field.hpp
+ /Users/maksim/Study/C++/gameTest/libraries/game_objects/interface_objects/interface_objects.hpp
  /Users/maksim/Study/C++/gameTest/libraries/game_objects/pull/pull.hpp
 

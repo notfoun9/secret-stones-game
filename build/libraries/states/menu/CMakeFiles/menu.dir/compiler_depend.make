@@ -747,7 +747,6 @@ libraries/states/menu/CMakeFiles/menu.dir/menu.cpp.o: /Users/maksim/Study/C++/ga
   /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include/stdarg.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include/stdint.h \
-  /Users/maksim/Study/C++/gameTest/libraries/conditions/conditions.hpp \
   /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL.h \
   /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_assert.h \
   /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_atomic.h \
@@ -800,17 +799,14 @@ libraries/states/menu/CMakeFiles/menu.dir/menu.cpp.o: /Users/maksim/Study/C++/ga
   /Users/maksim/Study/C++/gameTest/src/inc/SDL2/begin_code.h \
   /Users/maksim/Study/C++/gameTest/src/inc/SDL2/close_code.h \
   /Users/maksim/Study/C++/gameTest/libraries/game/game.hpp \
-  /Users/maksim/Study/C++/gameTest/libraries/game_objects/game_objects.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/texture_manager/texture_manager.hpp \
-  /Users/maksim/Study/C++/gameTest/libraries/game_objects/pull/pull.hpp \
+  /Users/maksim/Study/C++/gameTest/libraries/game_objects/interface_objects/interface_objects.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/states/menu/menu.hpp
 
 
-/Users/maksim/Study/C++/gameTest/libraries/game_objects/pull/pull.hpp:
+/Users/maksim/Study/C++/gameTest/libraries/game_objects/interface_objects/interface_objects.hpp:
 
 /Users/maksim/Study/C++/gameTest/libraries/texture_manager/texture_manager.hpp:
-
-/Users/maksim/Study/C++/gameTest/src/inc/SDL2/close_code.h:
 
 /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_timer.h:
 
@@ -1468,8 +1464,6 @@ libraries/states/menu/CMakeFiles/menu.dir/menu.cpp.o: /Users/maksim/Study/C++/ga
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__memory/unique_ptr.h:
 
-/Users/maksim/Study/C++/gameTest/libraries/conditions/conditions.hpp:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__type_traits/is_nothrow_copy_constructible.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__memory/shared_ptr.h:
@@ -1668,6 +1662,8 @@ libraries/states/menu/CMakeFiles/menu.dir/menu.cpp.o: /Users/maksim/Study/C++/ga
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__concepts/regular.h:
 
+/Users/maksim/Study/C++/gameTest/src/inc/SDL2/close_code.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/nth_element.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__concepts/movable.h:
@@ -1827,8 +1823,6 @@ libraries/states/menu/CMakeFiles/menu.dir/menu.cpp.o: /Users/maksim/Study/C++/ga
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/limits.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__iterator/counted_iterator.h:
-
-/Users/maksim/Study/C++/gameTest/libraries/game_objects/game_objects.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/sort.h:
 

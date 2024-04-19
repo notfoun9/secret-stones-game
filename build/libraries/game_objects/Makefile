@@ -161,44 +161,6 @@ depend:
 	cd /Users/maksim/Study/C++/gameTest/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-# Convenience name for target.
-libraries/game_objects/CMakeFiles/game_objects.dir/rule:
-	cd /Users/maksim/Study/C++/gameTest/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/game_objects/CMakeFiles/game_objects.dir/rule
-.PHONY : libraries/game_objects/CMakeFiles/game_objects.dir/rule
-
-# Convenience name for target.
-game_objects: libraries/game_objects/CMakeFiles/game_objects.dir/rule
-.PHONY : game_objects
-
-# fast build rule for target.
-game_objects/fast:
-	cd /Users/maksim/Study/C++/gameTest/build && $(MAKE) $(MAKESILENT) -f libraries/game_objects/CMakeFiles/game_objects.dir/build.make libraries/game_objects/CMakeFiles/game_objects.dir/build
-.PHONY : game_objects/fast
-
-game_object.o: game_object.cpp.o
-.PHONY : game_object.o
-
-# target to build an object file
-game_object.cpp.o:
-	cd /Users/maksim/Study/C++/gameTest/build && $(MAKE) $(MAKESILENT) -f libraries/game_objects/CMakeFiles/game_objects.dir/build.make libraries/game_objects/CMakeFiles/game_objects.dir/game_object.cpp.o
-.PHONY : game_object.cpp.o
-
-game_object.i: game_object.cpp.i
-.PHONY : game_object.i
-
-# target to preprocess a source file
-game_object.cpp.i:
-	cd /Users/maksim/Study/C++/gameTest/build && $(MAKE) $(MAKESILENT) -f libraries/game_objects/CMakeFiles/game_objects.dir/build.make libraries/game_objects/CMakeFiles/game_objects.dir/game_object.cpp.i
-.PHONY : game_object.cpp.i
-
-game_object.s: game_object.cpp.s
-.PHONY : game_object.s
-
-# target to generate assembly for a file
-game_object.cpp.s:
-	cd /Users/maksim/Study/C++/gameTest/build && $(MAKE) $(MAKESILENT) -f libraries/game_objects/CMakeFiles/game_objects.dir/build.make libraries/game_objects/CMakeFiles/game_objects.dir/game_object.cpp.s
-.PHONY : game_object.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -211,10 +173,6 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... game_objects"
-	@echo "... game_object.o"
-	@echo "... game_object.i"
-	@echo "... game_object.s"
 .PHONY : help
 
 

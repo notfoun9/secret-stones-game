@@ -1,6 +1,8 @@
 #pragma once
 
-#include <game_objects/game_objects.hpp>
+#include <card/card.hpp>
+#include <interface_objects/interface_objects.hpp>
+
 class Card;
 class Conditions;
 class Pull {

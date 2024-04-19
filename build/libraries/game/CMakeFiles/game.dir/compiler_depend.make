@@ -800,12 +800,14 @@ libraries/game/CMakeFiles/game.dir/game.cpp.o: /Users/maksim/Study/C++/gameTest/
   /Users/maksim/Study/C++/gameTest/src/inc/SDL2/close_code.h \
   /Users/maksim/Study/C++/gameTest/libraries/conditions/conditions.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/game/game.hpp \
-  /Users/maksim/Study/C++/gameTest/libraries/game_objects/game_objects.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/states/gameOver/gameOver.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/states/menu/menu.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/states/party/party.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/states/rules/rules.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/texture_manager/texture_manager.hpp \
+  /Users/maksim/Study/C++/gameTest/libraries/game_objects/card/card.hpp \
+  /Users/maksim/Study/C++/gameTest/libraries/game_objects/field/field.hpp \
+  /Users/maksim/Study/C++/gameTest/libraries/game_objects/interface_objects/interface_objects.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/game_objects/pull/pull.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/states/party/turn/turn.hpp
 
@@ -813,6 +815,10 @@ libraries/game/CMakeFiles/game.dir/game.cpp.o: /Users/maksim/Study/C++/gameTest/
 /Users/maksim/Study/C++/gameTest/libraries/states/party/turn/turn.hpp:
 
 /Users/maksim/Study/C++/gameTest/libraries/game_objects/pull/pull.hpp:
+
+/Users/maksim/Study/C++/gameTest/libraries/game_objects/interface_objects/interface_objects.hpp:
+
+/Users/maksim/Study/C++/gameTest/libraries/game_objects/card/card.hpp:
 
 /Users/maksim/Study/C++/gameTest/libraries/texture_manager/texture_manager.hpp:
 
@@ -1430,6 +1436,8 @@ libraries/game/CMakeFiles/game.dir/game.cpp.o: /Users/maksim/Study/C++/gameTest/
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__ranges/view_interface.h:
 
+/Users/maksim/Study/C++/gameTest/libraries/game_objects/field/field.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__ranges/subrange.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__ranges/size.h:
@@ -1839,8 +1847,6 @@ libraries/game/CMakeFiles/game.dir/game.cpp.o: /Users/maksim/Study/C++/gameTest/
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/limits.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__iterator/counted_iterator.h:
-
-/Users/maksim/Study/C++/gameTest/libraries/game_objects/game_objects.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/sort.h:
 

@@ -801,7 +801,9 @@ libraries/conditions/CMakeFiles/conditions.dir/conditions.cpp.o
  /Users/maksim/Study/C++/gameTest/src/inc/SDL2/begin_code.h
  /Users/maksim/Study/C++/gameTest/src/inc/SDL2/close_code.h
  /Users/maksim/Study/C++/gameTest/libraries/game/game.hpp
- /Users/maksim/Study/C++/gameTest/libraries/game_objects/game_objects.hpp
  /Users/maksim/Study/C++/gameTest/libraries/texture_manager/texture_manager.hpp
+ /Users/maksim/Study/C++/gameTest/libraries/game_objects/card/card.hpp
+ /Users/maksim/Study/C++/gameTest/libraries/game_objects/field/field.hpp
+ /Users/maksim/Study/C++/gameTest/libraries/game_objects/interface_objects/interface_objects.hpp
  /Users/maksim/Study/C++/gameTest/libraries/game_objects/pull/pull.hpp
 

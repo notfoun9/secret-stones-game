@@ -747,6 +747,9 @@ libraries/states/party/CMakeFiles/party.dir/party.cpp.o: /Users/maksim/Study/C++
   /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include/stdarg.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include/stdint.h \
+  /Users/maksim/Study/C++/gameTest/libraries/game_objects/card/card.hpp \
+  /Users/maksim/Study/C++/gameTest/libraries/game_objects/field/field.hpp \
+  /Users/maksim/Study/C++/gameTest/libraries/game_objects/interface_objects/interface_objects.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/game_objects/pull/pull.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/states/party/party.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/states/party/turn/turn.hpp \
@@ -803,7 +806,6 @@ libraries/states/party/CMakeFiles/party.dir/party.cpp.o: /Users/maksim/Study/C++
   /Users/maksim/Study/C++/gameTest/src/inc/SDL2/begin_code.h \
   /Users/maksim/Study/C++/gameTest/src/inc/SDL2/close_code.h \
   /Users/maksim/Study/C++/gameTest/libraries/game/game.hpp \
-  /Users/maksim/Study/C++/gameTest/libraries/game_objects/game_objects.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/texture_manager/texture_manager.hpp
 
 
@@ -817,7 +819,11 @@ libraries/states/party/CMakeFiles/party.dir/party.cpp.o: /Users/maksim/Study/C++
 
 /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_version.h:
 
+/Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_touch.h:
+
 /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_timer.h:
+
+/Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_thread.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__concepts/class_or_enum.h:
 
@@ -1255,6 +1261,8 @@ libraries/states/party/CMakeFiles/party.dir/party.cpp.o: /Users/maksim/Study/C++
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__type_traits/is_standard_layout.h:
 
+/Users/maksim/Study/C++/gameTest/libraries/game_objects/card/card.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__type_traits/is_signed_integer.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__type_traits/is_signed.h:
@@ -1422,6 +1430,8 @@ libraries/states/party/CMakeFiles/party.dir/party.cpp.o: /Users/maksim/Study/C++
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__utility/exchange.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__ranges/view_interface.h:
+
+/Users/maksim/Study/C++/gameTest/libraries/game_objects/field/field.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__ranges/subrange.h:
 
@@ -1671,6 +1681,8 @@ libraries/states/party/CMakeFiles/party.dir/party.cpp.o: /Users/maksim/Study/C++
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/memory:
 
+/Users/maksim/Study/C++/gameTest/libraries/game_objects/interface_objects/interface_objects.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/wait.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__type_traits/remove_const.h:
@@ -1829,8 +1841,6 @@ libraries/states/party/CMakeFiles/party.dir/party.cpp.o: /Users/maksim/Study/C++
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__iterator/counted_iterator.h:
 
-/Users/maksim/Study/C++/gameTest/libraries/game_objects/game_objects.hpp:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/sort.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__bit/byteswap.h:
@@ -1856,8 +1866,6 @@ libraries/states/party/CMakeFiles/party.dir/party.cpp.o: /Users/maksim/Study/C++
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/unique.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/remove.h:
-
-/Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_touch.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/sort_heap.h:
 
@@ -2362,8 +2370,6 @@ libraries/states/party/CMakeFiles/party.dir/party.cpp.o: /Users/maksim/Study/C++
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/unwrap_range.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/ranges_count_if.h:
-
-/Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_thread.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__type_traits/is_trivially_destructible.h:
 

@@ -747,6 +747,9 @@ libraries/states/gameOver/CMakeFiles/gameOver.dir/gameOver.cpp.o: /Users/maksim/
   /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include/stdarg.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include/stdint.h \
+  /Users/maksim/Study/C++/gameTest/libraries/game_objects/card/card.hpp \
+  /Users/maksim/Study/C++/gameTest/libraries/game_objects/field/field.hpp \
+  /Users/maksim/Study/C++/gameTest/libraries/game_objects/interface_objects/interface_objects.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/game_objects/pull/pull.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/states/gameOver/gameOver.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/conditions/conditions.hpp \
@@ -802,7 +805,6 @@ libraries/states/gameOver/CMakeFiles/gameOver.dir/gameOver.cpp.o: /Users/maksim/
   /Users/maksim/Study/C++/gameTest/src/inc/SDL2/begin_code.h \
   /Users/maksim/Study/C++/gameTest/src/inc/SDL2/close_code.h \
   /Users/maksim/Study/C++/gameTest/libraries/game/game.hpp \
-  /Users/maksim/Study/C++/gameTest/libraries/game_objects/game_objects.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/texture_manager/texture_manager.hpp
 
 
@@ -813,6 +815,10 @@ libraries/states/gameOver/CMakeFiles/gameOver.dir/gameOver.cpp.o: /Users/maksim/
 /Users/maksim/Study/C++/gameTest/src/inc/SDL2/begin_code.h:
 
 /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_video.h:
+
+/Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_version.h:
+
+/Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_touch.h:
 
 /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_timer.h:
 
@@ -869,8 +875,6 @@ libraries/states/gameOver/CMakeFiles/gameOver.dir/gameOver.cpp.o: /Users/maksim/
 /Users/maksim/Study/C++/gameTest/libraries/states/gameOver/gameOver.hpp:
 
 /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include/stddef.h:
-
-/Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_version.h:
 
 /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include/stdarg.h:
 
@@ -1256,6 +1260,8 @@ libraries/states/gameOver/CMakeFiles/gameOver.dir/gameOver.cpp.o: /Users/maksim/
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__type_traits/is_standard_layout.h:
 
+/Users/maksim/Study/C++/gameTest/libraries/game_objects/card/card.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__type_traits/is_signed_integer.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__type_traits/is_signed.h:
@@ -1421,6 +1427,8 @@ libraries/states/gameOver/CMakeFiles/gameOver.dir/gameOver.cpp.o: /Users/maksim/
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__utility/exchange.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__ranges/view_interface.h:
+
+/Users/maksim/Study/C++/gameTest/libraries/game_objects/field/field.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__ranges/subrange.h:
 
@@ -1670,6 +1678,8 @@ libraries/states/gameOver/CMakeFiles/gameOver.dir/gameOver.cpp.o: /Users/maksim/
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/memory:
 
+/Users/maksim/Study/C++/gameTest/libraries/game_objects/interface_objects/interface_objects.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/wait.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__type_traits/remove_const.h:
@@ -1828,8 +1838,6 @@ libraries/states/gameOver/CMakeFiles/gameOver.dir/gameOver.cpp.o: /Users/maksim/
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__iterator/counted_iterator.h:
 
-/Users/maksim/Study/C++/gameTest/libraries/game_objects/game_objects.hpp:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/sort.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__bit/byteswap.h:
@@ -1855,8 +1863,6 @@ libraries/states/gameOver/CMakeFiles/gameOver.dir/gameOver.cpp.o: /Users/maksim/
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/unique.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/remove.h:
-
-/Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_touch.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/sort_heap.h:
 

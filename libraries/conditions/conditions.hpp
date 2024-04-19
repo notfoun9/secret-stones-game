@@ -1,5 +1,5 @@
 #pragma once
-#include <game_objects/game_objects.hpp>
+#include <card/card.hpp>
 
 
 class Card;

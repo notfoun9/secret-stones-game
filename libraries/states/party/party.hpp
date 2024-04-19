@@ -1,7 +1,8 @@
 #pragma once
 
 #include <game/game.hpp>
-#include <game_objects/game_objects.hpp>
+#include <card/card.hpp>
+#include <interface_objects/interface_objects.hpp>
 #include <turn/turn.hpp>
 #include <pull/pull.hpp>
 

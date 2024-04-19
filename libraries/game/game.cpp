@@ -1,6 +1,6 @@
 #include <game/game.hpp>
 #include <texture_manager/texture_manager.hpp>
-#include <game_objects/game_objects.hpp>
+#include <card/card.hpp>
 #include <states/rules/rules.hpp>
 #include <states/menu/menu.hpp>
 #include <states/party/party.hpp>

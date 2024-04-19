@@ -175,19 +175,6 @@ game/fast:
 .PHONY : game/fast
 
 #=============================================================================
-# Target rules for targets named game_objects
-
-# Build rule for target.
-game_objects: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game_objects
-.PHONY : game_objects
-
-# fast build rule for target.
-game_objects/fast:
-	$(MAKE) $(MAKESILENT) -f libraries/game_objects/CMakeFiles/game_objects.dir/build.make libraries/game_objects/CMakeFiles/game_objects.dir/build
-.PHONY : game_objects/fast
-
-#=============================================================================
 # Target rules for targets named pull
 
 # Build rule for target.
@@ -199,6 +186,45 @@ pull: cmake_check_build_system
 pull/fast:
 	$(MAKE) $(MAKESILENT) -f libraries/game_objects/pull/CMakeFiles/pull.dir/build.make libraries/game_objects/pull/CMakeFiles/pull.dir/build
 .PHONY : pull/fast
+
+#=============================================================================
+# Target rules for targets named card
+
+# Build rule for target.
+card: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 card
+.PHONY : card
+
+# fast build rule for target.
+card/fast:
+	$(MAKE) $(MAKESILENT) -f libraries/game_objects/card/CMakeFiles/card.dir/build.make libraries/game_objects/card/CMakeFiles/card.dir/build
+.PHONY : card/fast
+
+#=============================================================================
+# Target rules for targets named field
+
+# Build rule for target.
+field: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 field
+.PHONY : field
+
+# fast build rule for target.
+field/fast:
+	$(MAKE) $(MAKESILENT) -f libraries/game_objects/field/CMakeFiles/field.dir/build.make libraries/game_objects/field/CMakeFiles/field.dir/build
+.PHONY : field/fast
+
+#=============================================================================
+# Target rules for targets named interface_objects
+
+# Build rule for target.
+interface_objects: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 interface_objects
+.PHONY : interface_objects
+
+# fast build rule for target.
+interface_objects/fast:
+	$(MAKE) $(MAKESILENT) -f libraries/game_objects/interface_objects/CMakeFiles/interface_objects.dir/build.make libraries/game_objects/interface_objects/CMakeFiles/interface_objects.dir/build
+.PHONY : interface_objects/fast
 
 #=============================================================================
 # Target rules for targets named texture_manager
@@ -316,10 +342,12 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... card"
 	@echo "... conditions"
+	@echo "... field"
 	@echo "... game"
 	@echo "... gameOver"
-	@echo "... game_objects"
+	@echo "... interface_objects"
 	@echo "... main"
 	@echo "... menu"
 	@echo "... party"

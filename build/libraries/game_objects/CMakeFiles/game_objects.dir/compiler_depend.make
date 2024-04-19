@@ -803,10 +803,14 @@ libraries/game_objects/CMakeFiles/game_objects.dir/game_object.cpp.o: /Users/mak
   /Users/maksim/Study/C++/gameTest/libraries/game_objects/game_objects.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/texture_manager/texture_manager.hpp \
   /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_image.h \
+  /Users/maksim/Study/C++/gameTest/libraries/game_objects/field/field.hpp \
+  /Users/maksim/Study/C++/gameTest/libraries/game_objects/interface_objects/interface_objects.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/game_objects/pull/pull.hpp
 
 
 /Users/maksim/Study/C++/gameTest/libraries/game_objects/pull/pull.hpp:
+
+/Users/maksim/Study/C++/gameTest/libraries/game_objects/interface_objects/interface_objects.hpp:
 
 /Users/maksim/Study/C++/gameTest/libraries/texture_manager/texture_manager.hpp:
 
@@ -1417,6 +1421,8 @@ libraries/game_objects/CMakeFiles/game_objects.dir/game_object.cpp.o: /Users/mak
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__utility/exchange.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__ranges/view_interface.h:
+
+/Users/maksim/Study/C++/gameTest/libraries/game_objects/field/field.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__ranges/subrange.h:
 
