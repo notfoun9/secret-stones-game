@@ -192,21 +192,21 @@ libraries/game/clean: libraries/game/CMakeFiles/game.dir/clean
 libraries/game_objects/all: libraries/game_objects/pull/all
 libraries/game_objects/all: libraries/game_objects/card/all
 libraries/game_objects/all: libraries/game_objects/field/all
-libraries/game_objects/all: libraries/game_objects/interface_objects/all
+libraries/game_objects/all: libraries/game_objects/interface/all
 .PHONY : libraries/game_objects/all
 
 # Recursive "preinstall" directory target.
 libraries/game_objects/preinstall: libraries/game_objects/pull/preinstall
 libraries/game_objects/preinstall: libraries/game_objects/card/preinstall
 libraries/game_objects/preinstall: libraries/game_objects/field/preinstall
-libraries/game_objects/preinstall: libraries/game_objects/interface_objects/preinstall
+libraries/game_objects/preinstall: libraries/game_objects/interface/preinstall
 .PHONY : libraries/game_objects/preinstall
 
 # Recursive "clean" directory target.
 libraries/game_objects/clean: libraries/game_objects/pull/clean
 libraries/game_objects/clean: libraries/game_objects/card/clean
 libraries/game_objects/clean: libraries/game_objects/field/clean
-libraries/game_objects/clean: libraries/game_objects/interface_objects/clean
+libraries/game_objects/clean: libraries/game_objects/interface/clean
 .PHONY : libraries/game_objects/clean
 
 #=============================================================================
@@ -240,19 +240,19 @@ libraries/game_objects/field/clean: libraries/game_objects/field/CMakeFiles/fiel
 .PHONY : libraries/game_objects/field/clean
 
 #=============================================================================
-# Directory level rules for directory libraries/game_objects/interface_objects
+# Directory level rules for directory libraries/game_objects/interface
 
 # Recursive "all" directory target.
-libraries/game_objects/interface_objects/all: libraries/game_objects/interface_objects/CMakeFiles/interface_objects.dir/all
-.PHONY : libraries/game_objects/interface_objects/all
+libraries/game_objects/interface/all: libraries/game_objects/interface/CMakeFiles/interface.dir/all
+.PHONY : libraries/game_objects/interface/all
 
 # Recursive "preinstall" directory target.
-libraries/game_objects/interface_objects/preinstall:
-.PHONY : libraries/game_objects/interface_objects/preinstall
+libraries/game_objects/interface/preinstall:
+.PHONY : libraries/game_objects/interface/preinstall
 
 # Recursive "clean" directory target.
-libraries/game_objects/interface_objects/clean: libraries/game_objects/interface_objects/CMakeFiles/interface_objects.dir/clean
-.PHONY : libraries/game_objects/interface_objects/clean
+libraries/game_objects/interface/clean: libraries/game_objects/interface/CMakeFiles/interface.dir/clean
+.PHONY : libraries/game_objects/interface/clean
 
 #=============================================================================
 # Directory level rules for directory libraries/game_objects/pull
@@ -512,7 +512,7 @@ libraries/game_objects/card/CMakeFiles/card.dir/clean:
 # Target rules for target libraries/game_objects/field/CMakeFiles/field.dir
 
 # All Build rule for target.
-libraries/game_objects/field/CMakeFiles/field.dir/all: libraries/game_objects/interface_objects/CMakeFiles/interface_objects.dir/all
+libraries/game_objects/field/CMakeFiles/field.dir/all: libraries/game_objects/interface/CMakeFiles/interface.dir/all
 	$(MAKE) $(MAKESILENT) -f libraries/game_objects/field/CMakeFiles/field.dir/build.make libraries/game_objects/field/CMakeFiles/field.dir/depend
 	$(MAKE) $(MAKESILENT) -f libraries/game_objects/field/CMakeFiles/field.dir/build.make libraries/game_objects/field/CMakeFiles/field.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/gameTest/build/CMakeFiles --progress-num=5,6 "Built target field"
@@ -535,30 +535,30 @@ libraries/game_objects/field/CMakeFiles/field.dir/clean:
 .PHONY : libraries/game_objects/field/CMakeFiles/field.dir/clean
 
 #=============================================================================
-# Target rules for target libraries/game_objects/interface_objects/CMakeFiles/interface_objects.dir
+# Target rules for target libraries/game_objects/interface/CMakeFiles/interface.dir
 
 # All Build rule for target.
-libraries/game_objects/interface_objects/CMakeFiles/interface_objects.dir/all: libraries/states/menu/CMakeFiles/menu.dir/all
-	$(MAKE) $(MAKESILENT) -f libraries/game_objects/interface_objects/CMakeFiles/interface_objects.dir/build.make libraries/game_objects/interface_objects/CMakeFiles/interface_objects.dir/depend
-	$(MAKE) $(MAKESILENT) -f libraries/game_objects/interface_objects/CMakeFiles/interface_objects.dir/build.make libraries/game_objects/interface_objects/CMakeFiles/interface_objects.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/gameTest/build/CMakeFiles --progress-num=11,12 "Built target interface_objects"
-.PHONY : libraries/game_objects/interface_objects/CMakeFiles/interface_objects.dir/all
+libraries/game_objects/interface/CMakeFiles/interface.dir/all: libraries/states/menu/CMakeFiles/menu.dir/all
+	$(MAKE) $(MAKESILENT) -f libraries/game_objects/interface/CMakeFiles/interface.dir/build.make libraries/game_objects/interface/CMakeFiles/interface.dir/depend
+	$(MAKE) $(MAKESILENT) -f libraries/game_objects/interface/CMakeFiles/interface.dir/build.make libraries/game_objects/interface/CMakeFiles/interface.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/gameTest/build/CMakeFiles --progress-num=11,12 "Built target interface"
+.PHONY : libraries/game_objects/interface/CMakeFiles/interface.dir/all
 
 # Build rule for subdir invocation for target.
-libraries/game_objects/interface_objects/CMakeFiles/interface_objects.dir/rule: cmake_check_build_system
+libraries/game_objects/interface/CMakeFiles/interface.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles 16
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/game_objects/interface_objects/CMakeFiles/interface_objects.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/game_objects/interface/CMakeFiles/interface.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles 0
-.PHONY : libraries/game_objects/interface_objects/CMakeFiles/interface_objects.dir/rule
+.PHONY : libraries/game_objects/interface/CMakeFiles/interface.dir/rule
 
 # Convenience name for target.
-interface_objects: libraries/game_objects/interface_objects/CMakeFiles/interface_objects.dir/rule
-.PHONY : interface_objects
+interface: libraries/game_objects/interface/CMakeFiles/interface.dir/rule
+.PHONY : interface
 
 # clean rule for target.
-libraries/game_objects/interface_objects/CMakeFiles/interface_objects.dir/clean:
-	$(MAKE) $(MAKESILENT) -f libraries/game_objects/interface_objects/CMakeFiles/interface_objects.dir/build.make libraries/game_objects/interface_objects/CMakeFiles/interface_objects.dir/clean
-.PHONY : libraries/game_objects/interface_objects/CMakeFiles/interface_objects.dir/clean
+libraries/game_objects/interface/CMakeFiles/interface.dir/clean:
+	$(MAKE) $(MAKESILENT) -f libraries/game_objects/interface/CMakeFiles/interface.dir/build.make libraries/game_objects/interface/CMakeFiles/interface.dir/clean
+.PHONY : libraries/game_objects/interface/CMakeFiles/interface.dir/clean
 
 #=============================================================================
 # Target rules for target libraries/texture_manager/CMakeFiles/texture_manager.dir

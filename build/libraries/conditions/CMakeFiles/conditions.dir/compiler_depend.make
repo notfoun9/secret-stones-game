@@ -803,13 +803,11 @@ libraries/conditions/CMakeFiles/conditions.dir/conditions.cpp.o: /Users/maksim/S
   /Users/maksim/Study/C++/gameTest/libraries/texture_manager/texture_manager.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/game_objects/card/card.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/game_objects/field/field.hpp \
-  /Users/maksim/Study/C++/gameTest/libraries/game_objects/interface_objects/interface_objects.hpp \
+  /Users/maksim/Study/C++/gameTest/libraries/game_objects/interface/interface.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/game_objects/pull/pull.hpp
 
 
 /Users/maksim/Study/C++/gameTest/libraries/game_objects/pull/pull.hpp:
-
-/Users/maksim/Study/C++/gameTest/libraries/game_objects/interface_objects/interface_objects.hpp:
 
 /Users/maksim/Study/C++/gameTest/libraries/game_objects/card/card.hpp:
 
@@ -830,6 +828,8 @@ libraries/conditions/CMakeFiles/conditions.dir/conditions.cpp.o: /Users/maksim/S
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__type_traits/is_fundamental.h:
 
 /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_rwops.h:
+
+/Users/maksim/Study/C++/gameTest/libraries/game_objects/interface/interface.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/libkern/arm/OSByteOrder.h:
 

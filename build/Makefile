@@ -214,17 +214,17 @@ field/fast:
 .PHONY : field/fast
 
 #=============================================================================
-# Target rules for targets named interface_objects
+# Target rules for targets named interface
 
 # Build rule for target.
-interface_objects: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 interface_objects
-.PHONY : interface_objects
+interface: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 interface
+.PHONY : interface
 
 # fast build rule for target.
-interface_objects/fast:
-	$(MAKE) $(MAKESILENT) -f libraries/game_objects/interface_objects/CMakeFiles/interface_objects.dir/build.make libraries/game_objects/interface_objects/CMakeFiles/interface_objects.dir/build
-.PHONY : interface_objects/fast
+interface/fast:
+	$(MAKE) $(MAKESILENT) -f libraries/game_objects/interface/CMakeFiles/interface.dir/build.make libraries/game_objects/interface/CMakeFiles/interface.dir/build
+.PHONY : interface/fast
 
 #=============================================================================
 # Target rules for targets named texture_manager
@@ -347,7 +347,7 @@ help:
 	@echo "... field"
 	@echo "... game"
 	@echo "... gameOver"
-	@echo "... interface_objects"
+	@echo "... interface"
 	@echo "... main"
 	@echo "... menu"
 	@echo "... party"

@@ -804,7 +804,7 @@ libraries/states/party/turn/CMakeFiles/turn.dir/turn.cpp.o
  /Users/maksim/Study/C++/gameTest/libraries/texture_manager/texture_manager.hpp
  /Users/maksim/Study/C++/gameTest/libraries/game_objects/card/card.hpp
  /Users/maksim/Study/C++/gameTest/libraries/game_objects/field/field.hpp
- /Users/maksim/Study/C++/gameTest/libraries/game_objects/interface_objects/interface_objects.hpp
+ /Users/maksim/Study/C++/gameTest/libraries/game_objects/interface/interface.hpp
  /Users/maksim/Study/C++/gameTest/libraries/game_objects/pull/pull.hpp
  /Users/maksim/Study/C++/gameTest/libraries/states/party/turn/turn.hpp
 

@@ -749,7 +749,7 @@ libraries/states/gameOver/CMakeFiles/gameOver.dir/gameOver.cpp.o: /Users/maksim/
   /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include/stdint.h \
   /Users/maksim/Study/C++/gameTest/libraries/game_objects/card/card.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/game_objects/field/field.hpp \
-  /Users/maksim/Study/C++/gameTest/libraries/game_objects/interface_objects/interface_objects.hpp \
+  /Users/maksim/Study/C++/gameTest/libraries/game_objects/interface/interface.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/game_objects/pull/pull.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/states/gameOver/gameOver.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/conditions/conditions.hpp \
@@ -837,6 +837,8 @@ libraries/states/gameOver/CMakeFiles/gameOver.dir/gameOver.cpp.o: /Users/maksim/
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/libkern/arm/OSByteOrder.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/is_sorted_until.h:
+
+/Users/maksim/Study/C++/gameTest/libraries/game_objects/interface/interface.hpp:
 
 /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_render.h:
 
@@ -1677,8 +1679,6 @@ libraries/states/gameOver/CMakeFiles/gameOver.dir/gameOver.cpp.o: /Users/maksim/
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/swap_ranges.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/memory:
-
-/Users/maksim/Study/C++/gameTest/libraries/game_objects/interface_objects/interface_objects.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/wait.h:
 

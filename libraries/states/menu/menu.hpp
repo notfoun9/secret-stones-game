@@ -1,7 +1,7 @@
 #pragma once
 
 #include <game/game.hpp>
-#include <interface_objects/interface_objects.hpp>
+#include <interface/interface.hpp>
 
 class Menu {
 public:

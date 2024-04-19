@@ -798,10 +798,10 @@ libraries/game/CMakeFiles/game.dir/game.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/deque \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/unordered_set \
   /Users/maksim/Study/C++/gameTest/libraries/game/../texture_manager/texture_manager.hpp \
-  /Users/maksim/Study/C++/gameTest/libraries/game_objects/interface_objects/../card/card.hpp \
-  /Users/maksim/Study/C++/gameTest/libraries/game_objects/interface_objects/../interface_objects/interface_objects.hpp \
-  /Users/maksim/Study/C++/gameTest/libraries/game_objects/interface_objects/../field/field.hpp \
-  /Users/maksim/Study/C++/gameTest/libraries/game_objects/interface_objects/../pull/pull.hpp \
+  /Users/maksim/Study/C++/gameTest/libraries/game_objects/interface/../card/card.hpp \
+  /Users/maksim/Study/C++/gameTest/libraries/game_objects/interface/../interface/interface.hpp \
+  /Users/maksim/Study/C++/gameTest/libraries/game_objects/interface/../field/field.hpp \
+  /Users/maksim/Study/C++/gameTest/libraries/game_objects/interface/../pull/pull.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/game/../conditions/conditions.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/game/../states/rules/rules.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/game/../states/menu/menu.hpp \

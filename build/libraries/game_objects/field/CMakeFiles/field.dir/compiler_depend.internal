@@ -804,6 +804,6 @@ libraries/game_objects/field/CMakeFiles/field.dir/field.cpp.o
  /Users/maksim/Study/C++/gameTest/libraries/texture_manager/texture_manager.hpp
  /Users/maksim/Study/C++/gameTest/libraries/game_objects/card/card.hpp
  /Users/maksim/Study/C++/gameTest/libraries/game_objects/field/field.hpp
- /Users/maksim/Study/C++/gameTest/libraries/game_objects/interface_objects/interface_objects.hpp
+ /Users/maksim/Study/C++/gameTest/libraries/game_objects/interface/interface.hpp
  /Users/maksim/Study/C++/gameTest/libraries/game_objects/pull/pull.hpp
 

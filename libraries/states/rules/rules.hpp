@@ -2,7 +2,7 @@
 
 #include <game/game.hpp>
 #include <card/card.hpp>
-#include <interface_objects/interface_objects.hpp>
+#include <interface/interface.hpp>
 
 class Rules {
 public:

@@ -1,7 +1,7 @@
 #include <card/card.hpp>
 
 #include <field/field.hpp>
-#include <interface_objects/interface_objects.hpp>
+#include <interface/interface.hpp>
 #include "../../src/inc/SDL2/SDL_image.h"
 
 Deck::Deck(Pull* pull) {   
