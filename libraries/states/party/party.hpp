@@ -30,6 +30,10 @@ private:
     SDL_Rect strikesDest = {860, 495, 120, 120};
     Turn* currentTurn;
 
+    SDL_Texture* movesLeft[5];
+    SDL_Rect movesLeftDest = {830, 625, 210, 40};
+    SDL_Rect moovesLeftSrc = {0,0,52,5};
+
     int badTurns = 0;
     int Score = 0;
     Field* field = nullptr;

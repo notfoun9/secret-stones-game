@@ -19,6 +19,8 @@ public:
     void ToogleWaitForDrop();
     void UnwaitDrop();
 
+    int ActionsAvailable();
+
 
     std::pair<Tile*, Tile*> selectedTiles = {nullptr, nullptr};
     std::pair<int, int> selectedTilesNums = {-1, -1};

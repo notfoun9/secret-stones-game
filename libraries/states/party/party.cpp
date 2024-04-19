@@ -40,6 +40,12 @@ Party::Party(SDL_Renderer* renderer_, SDL_Window* window_, Game* thisGame_, Pull
     dropGetButton->setBoarders(0,0,64,20);
     dropGetButton->setPos(30, 500, 250, 80);
 
+    movesLeft[0] = TextureManager::LoadTexture("../../assets/movesLeft0.png");
+    movesLeft[1] = TextureManager::LoadTexture("../../assets/movesLeft1.png");
+    movesLeft[2] = TextureManager::LoadTexture("../../assets/movesLeft2.png");
+    movesLeft[3] = TextureManager::LoadTexture("../../assets/movesLeft3.png");
+    movesLeft[4] = TextureManager::LoadTexture("../../assets/movesLeft4.png");
+
     mouse = new Mouse();
     field = new Field();
     deck = new Deck(pull);
@@ -160,8 +166,10 @@ void Party::Update() {
 
 void Party::Render() {
     SDL_RenderClear(renderer);
-
+    
     if (badTurns < 4) SDL_RenderCopy(Game::renderer, strikes[badTurns], NULL, &strikesDest);
+    SDL_RenderCopy(Game::renderer, movesLeft[currentTurn->ActionsAvailable()], &moovesLeftSrc, &movesLeftDest);
+
     dropGetButton->Render();
     note->Render();
     endTurnButton->Render();

@@ -5,6 +5,7 @@
 
 #include "../../src/inc/SDL2/SDL.h"
 #include "../../src/inc/SDL2/SDL_image.h"
+#include <string>
 #include <iostream>
 #include <thread>
 #include <chrono>

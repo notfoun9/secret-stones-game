@@ -86,3 +86,6 @@ bool Turn::GoodTurn() {
 void Turn::UnwaitDrop() {
     isWaitingForDrop = 0;
 }
+int Turn::ActionsAvailable() {
+    return actionsAvailable;
+}
