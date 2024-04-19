@@ -1,9 +1,14 @@
+
+set (CMAKE_PREFIX_PATH "../src/lib")
+
 add_executable(main main.cpp)
 
 target_link_libraries(main game)
 
-set_target_properties(main PROPERTIES LINK_FLAGS "-F/Library/Frameworks -framework SDL2_image -framework SDL2")
+find_package(SDL2 REQUIRED COMPONENTS SDL2)
+find_package(SDL2_image REQUIRED COMPONENTS SDL2_image)
 
-link_directories(/Library/Frameworks)
-target_link_libraries(main ${SDL2})
-target_link_libraries(main ${SDL2_image})
+target_link_libraries(main SDL2::SDL2)
+target_link_libraries(main SDL2_image::SDL2_image)
+
+link_directories(lib)

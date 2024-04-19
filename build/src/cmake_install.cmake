@@ -42,3 +42,8 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/Users/maksim/Study/C++/gameTest/build/src/inc/cmake_install.cmake")
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/Users/maksim/Study/C++/gameTest/build/src/lib/cmake_install.cmake")
+endif()
+

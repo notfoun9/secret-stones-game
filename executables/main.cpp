@@ -1,4 +1,4 @@
-// Yeah, here we go for the hundredth time
+// Here we go for the hundredth time
 // Hand grenade pins in every line
 
 #include <game/game.hpp>

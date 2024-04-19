@@ -93,6 +93,7 @@ main_EXTERNAL_OBJECTS =
 executables/bin/main: executables/CMakeFiles/main.dir/main.cpp.o
 executables/bin/main: executables/CMakeFiles/main.dir/build.make
 executables/bin/main: libraries/game/libgame.a
+executables/bin/main: /Users/maksim/Study/C++/gameTest/src/lib/SDL2.framework/Versions/A/SDL2
 executables/bin/main: libraries/states/menu/libmenu.a
 executables/bin/main: libraries/states/rules/librules.a
 executables/bin/main: libraries/states/party/libparty.a
