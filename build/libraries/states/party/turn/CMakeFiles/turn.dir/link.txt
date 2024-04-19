@@ -1,2 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/ar qc libturn.a CMakeFiles/turn.dir/turn.cpp.o
-/Library/Developer/CommandLineTools/usr/bin/ranlib libturn.a

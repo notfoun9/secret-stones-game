@@ -1,2 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/ar qc libfield.a CMakeFiles/field.dir/field.cpp.o
-/Library/Developer/CommandLineTools/usr/bin/ranlib libfield.a

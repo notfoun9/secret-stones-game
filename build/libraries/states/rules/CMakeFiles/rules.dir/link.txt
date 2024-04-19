@@ -1,2 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/ar qc librules.a CMakeFiles/rules.dir/rules.cpp.o
-/Library/Developer/CommandLineTools/usr/bin/ranlib librules.a

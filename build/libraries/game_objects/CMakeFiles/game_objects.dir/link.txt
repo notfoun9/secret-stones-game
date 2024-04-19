@@ -1,2 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/ar qc libgame_objects.a CMakeFiles/game_objects.dir/game_object.cpp.o
-/Library/Developer/CommandLineTools/usr/bin/ranlib libgame_objects.a

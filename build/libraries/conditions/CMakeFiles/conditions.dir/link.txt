@@ -1,2 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/ar qc libconditions.a CMakeFiles/conditions.dir/conditions.cpp.o
-/Library/Developer/CommandLineTools/usr/bin/ranlib libconditions.a

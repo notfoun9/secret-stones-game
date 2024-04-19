@@ -1,2 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/ar qc libinterface.a CMakeFiles/interface.dir/interface.cpp.o
-/Library/Developer/CommandLineTools/usr/bin/ranlib libinterface.a

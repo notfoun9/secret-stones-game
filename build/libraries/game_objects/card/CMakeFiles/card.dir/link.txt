@@ -1,2 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/ar qc libcard.a CMakeFiles/card.dir/card.cpp.o
-/Library/Developer/CommandLineTools/usr/bin/ranlib libcard.a

@@ -1,2 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/ar qc libcardConditions.a CMakeFiles/cardConditions.dir/cardConditions.cpp.o
-/Library/Developer/CommandLineTools/usr/bin/ranlib libcardConditions.a

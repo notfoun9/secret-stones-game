@@ -1,2 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/ar qc libpull.a CMakeFiles/pull.dir/pull.cpp.o
-/Library/Developer/CommandLineTools/usr/bin/ranlib libpull.a

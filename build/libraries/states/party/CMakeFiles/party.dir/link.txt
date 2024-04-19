@@ -1,2 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/ar qc libparty.a CMakeFiles/party.dir/party.cpp.o
-/Library/Developer/CommandLineTools/usr/bin/ranlib libparty.a
