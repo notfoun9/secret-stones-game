@@ -31,7 +31,7 @@ private:
     Turn* currentTurn;
 
     SDL_Texture* movesLeft[5];
-    SDL_Rect movesLeftDest = {830, 625, 210, 40};
+    SDL_Rect movesLeftDest = {830, 648, 208, 25};
     SDL_Rect moovesLeftSrc = {0,0,52,5};
 
     int badTurns = 0;
