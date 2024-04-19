@@ -266,6 +266,19 @@ pull/fast:
 .PHONY : pull/fast
 
 #=============================================================================
+# Target rules for targets named conditions
+
+# Build rule for target.
+conditions: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 conditions
+.PHONY : conditions
+
+# fast build rule for target.
+conditions/fast:
+	$(MAKE) $(MAKESILENT) -f libraries/conditions/CMakeFiles/conditions.dir/build.make libraries/conditions/CMakeFiles/conditions.dir/build
+.PHONY : conditions/fast
+
+#=============================================================================
 # Target rules for targets named main
 
 # Build rule for target.
@@ -290,6 +303,7 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... conditions"
 	@echo "... game"
 	@echo "... game_objects"
 	@echo "... main"

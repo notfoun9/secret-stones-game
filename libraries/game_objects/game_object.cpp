@@ -1,5 +1,4 @@
 #include <game_objects/game_objects.hpp>
-#include <pull/pull.hpp>
 #include "../../src/inc/SDL2/SDL_image.h"
 
 GameObject::GameObject(const char* textureSheet) {

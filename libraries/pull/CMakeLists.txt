@@ -1,6 +1,7 @@
 add_library(pull pull.cpp pull.hpp)
 
 set_property(TARGET pull PROPERTY CXX_STANDARD 20)
+target_link_libraries(pull game_objects game conditions texture_manager)
 
 target_include_directories(pull PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/..>

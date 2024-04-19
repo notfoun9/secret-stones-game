@@ -3,9 +3,10 @@
 #include <game/game.hpp>
 #include <texture_manager/texture_manager.hpp>
 #include <pull/pull.hpp>
+#include <conditions/conditions.hpp>
 
+class Pull;
 class GameObject;
-
 class Button;
 class Mouse;
 class Field;

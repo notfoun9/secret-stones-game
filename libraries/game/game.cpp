@@ -5,6 +5,7 @@
 #include <states/menu/menu.hpp>
 #include <states/party/party.hpp>
 #include <pull/pull.hpp>
+#include <conditions/conditions.hpp>
 
 Menu* mainMenu;
 Rules* rules;

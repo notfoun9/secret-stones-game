@@ -1,8 +1,8 @@
 #pragma once
 
-#include <game_objects/game_object.hpp>
-#include <conditions/conditions.hpp>
-
+#include <game_objects/game_objects.hpp>
+class Card;
+class Conditions;
 class Pull {
 public:
     Pull(Conditions* conditions);

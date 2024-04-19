@@ -1,7 +1,5 @@
 #include <pull/pull.hpp>
-#include <game_objects/game_object.hpp>
-#include <conditions/conditions.hpp>
-
+#include<conditions/conditions.hpp>
 
 Pull::Pull(Conditions* conditions) {
     std::cout << "Pull has cards: " << '\n';

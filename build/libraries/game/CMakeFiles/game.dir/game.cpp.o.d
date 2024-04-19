@@ -798,10 +798,10 @@ libraries/game/CMakeFiles/game.dir/game.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/deque \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/unordered_set \
   /Users/maksim/Study/C++/gameTest/libraries/game/../texture_manager/texture_manager.hpp \
-  /Users/maksim/Study/C++/gameTest/libraries/game/../game_objects/game_object.hpp \
+  /Users/maksim/Study/C++/gameTest/libraries/game/../game_objects/game_objects.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/game/../pull/pull.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/game/../conditions/conditions.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/game/../states/rules/rules.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/game/../states/menu/menu.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/game/../states/party/party.hpp \
-  /Users/maksim/Study/C++/gameTest/libraries/game/../states/party/./turn/turn.hpp
+  /Users/maksim/Study/C++/gameTest/libraries/states/party/turn/../turn/turn.hpp
