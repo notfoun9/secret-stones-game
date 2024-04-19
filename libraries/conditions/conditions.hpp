@@ -317,7 +317,7 @@ struct Cards_N_N {
     }
     static bool Card_2_16(const std::vector<int>& field) {
         for (int i : {0,3,6}) {
-            if (field[ + 1] == PURPLE && field[i + 2] == RED) return 1;
+            if (field[i + 1] == PURPLE && field[i + 2] == RED) return 1;
         }
         return 0;
     }
