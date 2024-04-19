@@ -119,12 +119,13 @@ private:
 
 class Card : public Button {
 public: 
-    Card(const char* defaultTexture, const char* selectedTexture);
+    Card(const char* texture);
     ~Card() = default;
     bool Usable(Field* field);
     void Drop(Trash* trash);
     void Update(Mouse* mouse);
 
+    void Achieve();
     enum colors {WHITE, RED, ORANGE, YELLOW, GREEN, BLUE, PURPLE, BLACK};
     bool CardIsAchievable(const Field* field) const;
     void SetCondition(bool (*)(const std::vector<int>& fieldStatus));

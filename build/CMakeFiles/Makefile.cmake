@@ -9,6 +9,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "/Users/maksim/Study/C++/gameTest/CMakeLists.txt"
   "/Users/maksim/Study/C++/gameTest/assets/CMakeLists.txt"
+  "/Users/maksim/Study/C++/gameTest/assets/cards/CMakeLists.txt"
   "CMakeFiles/3.27.7/CMakeCCompiler.cmake"
   "CMakeFiles/3.27.7/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.27.7/CMakeSystem.cmake"
@@ -75,6 +76,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "src/inc/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/inc/SDL2/CMakeFiles/CMakeDirectoryInformation.cmake"
   "assets/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "assets/cards/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:

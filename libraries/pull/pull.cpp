@@ -2,21 +2,25 @@
 #include<conditions/conditions.hpp>
 
 Pull::Pull(Conditions* conditions) {
-    std::cout << "Pull has cards: " << '\n';
+    std::string cardID;
     for (int i = 0; i < 28; ++i) {
-        points_1[i] = new Card("../../assets/unselectedBlankCard.png","../../assets/selectedBlankCard.png");
+        std::string cardID = "../../assets/Card_1_" + std::to_string(i) + ".png";
+        points_1[i] = new Card(cardID.data());
         conditions->GiveCondition(points_1[i], 1, i);
     }
     for (int i = 0; i < 8; ++i) {
-        points_2[i] = new Card("../../assets/unselectedBlankCard.png","../../assets/selectedBlankCard.png");
+        std::string cardID = "../../assets/Card_2_" + std::to_string(i) + ".png";
+        points_2[i] = new Card(cardID.data());
         conditions->GiveCondition(points_2[i], 2, i);
     }
     for (int i = 0; i < 8; ++i) {
-        points_3[i] = new Card("../../assets/unselectedBlankCard.png","../../assets/selectedBlankCard.png");
+        std::string cardID = "../../assets/Card_3_" + std::to_string(i) + ".png";
+        points_3[i] = new Card(cardID.data());
         conditions->GiveCondition(points_3[i], 3, i);
     }
     for (int i = 0; i < 5; ++i) {
-        points_5[i] = new Card("../../assets/unselectedBlankCard.png","../../assets/selectedBlankCard.png");
+        std::string cardID = "../../assets/Card_5_" + std::to_string(i) + ".png";
+        points_5[i] = new Card(cardID.data());
         conditions->GiveCondition(points_5[i], 5, i);
     }
     std::cout << '\n';
@@ -37,41 +41,36 @@ Pull::~Pull() {
 }
 Card* Pull::Take1() {
     srand(time(0));
-    int cardNo = rand() % 8;
+    int cardNo = rand() % 28;
     while (takenCards.find(points_1[cardNo]) != takenCards.end()) {
-        cardNo = rand() % 8;
+        cardNo = rand() % 28;
     }
     takenCards.insert(points_1[cardNo]);
-    std::cout << points_1[cardNo] << " isTaken 1" << '\n';
     return points_1[cardNo];
 }
 Card* Pull::Take2() {
     srand(time(0));
-    int cardNo = rand() % 4;
+    int cardNo = rand() % 8;
     while (takenCards.find(points_2[cardNo]) != takenCards.end()) {
-        std::cout << "somehow entered" << '\n';
-        cardNo = rand() % 4;
+        cardNo = rand() % 8;
     }
     takenCards.insert(points_2[cardNo]);
-    std::cout << points_2[cardNo] << " isTaken 2" << '\n';
     return points_2[cardNo];    
 }
 Card* Pull::Take3() {
     srand(time(0));
-    int cardNo = rand() % 3;
+    int cardNo = rand() % 8;
     while (takenCards.find(points_3[cardNo]) != takenCards.end()) {
-        cardNo = rand() % 3;
+        cardNo = rand() % 8;
     }
     takenCards.insert(points_3[cardNo]);
-    std::cout << points_3[cardNo] << " isTaken 3" << '\n';
     return points_3[cardNo];    
 }
 Card* Pull::Take5() {
     srand(time(0));
-    int cardNo = rand() % 1;
+    int cardNo = rand() % 5;
     while (takenCards.find(points_5[cardNo]) != takenCards.end()) {
-        std::cout << "Aflasf"<< '\n';
-        cardNo = rand() % 1;
+        cardNo = rand() % 5;
     }
     takenCards.insert(points_5[cardNo]);
     return points_5[cardNo];    
@@ -79,3 +78,4 @@ Card* Pull::Take5() {
 void Pull::ClearTaken() {
     takenCards.clear();
 }
+

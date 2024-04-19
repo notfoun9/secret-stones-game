@@ -25,7 +25,6 @@ void GameObject::Update() {}
 Button::Button (const char* defaultTexture, const char* selectedTexture) : 
     defaultStateTexture(TextureManager::LoadTexture(defaultTexture)), 
     selectedStateTexture(TextureManager::LoadTexture(selectedTexture)) {}
-
 void Button::Update(Mouse* mouse) {
     checkSelected(mouse);
     if (selected) {
@@ -47,7 +46,6 @@ void Button::checkSelected(Mouse* mouse) {
 Switch::Switch(const char* defaultStateTexture_, const char* selectedStateTexture) :
     defaultStateTexture(TextureManager::LoadTexture(defaultStateTexture_)),
     activetateTexture(TextureManager::LoadTexture(selectedStateTexture)) {}
-
 bool Switch::checkSelected(Mouse* mouse) {
     if (SDL_HasIntersection(&(mouse->tip), &destRect)) return true;
     return false;
@@ -204,12 +202,18 @@ Deck::Deck(Pull* pull) {
     setPos(830, 494, 220, 128);
     srand(time(0));
     std::vector<std::pair<int, Card*>> cards;
-    for (int i = 0; i < 2; ++i) {
+    for (int i = 0; i < 8; ++i) {
         cards.push_back({rand() % 100, pull->Take1()});
     }
-    cards.push_back({rand() % 100, pull->Take2()});
-    cards.push_back({rand() % 100, pull->Take3()});
-    cards.push_back({rand() % 100, pull->Take5()});
+    for (int i = 0; i < 4; ++i) {
+        cards.push_back({rand() % 100, pull->Take2()});
+    }
+    for (int i = 0; i < 3; ++i) {
+        cards.push_back({rand() % 100, pull->Take3()});
+    }
+    for (int i = 0; i < 1; ++i) {
+        cards.push_back({rand() % 100, pull->Take5()});
+    }
     std::sort(cards.begin(), cards.end(), [](std::pair<int, Card*> a, std::pair<int, Card*> b) {
         return a.first > b.first;
     } );
@@ -332,11 +336,9 @@ void Hand::Remove(Card* card_) {
 
 }
 
-Card::Card(const char* defaultTexture, const char* selectedTexture) {
+Card::Card(const char* texture) {
     srcRect = {0,0, 127, 192};
-    defaultStateTexture = TextureManager::LoadTexture(defaultTexture);
-    selectedStateTexture = TextureManager::LoadTexture(selectedTexture);
-    objTexture = defaultStateTexture;
+    objTexture = TextureManager::LoadTexture(texture);
 }
 void Card::Drop(Trash* trash) {
     trash->Add(this);
@@ -344,10 +346,10 @@ void Card::Drop(Trash* trash) {
 void Card::Update(Mouse* mouse) {
     checkSelected(mouse);
     if (selected) {
-        objTexture = selectedStateTexture;
+        destRect.y = 500;
     }
     else {
-        objTexture = defaultStateTexture;
+        destRect.y = 488;
     }
 }
 bool Card::CardIsAchievable(const Field* field) const {

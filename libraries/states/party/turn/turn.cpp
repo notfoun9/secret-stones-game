@@ -39,7 +39,13 @@ void Turn::HandleDropAction() {
 void Turn::HandleAchieveAction() {
     for (Card* card : hand->cardsInHand) {
         if (card && card->selected) {
-            std::cout << "Card is not achievable" << '\n';
+            std::cout << card << '\n';
+            if (card->CardIsAchievable(field)) {
+                std::cout << "CARD IS ACHIIIEEVED !!!" << '\n';
+                isGoodTurn = 1; 
+                hand->Remove(card);
+                return;
+            }
         }
     }
 }

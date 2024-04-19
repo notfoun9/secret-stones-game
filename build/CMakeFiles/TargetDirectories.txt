@@ -110,3 +110,9 @@
 /Users/maksim/Study/C++/gameTest/build/assets/CMakeFiles/install.dir
 /Users/maksim/Study/C++/gameTest/build/assets/CMakeFiles/install/local.dir
 /Users/maksim/Study/C++/gameTest/build/assets/CMakeFiles/install/strip.dir
+/Users/maksim/Study/C++/gameTest/build/assets/cards/CMakeFiles/edit_cache.dir
+/Users/maksim/Study/C++/gameTest/build/assets/cards/CMakeFiles/rebuild_cache.dir
+/Users/maksim/Study/C++/gameTest/build/assets/cards/CMakeFiles/list_install_components.dir
+/Users/maksim/Study/C++/gameTest/build/assets/cards/CMakeFiles/install.dir
+/Users/maksim/Study/C++/gameTest/build/assets/cards/CMakeFiles/install/local.dir
+/Users/maksim/Study/C++/gameTest/build/assets/cards/CMakeFiles/install/strip.dir

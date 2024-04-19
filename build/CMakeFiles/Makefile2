@@ -87,16 +87,31 @@ clean: assets/clean
 # Directory level rules for directory assets
 
 # Recursive "all" directory target.
-assets/all:
+assets/all: assets/cards/all
 .PHONY : assets/all
 
 # Recursive "preinstall" directory target.
-assets/preinstall:
+assets/preinstall: assets/cards/preinstall
 .PHONY : assets/preinstall
 
 # Recursive "clean" directory target.
-assets/clean:
+assets/clean: assets/cards/clean
 .PHONY : assets/clean
+
+#=============================================================================
+# Directory level rules for directory assets/cards
+
+# Recursive "all" directory target.
+assets/cards/all:
+.PHONY : assets/cards/all
+
+# Recursive "preinstall" directory target.
+assets/cards/preinstall:
+.PHONY : assets/cards/preinstall
+
+# Recursive "clean" directory target.
+assets/cards/clean:
+.PHONY : assets/cards/clean
 
 #=============================================================================
 # Directory level rules for directory executables
