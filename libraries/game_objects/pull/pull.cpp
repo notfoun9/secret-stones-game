@@ -8,12 +8,12 @@ Pull::Pull(Conditions* conditions) {
         points_1[i] = new Card(cardID.data());
         conditions->GiveCondition(points_1[i], 1, i);
     }
-    for (int i = 0; i < 8; ++i) {
+    for (int i = 0; i < 19; ++i) {
         std::string cardID = "../../assets/Card_2_" + std::to_string(i) + ".png";
         points_2[i] = new Card(cardID.data());
         conditions->GiveCondition(points_2[i], 2, i);
     }
-    for (int i = 0; i < 8; ++i) {
+    for (int i = 0; i < 13; ++i) {
         std::string cardID = "../../assets/Card_3_" + std::to_string(i) + ".png";
         points_3[i] = new Card(cardID.data());
         conditions->GiveCondition(points_3[i], 3, i);
@@ -50,18 +50,18 @@ Card* Pull::Take1() {
 }
 Card* Pull::Take2() {
     srand(time(0));
-    int cardNo = rand() % 8;
+    int cardNo = rand() % 19;
     while (takenCards.find(points_2[cardNo]) != takenCards.end()) {
-        cardNo = rand() % 8;
+        cardNo = rand() % 19;
     }
     takenCards.insert(points_2[cardNo]);
     return points_2[cardNo];    
 }
 Card* Pull::Take3() {
     srand(time(0));
-    int cardNo = rand() % 8;
+    int cardNo = rand() % 12;
     while (takenCards.find(points_3[cardNo]) != takenCards.end()) {
-        cardNo = rand() % 8;
+        cardNo = rand() % 12;
     }
     takenCards.insert(points_3[cardNo]);
     return points_3[cardNo];    

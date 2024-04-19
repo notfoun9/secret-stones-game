@@ -19,7 +19,7 @@ private:
     std::unordered_set<Card*> takenCards;
 
     Card* points_1[28];
-    Card* points_2[8];
-    Card* points_3[8];
+    Card* points_2[19];
+    Card* points_3[13];
     Card* points_5[5];
 } ;

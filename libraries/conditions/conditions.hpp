@@ -279,6 +279,66 @@ struct Cards_N_N {
         }
         return 0;
     }
+    static bool Card_2_8(const std::vector<int>& field) {
+        return field[0] == YELLOW;
+    }
+    static bool Card_2_9(const std::vector<int>& field) {
+        return (field[0] == PURPLE && field[8] == PURPLE);
+    }
+    static bool Card_2_10(const std::vector<int>& field) {
+        return (field[2] == WHITE && field[6] == WHITE);
+    }
+    static bool Card_2_11(const std::vector<int>& field) {
+        return (field[2] == RED && field[6] == BLUE);
+    }
+    static bool Card_2_12(const std::vector<int>& field) {
+        for (int i : {0,3,6}) {
+            if (field[i] == PURPLE) return 1;
+        }
+        return 0;
+    }
+    static bool Card_2_13(const std::vector<int>& field) {
+        for (int i : {0,3,6}) {
+            if (field[i] == BLUE && field[i + 2] == BLUE) return 1;
+        }
+        return 0;
+    }
+    static bool Card_2_14(const std::vector<int>& field) {
+        for (int i : {0,3,6}) {
+            if (field[i] == PURPLE && field[i + 2] == PURPLE) return 1;
+        }
+        return 0;
+    }
+    static bool Card_2_15(const std::vector<int>& field) {
+        for (int i : {0,3,6}) {
+            if (field[i + 2] == YELLOW) return 1;
+        }
+        return 0;
+    }
+    static bool Card_2_16(const std::vector<int>& field) {
+        for (int i : {0,3,6}) {
+            if (field[ + 1] == PURPLE && field[i + 2] == RED) return 1;
+        }
+        return 0;
+    }
+    static bool Card_2_17(const std::vector<int>& field) {
+        for (int i : {0,3,6}) {
+            if (field[i] == WHITE && field[i + 2] == GREEN) return 1;
+        }
+        return 0;
+    }
+    static bool Card_2_18(const std::vector<int>& field) {
+        for (int i : {0,3,6}) {
+            if (field[i] == ORANGE && field[i + 1] == BLUE) return 1;
+        }
+        return 0;
+    }
+    static bool Card_2_19(const std::vector<int>& field) {
+        for (int i : {0,1,2}) {
+            if (field[i] == YELLOW) return 1;
+        }
+        return 0;
+    }
 
     static bool Card_3_0(const std::vector<int>& field) {
         return (field[1] == WHITE && field[6] == WHITE && field[8] == WHITE);
@@ -325,6 +385,34 @@ struct Cards_N_N {
         }
         return 0;
     }
+    static bool Card_3_8(const std::vector<int>& field) {
+        return (field[0] == BLUE && field[2] == BLUE && field[7] == BLUE);
+    }
+    static bool Card_3_9(const std::vector<int>& field) {
+        for (int i : {0,1,3,4}) {
+            if (field[i] == GREEN && field[i + 3] == YELLOW && field[i + 4] == GREEN) return 1;
+        }
+        return 0;
+    }
+    static bool Card_3_10(const std::vector<int>& field) {
+        for (int i : {0,3,6}) {
+            if (field[i] == WHITE && field[i + 1] == WHITE && field[i + 2] == WHITE) return 1;
+        }
+        return 0;
+    }
+    static bool Card_3_11(const std::vector<int>& field) {
+        for (int i : {0,3,6}) {
+            if (field[i] == GREEN && field[i + 1] == GREEN && field[i + 2] == GREEN) return 1;
+        }
+        return 0;
+    }
+    static bool Card_3_12(const std::vector<int>& field) {
+        for (int i : {0,3,6}) {
+            if (field[i] == GREEN && field[i + 1] == ORANGE && field[i + 2] == BLUE) return 1;
+        }
+        return 0;
+    }
+
 
     static bool Card_5_0(const std::vector<int>& field) {
         return (field[1] == GREEN && field[3] == ORANGE && field[5] == ORANGE && field[7] == BLUE);
