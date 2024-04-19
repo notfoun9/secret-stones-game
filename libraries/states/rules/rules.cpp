@@ -6,8 +6,8 @@ Rules::Rules(SDL_Renderer* renderer_, SDL_Window* window_, Game* thisGame_) : re
     goBack->setPos(430, 600, 220, 80);
 
     rules = new GameObject("../../assets/rules.png");
-    rules->setBoarders(0, 0, 934, 392);
-    rules->setPos(100, 100, 880, 420);
+    rules->setBoarders(0, 0, 1440, 270);
+    rules->setPos(20, 50, 1060, 400);
 }
 Rules::~Rules() {
     delete goBack;

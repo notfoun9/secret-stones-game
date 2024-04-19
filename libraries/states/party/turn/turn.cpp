@@ -32,20 +32,16 @@ void Turn::HandleDropAction() {
         }
     }
 }
-
 void Turn::HandleAchieveAction() {
     for (Card* card : hand->cardsInHand) {
-        if (card && card->selected) {
-            if (card->CardIsAchievable(field)) {
-                isGoodTurn = 1; 
-                std::cout << "Turn is good" << '\n';
-                hand->Remove(card);
-                return;
-            }
+        if (card && card->selected && card->CardIsAchievable(field)) {
+            isGoodTurn = 1; 
+            std::cout << "Turn is good" << '\n';
+            hand->Remove(card);
+            return;
         }
     }
 }
-
 void Turn::HandleTilesActions() {
     for (int i = 0; i < 9; ++i) {
         Tile* &tile = field->positions[i];

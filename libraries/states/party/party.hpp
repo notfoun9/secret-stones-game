@@ -26,7 +26,7 @@ private:
 
     GameObject* note;
     SDL_Texture* strikes[4];
-    SDL_Rect strikesDest = {860, 515, 140, 140};
+    SDL_Rect strikesDest = {860, 495, 120, 120};
     Turn* currentTurn;
 
     int badTurns = 0;

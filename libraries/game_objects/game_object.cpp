@@ -4,6 +4,8 @@
 GameObject::GameObject(const char* textureSheet) {
     objTexture = TextureManager::LoadTexture(textureSheet);
 }
+GameObject::~GameObject() {
+}
 void GameObject::setPos(int x1, int y1, int x2, int y2) {
     destRect.x = x1;
     destRect.y = y1;
@@ -28,6 +30,14 @@ SDL_Texture* GameObject::GetTexture() {
 Button::Button (const char* defaultTexture, const char* selectedTexture) : 
     defaultStateTexture(TextureManager::LoadTexture(defaultTexture)), 
     selectedStateTexture(TextureManager::LoadTexture(selectedTexture)) {}
+Button::~Button() {
+    if (selectedStateTexture) {
+        delete selectedStateTexture;
+    }
+    if (defaultStateTexture) {
+        delete defaultStateTexture;
+    }
+}
 void Button::Update(Mouse* mouse) {
     checkSelected(mouse);
     if (selected) {
@@ -48,14 +58,19 @@ void Button::checkSelected(Mouse* mouse) {
 
 Switch::Switch(const char* defaultStateTexture_, const char* selectedStateTexture) :
     defaultStateTexture(TextureManager::LoadTexture(defaultStateTexture_)),
-    activetateTexture(TextureManager::LoadTexture(selectedStateTexture)) {}
+    activeStateTexture(TextureManager::LoadTexture(selectedStateTexture)) {}
+Switch::~Switch() {
+    if (defaultStateTexture) delete defaultStateTexture;
+    if (activeStateTexture) delete activeStateTexture;
+}
+
 bool Switch::checkSelected(Mouse* mouse) {
     if (SDL_HasIntersection(&(mouse->tip), &destRect)) return true;
     return false;
 }
 void Switch::Update(Mouse* mouse) {
     if (active) {
-        objTexture = activetateTexture;
+        objTexture = activeStateTexture;
     }
     else {
         objTexture = defaultStateTexture;
@@ -247,7 +262,7 @@ void Deck::Render() {
 
 Trash::Trash() {
     setBoarders(0,0, 128, 192);
-    setPos(900, 190, 128, 192);
+    setPos(900, 283, 128, 192);
 }
 void Trash::Clear() {
     cards.clear();

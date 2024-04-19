@@ -49,7 +49,6 @@ void Game::init(const char* title, int xPos, int yPos, int width, int height, bo
         isRunning = false;
     }
 }
-
 void Game::handleEvents() {
     while (inMenu) {
         mainMenu->Run();
@@ -68,19 +67,15 @@ void Game::handleEvents() {
 void Game::clean() {
     delete mainMenu;
     SDL_DestroyWindow(window);
-    SDL_DestroyRenderer(renderer);
     SDL_Quit();
 }
-
 bool Game::running() {
     return isRunning;
 }
-
 void Game::toggleFullscreen() {
     fullscreen_ = !fullscreen_;
     (fullscreen_) ? SDL_SetWindowFullscreen(window, 1) : SDL_SetWindowFullscreen(window, 0);
 }
-
 void Game::quit() {
     inMenu = 0;
     isRunning = 0;

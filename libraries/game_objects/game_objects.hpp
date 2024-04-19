@@ -20,7 +20,7 @@ class GameObject {
 public:
     GameObject() = default;
     GameObject(const char* textureSheet);
-    virtual ~GameObject() = default;
+    virtual ~GameObject();
 
     virtual void Update();
     virtual void Render();
@@ -38,7 +38,7 @@ class Button : public GameObject {
 public:
     Button() = default;
     Button(const char* defaultStateTexture, const char* selectedStateTexture);
-    virtual ~Button() = default;
+    virtual ~Button();
 
     virtual void Update(Mouse* mouse);
     void checkSelected(Mouse* mouse);
@@ -51,7 +51,7 @@ protected:
 class Switch : public GameObject {
 public:
     Switch(const char* defaultStateTexture, const char* selectedStateTexture);
-    ~Switch() = default;
+    ~Switch();
 
     bool checkSelected(Mouse* mouse);
     void Deselect();
@@ -61,7 +61,7 @@ private:
     bool active = 0;
 
     SDL_Texture* defaultStateTexture = nullptr;
-    SDL_Texture* activetateTexture = nullptr;
+    SDL_Texture* activeStateTexture = nullptr;
 } ;
 
 class Mouse : public GameObject {

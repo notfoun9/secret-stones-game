@@ -2,7 +2,7 @@
 
 Menu::Menu(SDL_Renderer* renderer_, SDL_Window* window_, Game* thisGame_) : renderer(renderer_), window(window_), thisGame(thisGame_) {
     button[START] = new Button("../../assets/menuButton.png", "../../assets/activeStartButton.png");
-    button[START]->setBoarders(2, 16, 62, 22); // ~ 3 : 1
+    button[START]->setBoarders(2, 16, 62, 22);
     button[START]->setPos(350, 150, 380, 125);
 
     button[RULES] = new Button("../../assets/rulesButton.png", "../../assets/activeRulesButton.png");
@@ -15,10 +15,8 @@ Menu::Menu(SDL_Renderer* renderer_, SDL_Window* window_, Game* thisGame_) : rend
 
 }
 Menu::~Menu() {
-    delete button[START];
-    delete button[RULES];
-    delete button[EXIT];
     delete mouse;
+    delete button[START];
 }
 
 
