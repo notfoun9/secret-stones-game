@@ -1,6 +1,6 @@
 #pragma once
 
-#include <game_objects/game_object.hpp>
+#include <game_objects/game_objects.hpp>
 
 class Turn {
 public:

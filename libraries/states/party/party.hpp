@@ -1,8 +1,9 @@
 #pragma once
 
 #include <game/game.hpp>
+#include <game_objects/game_objects.hpp>
 #include <turn/turn.hpp>
-#include <game_objects/game_object.hpp>
+#include <pull/pull.hpp>
 
 class Party {
 public:

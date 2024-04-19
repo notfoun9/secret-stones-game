@@ -1,3 +1,5 @@
+#pragma once
+
 #include <game/game.hpp>
 
 #ifndef texture_manager_hpp

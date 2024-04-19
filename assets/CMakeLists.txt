@@ -1,4 +1,3 @@
-file(COPY player.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
 file(COPY mouses.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
 
 file(COPY menuButton.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
@@ -35,6 +34,8 @@ file(COPY deselectedBlack.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
 
 file(COPY selectedBlankCard.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
 file(COPY unselectedBlankCard.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
+file(COPY deck.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
+
 
 file(COPY endTurnButton.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
 file(COPY activeEndTurnButton.png DESTINATION ${CMAKE_BINARY_DIR}/assets)

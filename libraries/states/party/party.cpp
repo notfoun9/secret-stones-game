@@ -4,7 +4,6 @@
 void Party::StartNewParty() {
     pull->ClearTaken();
     field->constructRandomField();
-    std::cout << "Field Constructed" << '\n';
     delete deck;
     delete trash;
     delete hand;
@@ -17,13 +16,9 @@ void Party::StartNewParty() {
     dropGetButton->setPos(780, 400, 250, 80);
     }
     deck = new Deck(pull);
-    std::cout << "Deck constructed" << '\n';
     trash = new Trash();
-    std::cout << "Trash constructed" << '\n';
     hand = new Hand(deck, trash);
-    std::cout << "Hand constructed" << '\n';
     mouse = new Mouse();
-    std::cout << "Mouse constructed" << '\n';
 
     currentTurn = new Turn(field, deck, trash, hand, mouse);
     badTurns = 0;
@@ -66,7 +61,6 @@ Party::~Party() {
 
 
 void Party::Run() {
-    std::cout << "run forest" << '\n';
     StartNewParty();
 
     const int FPS = 60;
@@ -115,7 +109,6 @@ void Party::HandleEvents() {
 
 void Party::HandleMouseLeftClick() {
     if (exitButton->selected) {
-        std::cout << "to menu from party" << std::endl;
         thisGame->inParty = 0;
         thisGame->inMenu = 1;
         return;
@@ -123,6 +116,9 @@ void Party::HandleMouseLeftClick() {
     if (endTurnButton->selected) {
         std::cout << "End turn" << '\n';
         if (!currentTurn->GoodTurn()) {
+            for (Tile *t : field->positions) {
+                t->Unclick();
+            }
             ++badTurns;
         }
         delete currentTurn;
@@ -159,6 +155,7 @@ void Party::Render() {
     endTurnButton->Render();
     exitButton->Render();
 
+    deck->Render();
     field->Render();
     hand->Render();
     mouse->Render();

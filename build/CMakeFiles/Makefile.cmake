@@ -16,6 +16,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/Users/maksim/Study/C++/gameTest/libraries/CMakeLists.txt"
   "/Users/maksim/Study/C++/gameTest/libraries/game/CMakeLists.txt"
   "/Users/maksim/Study/C++/gameTest/libraries/game_objects/CMakeLists.txt"
+  "/Users/maksim/Study/C++/gameTest/libraries/pull/CMakeLists.txt"
   "/Users/maksim/Study/C++/gameTest/libraries/states/CMakeLists.txt"
   "/Users/maksim/Study/C++/gameTest/libraries/states/menu/CMakeLists.txt"
   "/Users/maksim/Study/C++/gameTest/libraries/states/party/CMakeLists.txt"
@@ -66,6 +67,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "libraries/states/party/CMakeFiles/CMakeDirectoryInformation.cmake"
   "libraries/states/party/turn/CMakeFiles/CMakeDirectoryInformation.cmake"
   "libraries/states/rules/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "libraries/pull/CMakeFiles/CMakeDirectoryInformation.cmake"
   "executables/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/inc/CMakeFiles/CMakeDirectoryInformation.cmake"
@@ -82,5 +84,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "libraries/states/party/CMakeFiles/party.dir/DependInfo.cmake"
   "libraries/states/party/turn/CMakeFiles/turn.dir/DependInfo.cmake"
   "libraries/states/rules/CMakeFiles/rules.dir/DependInfo.cmake"
+  "libraries/pull/CMakeFiles/pull.dir/DependInfo.cmake"
   "executables/CMakeFiles/main.dir/DependInfo.cmake"
   )

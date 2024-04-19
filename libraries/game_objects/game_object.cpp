@@ -1,4 +1,5 @@
-#include <game_objects/game_object.hpp>
+#include <game_objects/game_objects.hpp>
+#include <pull/pull.hpp>
 #include "../../src/inc/SDL2/SDL_image.h"
 
 GameObject::GameObject(const char* textureSheet) {
@@ -122,6 +123,7 @@ void Field::constructRandomField() {
         if (a == 1) {
             tile->Flip();
         } 
+        tile->Unclick();
     }
 
     std::vector<std::pair<int, Tile*>> seq(9); 
@@ -152,6 +154,13 @@ void Field::SwapCards(int i, int j) {
     positions[i] = positions[j];
     positions[j] = tmp;
 }
+std::vector<int> Field::GetStatus() const {
+    std::vector<int> status;
+    for (Tile* tile : positions) {
+        status.push_back(tile->GetActiveColor());
+    }
+    return status;
+}
 
 Tile::Tile(const char* deSide1_, const char* side1_, const char* deSide2_, const char* side2_, int color1_, int color2_) 
 : color1(color1_), color2(color2_) {
@@ -162,7 +171,7 @@ int Tile::GetActiveColor() {
     return activeColor;
 }
 SDL_Texture* Tile::GetActiveSide() {
-    if (selected) return activeSide->second;
+    if (selected || clicked) return activeSide->second;
     return activeSide->first;
 }  
 void Tile::Update(Mouse* mouse) {
@@ -181,87 +190,19 @@ void Tile::Flip() {
 void Tile::Select() {
     return;
 }
-
-Pull::Pull() {
-    std::cout << "Pull has cards: " << '\n';
-    for (int i = 0; i < 8; ++i) {
-        points_1[i] = new Card("../../assets/unselectedBlankCard.png","../../assets/selectedBlankCard.png");
-        std::cout << points_1[i] << 1 << '\n'; 
-    }
-    for (int i = 0; i < 4; ++i) {
-        points_2[i] = new Card("../../assets/unselectedBlankCard.png","../../assets/selectedBlankCard.png");
-        std::cout << points_2[i] << 2 << '\n';
-    }
-    for (int i = 0; i < 3; ++i) {
-        points_3[i] = new Card("../../assets/unselectedBlankCard.png","../../assets/selectedBlankCard.png");
-        std::cout << points_3[i] << 3 << '\n';
-    }
-    for (int i = 0; i < 1; ++i) {
-        points_5[i] = new Card("../../assets/unselectedBlankCard.png","../../assets/selectedBlankCard.png");
-        std::cout << points_5[i] << 5 << '\n';
-    }
-    std::cout << '\n';
+void Tile::Click() {
+    std::cout << "click action " << '\n';
+    clicked =  1;
 }
-Pull::~Pull() {
-    for (auto card : points_1) {
-        delete card;
-    }
-    for (auto card : points_2) {
-        delete card;
-    }
-    for (auto card : points_3) {
-        delete card;
-    }
-    for (auto card : points_5) {
-        delete card;
-    }
-}
-Card* Pull::Take1() {
-    srand(time(0));
-    int cardNo = rand() % 8;
-    while (takenCards.find(points_1[cardNo]) != takenCards.end()) {
-        cardNo = rand() % 8;
-    }
-    takenCards.insert(points_1[cardNo]);
-    std::cout << points_1[cardNo] << " isTaken 1" << '\n';
-    return points_1[cardNo];
-}
-Card* Pull::Take2() {
-    srand(time(0));
-    int cardNo = rand() % 4;
-    while (takenCards.find(points_2[cardNo]) != takenCards.end()) {
-        std::cout << "somehow entered" << '\n';
-        cardNo = rand() % 4;
-    }
-    takenCards.insert(points_2[cardNo]);
-    std::cout << points_2[cardNo] << " isTaken 2" << '\n';
-    return points_2[cardNo];    
-}
-Card* Pull::Take3() {
-    srand(time(0));
-    int cardNo = rand() % 3;
-    while (takenCards.find(points_3[cardNo]) != takenCards.end()) {
-        cardNo = rand() % 3;
-    }
-    takenCards.insert(points_3[cardNo]);
-    std::cout << points_3[cardNo] << " isTaken 3" << '\n';
-    return points_3[cardNo];    
-}
-Card* Pull::Take5() {
-    srand(time(0));
-    int cardNo = rand() % 1;
-    while (takenCards.find(points_5[cardNo]) != takenCards.end()) {
-        std::cout << "Aflasf"<< '\n';
-        cardNo = rand() % 1;
-    }
-    takenCards.insert(points_5[cardNo]);
-    return points_5[cardNo];    
-}
-void Pull::ClearTaken() {
-    takenCards.clear();
+void Tile::Unclick() {
+    std::cout << "unclick action " << '\n';
+    clicked = 0;
 }
 
 Deck::Deck(Pull* pull) {   
+    objTexture = TextureManager::LoadTexture("../../assets/deck.png");
+    setBoarders(0,0, 192, 128);
+    setPos(830, 494, 220, 128);
     srand(time(0));
     std::vector<std::pair<int, Card*>> cards;
     for (int i = 0; i < 2; ++i) {
@@ -298,6 +239,11 @@ bool Deck::Empty() {
 }
 int Deck::Size() {
     return cardsInDeck.size();
+}
+void Deck::Render() {
+    if (!Empty()) {
+        SDL_RenderCopy(Game::renderer, objTexture, &srcRect, &destRect);
+    }
 }
 
 void Trash::Clear() {
@@ -363,7 +309,7 @@ void Hand::Update(Mouse* mouse) {
     if (size == 4) {
         for (int i = 0; i < 4; ++i) {
             if (cardsInHand[i]) {
-                cardsInHand[i]->setPos(350 + 128 * i, 488, 128, 192);
+                cardsInHand[i]->setPos(300 + 128 * i, 488, 128, 192);
             }
         }
     }
@@ -404,4 +350,11 @@ void Card::Update(Mouse* mouse) {
     else {
         objTexture = defaultStateTexture;
     }
+}
+bool Card::CardIsAchievable(const Field* field) const {
+    std::vector<int> CurrentFieldStatus = field->GetStatus();
+    return cardCondition(CurrentFieldStatus);
+}
+void Card::SetCondition(bool (*condition)(const std::vector<int>& fieldStatus)) {
+    cardCondition = condition;
 }

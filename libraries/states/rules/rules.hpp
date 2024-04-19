@@ -1,7 +1,7 @@
 #pragma once
 
 #include <game/game.hpp>
-#include <game_objects/game_object.hpp>
+#include <game_objects/game_objects.hpp>
 
 class Rules {
 public:

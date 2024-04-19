@@ -6,7 +6,6 @@ Turn::Turn(Field* field_, Deck* deck_, Trash* trash_, Hand* hand_, Mouse* mouse_
 
 bool Separated(int i, int j) {
     int sep = std::abs((i / 3) - (j / 3)) + std::abs((i % 3) - (j % 3));
-    std::cout << "Distanse: " << sep << '\n';
     return sep > 1;
 }
 
@@ -50,14 +49,15 @@ void Turn::HandleTilesActions() {
         Tile* &tile = field->positions[i];
         if (tile->selected) {
             if (selectedTiles.first == nullptr) {
+                tile->Click();
                 selectedTiles.first = tile;
                 selectedTilesNums.first = i;
             }
             else {
+                selectedTiles.first->Unclick();
                 selectedTiles.second = tile;
                 selectedTilesNums.second = i;
                 if (Separated(selectedTilesNums.first, selectedTilesNums.second)) {
-                    std::cout << "Separated" << '\n';
                     selectedTiles = {nullptr, nullptr};
                     return;
                 }
@@ -65,6 +65,7 @@ void Turn::HandleTilesActions() {
                 --actionsAvailable;
                 selectedTiles = {nullptr, nullptr};
             }
+            return;
         }
     }
 }

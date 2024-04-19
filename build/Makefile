@@ -253,6 +253,19 @@ rules/fast:
 .PHONY : rules/fast
 
 #=============================================================================
+# Target rules for targets named pull
+
+# Build rule for target.
+pull: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pull
+.PHONY : pull
+
+# fast build rule for target.
+pull/fast:
+	$(MAKE) $(MAKESILENT) -f libraries/pull/CMakeFiles/pull.dir/build.make libraries/pull/CMakeFiles/pull.dir/build
+.PHONY : pull/fast
+
+#=============================================================================
 # Target rules for targets named main
 
 # Build rule for target.
@@ -282,6 +295,7 @@ help:
 	@echo "... main"
 	@echo "... menu"
 	@echo "... party"
+	@echo "... pull"
 	@echo "... rules"
 	@echo "... texture_manager"
 	@echo "... turn"

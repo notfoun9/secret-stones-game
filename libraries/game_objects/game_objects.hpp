@@ -2,6 +2,7 @@
 
 #include <game/game.hpp>
 #include <texture_manager/texture_manager.hpp>
+#include <pull/pull.hpp>
 
 class GameObject;
 
@@ -13,8 +14,6 @@ class Card;
 class Hand;
 class Deck;
 class Trash;
-class Pull;
-
 
 class GameObject {
 public:
@@ -82,9 +81,10 @@ public:
     void Update(Mouse* mouse);
     void Render();
     void SwapCards(int i, int j);
+    std::vector<int> GetStatus() const;
 
     enum Tiles {GR_WH_1, GR_WH_2, GR_WH_3, BLU_PUR_1, BLU_PUR_2, BLU_PUR_3, RED_OR_1, RED_OR_2, BLA_YEL_1};
-    enum colors {GREEN, WHITE, BLUE, PURPLE, RED, ORANGE, BLACK, YELLOW};
+    enum colors {WHITE, RED, ORANGE, YELLOW, GREEN, BLUE, PURPLE, BLACK};
     Tile* positions[9];
     void constructRandomField();
 private:
@@ -103,12 +103,14 @@ public:
     void Update(Mouse* mouse);
 
     void Select();
-
+    void Click();
+    void Unclick();
 private:
     std::pair<SDL_Texture*, SDL_Texture*> side1 = {nullptr, nullptr};
     std::pair<SDL_Texture*, SDL_Texture*> side2 = {nullptr, nullptr};
     int color1;
     int color2;
+    bool clicked = 0;
 
     int activeColor = color1;
     std::pair<SDL_Texture*, SDL_Texture*>* activeSide = &side1;
@@ -122,8 +124,11 @@ public:
     void Drop(Trash* trash);
     void Update(Mouse* mouse);
 
-    enum colors {GREEN, WHITE, BLUE, PURPLE, RED, ORANGE, BLACK, YELLOW};
-    int num = 0;
+    enum colors {WHITE, RED, ORANGE, YELLOW, GREEN, BLUE, PURPLE, BLACK};
+    bool CardIsAchievable(const Field* field) const;
+    void SetCondition(bool (*)(const std::vector<int>& fieldStatus));
+private:
+    bool (*cardCondition)(const std::vector<int>& fieldStatus);
 } ;
 
 class Hand : public GameObject {
@@ -150,6 +155,8 @@ public:
     Deck(Pull* pull);
     Deck(Trash*);
     ~Deck() = default;
+    
+    void Render();
 
     int Size();
     bool Empty();
@@ -170,23 +177,4 @@ public:
     int Size();
 private:
     std::vector<Card*> cards;
-} ;
-
-class Pull : public GameObject {
-public:
-    Pull();
-    ~Pull();
-    
-    Card* Take1();
-    Card* Take2();
-    Card* Take3();
-    Card* Take5();
-    void ClearTaken();
-private:
-    std::unordered_set<Card*> takenCards;
-
-    Card* points_1[8];
-    Card* points_2[4];
-    Card* points_3[3];
-    Card* points_5[1];
 } ;

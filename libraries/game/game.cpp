@@ -1,17 +1,19 @@
 #include <game/game.hpp>
 #include <texture_manager/texture_manager.hpp>
-#include <game_objects/game_object.hpp>
-
-#include <states/menu/menu.hpp>
+#include <game_objects/game_objects.hpp>
 #include <states/rules/rules.hpp>
+#include <states/menu/menu.hpp>
 #include <states/party/party.hpp>
+#include <pull/pull.hpp>
 
 Menu* mainMenu;
 Rules* rules;
 Party* party;
 Pull* pull;
 
+
 SDL_Renderer* Game::renderer = nullptr;
+Conditions* conditions = new Conditions();
 
 Game::Game() {
 }
@@ -37,7 +39,7 @@ void Game::init(const char* title, int xPos, int yPos, int width, int height, bo
 
         mainMenu = new Menu(renderer, window, this);
         rules = new Rules(renderer, window, this);
-        pull = new Pull();
+        pull = new Pull(conditions);
         party = new Party(renderer, window, this, pull);
     }
     else {
