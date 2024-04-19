@@ -253,6 +253,19 @@ rules/fast:
 .PHONY : rules/fast
 
 #=============================================================================
+# Target rules for targets named gameOver
+
+# Build rule for target.
+gameOver: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gameOver
+.PHONY : gameOver
+
+# fast build rule for target.
+gameOver/fast:
+	$(MAKE) $(MAKESILENT) -f libraries/states/gameOver/CMakeFiles/gameOver.dir/build.make libraries/states/gameOver/CMakeFiles/gameOver.dir/build
+.PHONY : gameOver/fast
+
+#=============================================================================
 # Target rules for targets named pull
 
 # Build rule for target.
@@ -305,6 +318,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... conditions"
 	@echo "... game"
+	@echo "... gameOver"
 	@echo "... game_objects"
 	@echo "... main"
 	@echo "... menu"

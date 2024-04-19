@@ -328,6 +328,13 @@ void Hand::Remove(Card* card_) {
     }
 
 }
+bool Hand::Empty() {
+    short nullpts = 0;
+    for (auto card : cardsInHand) {
+        if (!card) ++nullpts;
+    }
+    return (cardsInHand.size() - nullpts == 0);
+}
 
 Card::Card(const char* texture) {
     srcRect = {0,0, 127, 192};

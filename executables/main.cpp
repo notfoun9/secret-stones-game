@@ -15,12 +15,10 @@ int main() {
     game->init("Secret Stones", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1080, 720, false);
     SDL_ShowCursor(false);
     while (game->running()) {
-        
+        std::cout << "cycle" << '\n';
         frameStart = SDL_GetTicks();
 
         game->handleEvents();
-        // game->update();
-        // game->render();
 
         frameTime = SDL_GetTicks() - frameStart;
         if (frameDelay > frameTime) {

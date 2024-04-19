@@ -114,8 +114,15 @@ void Party::HandleMouseLeftClick() {
             ++badTurns;
         }
         delete currentTurn;
-        if (badTurns > 3) {
+        if (hand->Empty() && deck->Empty() && trash->Empty()) {
+            std::cout << "YOU WIN!" << '\n';
+            thisGame->inGameOver = 1;
+            thisGame->inParty = 0;
+        }
+        else if (badTurns > 3) {
             std::cout << "GAME OVER" << '\n';
+            thisGame->inGameOver = 1;
+            thisGame->inParty = 0;
         }
         currentTurn = new Turn(field, deck, trash, hand, mouse);
         hand->Fill();

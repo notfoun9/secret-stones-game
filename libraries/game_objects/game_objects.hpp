@@ -145,6 +145,7 @@ public:
     void addCard();
     void Push();
     void Remove(Card* card);
+    bool Empty();
     std::vector<Card*> cardsInHand;
 private:
     Deck* deck;

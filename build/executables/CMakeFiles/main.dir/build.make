@@ -100,6 +100,7 @@ executables/bin/main: libraries/states/party/turn/libturn.a
 executables/bin/main: libraries/game_objects/libgame_objects.a
 executables/bin/main: libraries/conditions/libconditions.a
 executables/bin/main: libraries/pull/libpull.a
+executables/bin/main: libraries/states/gameOver/libgameOver.a
 executables/bin/main: libraries/game/libgame.a
 executables/bin/main: libraries/states/menu/libmenu.a
 executables/bin/main: libraries/states/rules/librules.a
@@ -108,6 +109,7 @@ executables/bin/main: libraries/states/party/turn/libturn.a
 executables/bin/main: libraries/game_objects/libgame_objects.a
 executables/bin/main: libraries/conditions/libconditions.a
 executables/bin/main: libraries/pull/libpull.a
+executables/bin/main: libraries/states/gameOver/libgameOver.a
 executables/bin/main: libraries/texture_manager/libtexture_manager.a
 executables/bin/main: executables/CMakeFiles/main.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/maksim/Study/C++/gameTest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable bin/main"

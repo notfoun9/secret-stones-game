@@ -6,11 +6,13 @@
 #include <states/party/party.hpp>
 #include <pull/pull.hpp>
 #include <conditions/conditions.hpp>
+#include <states/gameOver/gameOver.hpp>
 
 Menu* mainMenu;
 Rules* rules;
 Party* party;
 Pull* pull;
+GameOver* gameOver;
 
 
 SDL_Renderer* Game::renderer = nullptr;
@@ -41,6 +43,7 @@ void Game::init(const char* title, int xPos, int yPos, int width, int height, bo
         rules = new Rules(renderer, window, this);
         pull = new Pull(conditions);
         party = new Party(renderer, window, this, pull);
+        gameOver = new GameOver(renderer, window, this);
     }
     else {
         isRunning = false;
@@ -56,6 +59,9 @@ void Game::handleEvents() {
     }
     while (inParty) {
         party->Run();
+    }
+    while (inGameOver) {
+        gameOver->Run();
     }
 }
 

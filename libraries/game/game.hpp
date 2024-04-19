@@ -33,6 +33,9 @@ public:
     bool inMenu = 1;
     bool inParty = 0;
     bool inRules = 0;
+    bool inGameOver = 0;
+
+    bool isWin = 0;
 private:
     SDL_Window *window;
 

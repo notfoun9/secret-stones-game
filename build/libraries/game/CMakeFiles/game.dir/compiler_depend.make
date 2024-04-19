@@ -802,6 +802,7 @@ libraries/game/CMakeFiles/game.dir/game.cpp.o: /Users/maksim/Study/C++/gameTest/
   /Users/maksim/Study/C++/gameTest/libraries/game/game.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/game_objects/game_objects.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/pull/pull.hpp \
+  /Users/maksim/Study/C++/gameTest/libraries/states/gameOver/gameOver.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/states/menu/menu.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/states/party/party.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/states/rules/rules.hpp \
@@ -1288,6 +1289,8 @@ libraries/game/CMakeFiles/game.dir/game.cpp.o: /Users/maksim/Study/C++/gameTest/
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__type_traits/is_nothrow_move_assignable.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__type_traits/is_nothrow_convertible.h:
+
+/Users/maksim/Study/C++/gameTest/libraries/states/gameOver/gameOver.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__type_traits/is_move_constructible.h:
 

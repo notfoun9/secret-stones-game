@@ -16,6 +16,11 @@ file(COPY activeGoBack.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
 file(COPY rules.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
 file(COPY note.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
 
+file(COPY toMenu.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
+file(COPY toMenuSelected.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
+file(COPY gameOver.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
+file(COPY win.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
+
 file(COPY selectedRed.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
 file(COPY deselectedRed.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
 file(COPY selectedBlue.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
