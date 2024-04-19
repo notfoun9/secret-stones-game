@@ -188,11 +188,9 @@ void Tile::Select() {
     return;
 }
 void Tile::Click() {
-    std::cout << "click action " << '\n';
     clicked =  1;
 }
 void Tile::Unclick() {
-    std::cout << "unclick action " << '\n';
     clicked = 0;
 }
 
@@ -217,9 +215,7 @@ Deck::Deck(Pull* pull) {
     std::sort(cards.begin(), cards.end(), [](std::pair<int, Card*> a, std::pair<int, Card*> b) {
         return a.first > b.first;
     } );
-    std::cout << "Deck has Cards: " << '\n';
     for (auto card : cards) {
-        std::cout << card.second << '\n';
         cardsInDeck.push(card.second);
     }
     std::cout << '\n';
@@ -234,7 +230,6 @@ Card* Deck::Take() {
     
     Card* card = cardsInDeck.top();
     cardsInDeck.pop();
-    std::cout << "Card taken from deck is " << card << '\n';
     return card;
 }
 bool Deck::Empty() {
@@ -244,9 +239,7 @@ int Deck::Size() {
     return cardsInDeck.size();
 }
 void Deck::Render() {
-    if (!Empty()) {
-        SDL_RenderCopy(Game::renderer, objTexture, &srcRect, &destRect);
-    }
+    if (!Empty()) SDL_RenderCopy(Game::renderer, objTexture, &srcRect, &destRect);
 }
 
 void Trash::Clear() {

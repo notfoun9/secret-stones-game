@@ -26,7 +26,6 @@ private:
     bool isGoodTurn = 0;
     bool isWaitingForDrop = 0;
 
-
     Field* field;
     Deck* deck;
     Trash* trash;

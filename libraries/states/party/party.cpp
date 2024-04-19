@@ -4,22 +4,16 @@
 void Party::StartNewParty() {
     pull->ClearTaken();
     field->constructRandomField();
-    delete deck;
-    delete trash;
-    delete hand;
-    delete currentTurn;
-    delete mouse;
-    delete dropGetButton;
-    {
-     dropGetButton = new Switch("../../assets/dropGetButton.png", "../../assets/activeDropGetButton.png");
-    dropGetButton->setBoarders(0,0,64,20);
-    dropGetButton->setPos(780, 400, 250, 80);
-    }
-    deck = new Deck(pull);
-    trash = new Trash();
-    hand = new Hand(deck, trash);
-    mouse = new Mouse();
+    dropGetButton->Deselect();
+    trash->Clear();
 
+    delete deck;
+    delete hand;
+    
+    deck = new Deck(pull);
+    hand = new Hand(deck, trash);
+
+    delete currentTurn;
     currentTurn = new Turn(field, deck, trash, hand, mouse);
     badTurns = 0;
 }
@@ -41,6 +35,7 @@ Party::Party(SDL_Renderer* renderer_, SDL_Window* window_, Game* thisGame_, Pull
     dropGetButton->setBoarders(0,0,64,20);
     dropGetButton->setPos(780, 400, 250, 80);
 
+    mouse = new Mouse();
     field = new Field();
     deck = new Deck(pull);
     trash = new Trash();
@@ -115,19 +110,19 @@ void Party::HandleMouseLeftClick() {
     }
     if (endTurnButton->selected) {
         std::cout << "End turn" << '\n';
-        if (!currentTurn->GoodTurn()) {
-            for (Tile *t : field->positions) {
-                t->Unclick();
-            }
+        if (!(currentTurn->GoodTurn())) {
             ++badTurns;
         }
         delete currentTurn;
-        if (badTurns > 4) {
+        if (badTurns > 3) {
             std::cout << "GAME OVER" << '\n';
         }
         currentTurn = new Turn(field, deck, trash, hand, mouse);
         hand->Fill();
         dropGetButton->Deselect();
+        for (Tile *t : field->positions) {
+            t->Unclick();
+        }
         return;
     }
     if (dropGetButton->checkSelected(mouse)) {

@@ -17,14 +17,14 @@ public:
     void Update();
     void Render();
     void StartNewParty();
-    Mouse* mouse = new Mouse();
 private:
+    Mouse* mouse;
     Button* exitButton;
     Button* endTurnButton;
     Switch* dropGetButton;
 
     GameObject* note;
-    Turn* currentTurn;;
+    Turn* currentTurn;
 
     int badTurns = 0;
     int Score = 0;

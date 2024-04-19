@@ -26,11 +26,10 @@ void Turn::HandleDropAction() {
     for (Card* card : hand->cardsInHand) {
         if (card && card->selected) {
             hand->Remove(card);
-            std::cout << "Card to remove is " << card << '\n';
             card->Drop(trash);
             ++actionsAvailable;
+            std::cout << "Card is dropped" << '\n';
             std::cout << "Actions left: " << actionsAvailable << '\n';
-            std::cout << "card dropped" << '\n';
             return;
         }
     }
@@ -39,10 +38,9 @@ void Turn::HandleDropAction() {
 void Turn::HandleAchieveAction() {
     for (Card* card : hand->cardsInHand) {
         if (card && card->selected) {
-            std::cout << card << '\n';
             if (card->CardIsAchievable(field)) {
-                std::cout << "CARD IS ACHIIIEEVED !!!" << '\n';
                 isGoodTurn = 1; 
+                std::cout << "Turn is good" << '\n';
                 hand->Remove(card);
                 return;
             }
@@ -87,10 +85,9 @@ void Turn::MakeAction() {
 
 void Turn::ToogleWaitForDrop() {
     isWaitingForDrop = !isWaitingForDrop;
-    std::cout << isWaitingForDrop << '\n';
 }
 bool Turn::GoodTurn() {
-    return !isGoodTurn;
+    return isGoodTurn;
 }
 void Turn::UnwaitDrop() {
     isWaitingForDrop = 0;
