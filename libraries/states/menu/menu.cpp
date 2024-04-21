@@ -1,16 +1,16 @@
 #include <menu/menu.hpp>
 
 Menu::Menu(SDL_Renderer* renderer_, SDL_Window* window_, Game* thisGame_) : renderer(renderer_), window(window_), thisGame(thisGame_) {
-    button[START] = new Button("../../assets/menuButton.png", "../../assets/activeStartButton.png");
-    button[START]->setBoarders(2, 16, 62, 22);
+    button[START] = new Button("../../assets/satrtButton.png", "../../assets/activeStartButton.png");
+    button[START]->setBoarders(0, 0, 76, 25);
     button[START]->setPos(350, 150, 380, 125);
 
     button[RULES] = new Button("../../assets/rulesButton.png", "../../assets/activeRulesButton.png");
-    button[RULES]->setBoarders(0, 0, 60, 22);
+    button[RULES]->setBoarders(0, 0, 76, 25);
     button[RULES]->setPos(350, 300, 380, 125);
 
     button[EXIT] = new Button("../../assets/exitButton.png", "../../assets/activeExitButton.png");
-    button[EXIT]->setBoarders(0, 0, 116, 44);
+    button[EXIT]->setBoarders(0, 0, 76, 25);
     button[EXIT]->setPos(350, 450, 380, 125);
 
 }

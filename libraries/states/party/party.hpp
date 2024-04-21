@@ -26,6 +26,7 @@ private:
     Switch* dropGetButton;
 
     GameObject* note;
+    GameObject* back;
     SDL_Texture* strikes[4];
     SDL_Rect strikesDest = {860, 495, 120, 120};
     Turn* currentTurn;

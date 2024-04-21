@@ -2,8 +2,8 @@
 
 GameOver::GameOver(SDL_Renderer* renderer_, SDL_Window* window_, Game* thisGame_) : renderer(renderer_), window(window_), thisGame(thisGame_) {
     goToMenu = new Button("../../assets/toMenu.png", "../../assets/toMenuSelected.png");
-    goToMenu->setBoarders(0, 0, 140, 60);
-    goToMenu->setPos(400, 580, 280, 120);
+    goToMenu->setBoarders(0, 0, 40, 12);
+    goToMenu->setPos(360, 580, 360, 108);
 }
 GameOver::~GameOver() {
     delete goToMenu;

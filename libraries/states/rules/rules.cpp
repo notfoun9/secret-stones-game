@@ -1,7 +1,7 @@
 #include <rules/rules.hpp>
 
 Rules::Rules(SDL_Renderer* renderer_, SDL_Window* window_, Game* thisGame_) : renderer(renderer_), window(window_), thisGame(thisGame_) {
-    goBack = new Button("../../assets/goBackButton.png", "../../assets/activeGoBack.png");
+    goBack = new Button("../../assets/toMenuButton.png", "../../assets/activeToMenu.png");
     goBack->setBoarders(0, 0, 34, 11);
     goBack->setPos(430, 600, 220, 80);
 

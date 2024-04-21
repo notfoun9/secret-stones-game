@@ -24,21 +24,26 @@ Party::Party(SDL_Renderer* renderer_, SDL_Window* window_, Game* thisGame_, Pull
     strikes[2] = TextureManager::LoadTexture("../../assets/strikes2.png");
     strikes[3] = TextureManager::LoadTexture("../../assets/strikes3.png");
 
-    exitButton = new Button("../../assets/goBackButton.png", "../../assets/activeGoBack.png");;
-    exitButton->setBoarders(0, 0, 34, 11);
+    exitButton = new Button("../../assets/toMenu.png", "../../assets/toMenuSelected.png");;
+    exitButton->setBoarders(0, 0, 40, 12);
     exitButton->setPos(30, 30, 220, 80);
 
     note = new GameObject("../../assets/note.png");
     note->setBoarders(0,0,149, 280);
     note->setPos(30, 140, 189, 340);
 
+    back = new GameObject("../../assets/back.png");
+    back->setBoarders(0,0,454, 454);
+    back->setPos(298, 28, 454, 454);
+
     endTurnButton = new Button("../../assets/endTurnButton.png", "../../assets/activeEndTurnButton.png");
-    endTurnButton->setBoarders(0, 0, 64, 18);
+    endTurnButton->setBoarders(0, 0, 39, 9);
     endTurnButton->setPos(30, 595, 250, 80);
 
     dropGetButton = new Switch("../../assets/dropGetButton.png", "../../assets/activeDropGetButton.png");
     dropGetButton->setBoarders(0,0,64,20);
-    dropGetButton->setPos(30, 500, 250, 80);
+    dropGetButton->setPos(30, 495, 250, 90);
+
 
     movesLeft[0] = TextureManager::LoadTexture("../../assets/movesLeft0.png");
     movesLeft[1] = TextureManager::LoadTexture("../../assets/movesLeft1.png");
@@ -64,6 +69,7 @@ Party::~Party() {
     delete exitButton;
     delete field;
     delete mouse;
+    delete back;
 }
 
 
@@ -170,6 +176,7 @@ void Party::Render() {
     if (badTurns < 4) SDL_RenderCopy(Game::renderer, strikes[badTurns], NULL, &strikesDest);
     SDL_RenderCopy(Game::renderer, movesLeft[currentTurn->ActionsAvailable()], &moovesLeftSrc, &movesLeftDest);
 
+    back->Render();
     dropGetButton->Render();
     note->Render();
     endTurnButton->Render();
