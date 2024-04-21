@@ -19,7 +19,7 @@ void GameObject::setBoarders(int x1, int y1, int x2, int y2) {
     srcRect.h = y2;
 }
 void GameObject::Render() {
-    SDL_RenderCopy(Game::renderer, objTexture, &srcRect, &destRect);
+    TextureManager::Draw(objTexture, srcRect, destRect);
 }
 void GameObject::Update() {}
 SDL_Texture* GameObject::GetTexture() {
