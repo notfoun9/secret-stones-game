@@ -1,8 +1,8 @@
 #pragma once
 #include <card/card.hpp>
 
-
 class Card;
+
 class Conditions {
 public:
     Conditions();
