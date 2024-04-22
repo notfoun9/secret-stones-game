@@ -807,4 +807,6 @@ libraries/states/party/turn/CMakeFiles/turn.dir/turn.cpp.o: \
   /Users/maksim/Study/C++/gameTest/libraries/game/../texture_manager/texture_manager.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/game_objects/interface/../field/field.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/game_objects/interface/../pull/pull.hpp \
-  /Users/maksim/Study/C++/gameTest/libraries/game/../conditions/conditions.hpp
+  /Users/maksim/Study/C++/gameTest/libraries/game/../conditions/conditions.hpp \
+  /Users/maksim/Study/C++/gameTest/libraries/game/../text/text.hpp \
+  /Users/maksim/Study/C++/gameTest/libraries/game/../text/../../src/inc/SDL2/SDL_ttf.h

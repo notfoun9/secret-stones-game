@@ -810,5 +810,7 @@ libraries/states/rules/CMakeFiles/rules.dir/rules.cpp.o
  /Users/maksim/Study/C++/gameTest/src/inc/SDL2/begin_code.h
  /Users/maksim/Study/C++/gameTest/src/inc/SDL2/close_code.h
  /Users/maksim/Study/C++/gameTest/libraries/game/game.hpp
+ /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_ttf.h
+ /Users/maksim/Study/C++/gameTest/libraries/text/text.hpp
  /Users/maksim/Study/C++/gameTest/libraries/texture_manager/texture_manager.hpp
 

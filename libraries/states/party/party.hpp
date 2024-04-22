@@ -49,7 +49,4 @@ private:
     Deck* deck;
     Trash* trash;
     Hand* hand;
-
-    Text* cardsInDeck;
-    Text* cardsInTrash;
 } ;

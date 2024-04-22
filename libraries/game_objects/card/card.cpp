@@ -6,6 +6,7 @@
 
 Deck::Deck(Pull* pull) {   
     objTexture = TextureManager::LoadTexture("../../assets/deck.png");
+    cardsInDeckNum = new Text("../../assets/SomeFont.ttf", 22, {0,0,0,255});
     setBoarders(0,0, 128, 192);
     setPos(760, 283, 128, 192); 
     srand(time(0));
@@ -28,7 +29,6 @@ Deck::Deck(Pull* pull) {
     for (auto card : cards) {
         cardsInDeck.push(card.second);
     }
-    std::cout << '\n';
 }
 void Deck::Fill(Trash* trash) {
     while (!trash->Empty()) {
@@ -49,10 +49,22 @@ int Deck::Size() {
     return cardsInDeck.size();
 }
 void Deck::Render() {
-    if (!Empty()) SDL_RenderCopy(Game::renderer, objTexture, &srcRect, &destRect);
+    cardsInDeckNum->SetMessage(std::to_string(Size()));
+    if (Size() > 9) {
+        cardsInDeckNum->SetDest(812,225);
+    }
+    else {
+        cardsInDeckNum->SetDest(816,225);
+    }
+    if (!Empty()) {
+        SDL_RenderCopy(Game::renderer, objTexture, &srcRect, &destRect);
+        cardsInDeckNum->Update();
+        cardsInDeckNum->Render();
+    }
 }
 
 Trash::Trash() {
+    cardsInTrash = new Text("../../assets/SomeFont.ttf", 22, {0,0,0,255});
     setBoarders(0,0, 128, 192);
     setPos(900, 277, 136, 204);
 }
@@ -75,8 +87,17 @@ int Trash::Size() {
 }
 void Trash::Render() {
     if (!Empty()) {
+        cardsInTrash->SetMessage(std::to_string(Size()));
+        if (Size() > 9) {
+            cardsInTrash->SetDest(951,225);
+        }
+        else {
+            cardsInTrash->SetDest(960,225);
+        }
         objTexture = cards.back()->GetTexture();
         SDL_RenderCopy(Game::renderer, objTexture, &srcRect, &destRect);
+        cardsInTrash->Update();
+        cardsInTrash->Render();
     }
 }
 

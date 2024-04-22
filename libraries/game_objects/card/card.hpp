@@ -4,6 +4,7 @@
 #include<field/field.hpp>
 #include<pull/pull.hpp>
 #include<conditions/conditions.hpp>
+#include<text/text.hpp>
 
 class Trash;
 class Deck;
@@ -58,6 +59,7 @@ public:
     Card* Take();
     void Fill(Trash* trash);
 private:
+    Text* cardsInDeckNum;
     std::stack<Card*> cardsInDeck;
 } ;
 
@@ -73,5 +75,6 @@ public:
     bool Empty();
     int Size();
 private:
+    Text* cardsInTrash;
     std::vector<Card*> cards;
 } ;

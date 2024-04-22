@@ -807,4 +807,6 @@ libraries/states/gameOver/CMakeFiles/gameOver.dir/gameOver.cpp.o: \
   /Users/maksim/Study/C++/gameTest/libraries/texture_manager/../texture_manager/texture_manager.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/game_objects/interface/../field/field.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/game_objects/interface/../pull/pull.hpp \
-  /Users/maksim/Study/C++/gameTest/libraries/texture_manager/../conditions/conditions.hpp
+  /Users/maksim/Study/C++/gameTest/libraries/texture_manager/../conditions/conditions.hpp \
+  /Users/maksim/Study/C++/gameTest/libraries/texture_manager/../text/text.hpp \
+  /Users/maksim/Study/C++/gameTest/libraries/texture_manager/../text/../../src/inc/SDL2/SDL_ttf.h

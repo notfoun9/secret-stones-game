@@ -16,20 +16,18 @@ void Text::SetMessage(std::string message_) {
     message = message_;
     auto textSurface = TTF_RenderText_Solid(font, message.c_str(), color);
     textTex = SDL_CreateTextureFromSurface(Game::renderer, textSurface);
-    SDL_QueryTexture(textTex, nullptr, nullptr, &textRect.w, &textRect.h);
 }
 
 void Text::Update() {
-    SDL_QueryTexture(textTex, nullptr, nullptr, &textRect.w, &textRect.h);
+    SDL_QueryTexture(textTex, nullptr, nullptr, &textDest.w, &textDest.h);
 }
 
 void Text::Render() const {
+    if (!textTex) std::cerr << "error" << '\n';
     SDL_RenderCopy(Game::renderer, textTex, NULL, &textDest);
 }
 
-void Text::SetSrc(int x, int y, int w, int h) {
-    textRect = {x,y,w,h};
-}
-void Text::SetDest(int x, int y, int w, int h) {
-    textDest = {x, y, w, h};
+void Text::SetDest(int x, int y) {
+    textDest.x = x;
+    textDest.y = y;
 }

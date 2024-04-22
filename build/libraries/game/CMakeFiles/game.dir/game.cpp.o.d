@@ -807,10 +807,10 @@ libraries/game/CMakeFiles/game.dir/game.cpp.o: \
   /Users/maksim/Study/C++/gameTest/libraries/game_objects/interface/../field/field.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/game_objects/interface/../pull/pull.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/game/../conditions/conditions.hpp \
+  /Users/maksim/Study/C++/gameTest/libraries/game/../text/text.hpp \
+  /Users/maksim/Study/C++/gameTest/libraries/game/../text/../../src/inc/SDL2/SDL_ttf.h \
   /Users/maksim/Study/C++/gameTest/libraries/game/../states/rules/rules.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/game/../states/menu/menu.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/game/../states/party/party.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/states/party/turn/../turn/turn.hpp \
-  /Users/maksim/Study/C++/gameTest/libraries/game/../text/text.hpp \
-  /Users/maksim/Study/C++/gameTest/libraries/game/../text/../../src/inc/SDL2/SDL_ttf.h \
   /Users/maksim/Study/C++/gameTest/libraries/game/../states/gameOver/gameOver.hpp

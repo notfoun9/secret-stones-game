@@ -11,11 +11,9 @@ public:
     void Render() const;
     void Update();
 
-    void SetSrc(int x, int y, int w, int h);
-    void SetDest(int x, int y, int w, int h);
+    void SetDest(int x, int y);
 private:
     SDL_Texture* textTex = nullptr;
-    SDL_Rect textRect;
     SDL_Rect textDest;
     std::string message;
     SDL_Color color;

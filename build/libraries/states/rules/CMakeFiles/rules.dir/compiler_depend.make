@@ -809,6 +809,8 @@ libraries/states/rules/CMakeFiles/rules.dir/rules.cpp.o: /Users/maksim/Study/C++
   /Users/maksim/Study/C++/gameTest/src/inc/SDL2/begin_code.h \
   /Users/maksim/Study/C++/gameTest/src/inc/SDL2/close_code.h \
   /Users/maksim/Study/C++/gameTest/libraries/game/game.hpp \
+  /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_ttf.h \
+  /Users/maksim/Study/C++/gameTest/libraries/text/text.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/texture_manager/texture_manager.hpp
 
 
@@ -1501,6 +1503,8 @@ libraries/states/rules/CMakeFiles/rules.dir/rules.cpp.o: /Users/maksim/Study/C++
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/find_if_not.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__memory/concepts.h:
+
+/Users/maksim/Study/C++/gameTest/libraries/text/text.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/ranges_partial_sort_copy.h:
 

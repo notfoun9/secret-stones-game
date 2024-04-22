@@ -806,4 +806,6 @@ libraries/conditions/CMakeFiles/conditions.dir/conditions.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/unordered_set \
   /Users/maksim/Study/C++/gameTest/libraries/conditions/../texture_manager/texture_manager.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/game_objects/pull/../field/field.hpp \
-  /Users/maksim/Study/C++/gameTest/libraries/game_objects/pull/../pull/pull.hpp
+  /Users/maksim/Study/C++/gameTest/libraries/game_objects/pull/../pull/pull.hpp \
+  /Users/maksim/Study/C++/gameTest/libraries/conditions/../text/text.hpp \
+  /Users/maksim/Study/C++/gameTest/libraries/conditions/../text/../../src/inc/SDL2/SDL_ttf.h

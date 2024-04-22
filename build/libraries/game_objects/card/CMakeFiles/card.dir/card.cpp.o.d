@@ -807,4 +807,6 @@ libraries/game_objects/card/CMakeFiles/card.dir/card.cpp.o: \
   /Users/maksim/Study/C++/gameTest/libraries/game_objects/card/../field/field.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/game_objects/card/../pull/pull.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/game/../conditions/conditions.hpp \
+  /Users/maksim/Study/C++/gameTest/libraries/game/../text/text.hpp \
+  /Users/maksim/Study/C++/gameTest/libraries/game/../text/../../src/inc/SDL2/SDL_ttf.h \
   /Users/maksim/Study/C++/gameTest/libraries/game_objects/card/../../../src/inc/SDL2/SDL_image.h
