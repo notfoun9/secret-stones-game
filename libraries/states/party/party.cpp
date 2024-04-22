@@ -64,7 +64,8 @@ Party::~Party() {
     delete trash;
     delete hand;
 
-    for (auto s : strikes) delete s;
+    for (auto move : movesLeft) SDL_DestroyTexture(move);
+    for (auto s : strikes) SDL_DestroyTexture(s);
     delete currentTurn;
     delete exitButton;
     delete field;

@@ -30,6 +30,9 @@ Deck::Deck(Pull* pull) {
         cardsInDeck.push(card.second);
     }
 }
+Deck::~Deck() {
+    delete cardsInDeckNum;
+}
 void Deck::Fill(Trash* trash) {
     while (!trash->Empty()) {
         cardsInDeck.push(trash->Take());
@@ -67,6 +70,9 @@ Trash::Trash() {
     cardsInTrash = new Text("../../assets/SomeFont.ttf", 22, {0,0,0,255});
     setBoarders(0,0, 128, 192);
     setPos(900, 277, 136, 204);
+}
+Trash::~Trash() {
+    delete cardsInTrash;
 }
 void Trash::Clear() {
     cards.clear();

@@ -6,7 +6,7 @@
 class Text {
 public:
     Text(std::string fontPath, int fontSize, const SDL_Color color);
-    ~Text() = default;
+    ~Text();
     void SetMessage(std::string message);
     void Render() const;
     void Update();

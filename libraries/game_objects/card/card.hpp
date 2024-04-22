@@ -50,7 +50,7 @@ private:
 class Deck : public GameObject {
 public:
     Deck(Pull* pull);
-    ~Deck() = default;
+    ~Deck();
     
     void Render();
 
@@ -66,7 +66,7 @@ private:
 class Trash : public GameObject {
 public:
     Trash();
-    ~Trash() = default;
+    ~Trash();
 
     void Render();
     void Clear();

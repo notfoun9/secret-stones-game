@@ -5,6 +5,7 @@ GameObject::GameObject(const char* textureSheet) {
     objTexture = TextureManager::LoadTexture(textureSheet);
 }
 GameObject::~GameObject() {
+    SDL_DestroyTexture(objTexture);
 }
 void GameObject::setPos(int x1, int y1, int x2, int y2) {
     destRect.x = x1;
@@ -31,12 +32,8 @@ Button::Button (const char* defaultTexture, const char* selectedTexture) :
     defaultStateTexture(TextureManager::LoadTexture(defaultTexture)), 
     selectedStateTexture(TextureManager::LoadTexture(selectedTexture)) {}
 Button::~Button() {
-    if (selectedStateTexture) {
-        delete selectedStateTexture;
-    }
-    if (defaultStateTexture) {
-        delete defaultStateTexture;
-    }
+    SDL_DestroyTexture(defaultStateTexture);
+    SDL_DestroyTexture(selectedStateTexture);
 }
 void Button::Update(Mouse* mouse) {
     checkSelected(mouse);
@@ -60,8 +57,8 @@ Switch::Switch(const char* defaultStateTexture_, const char* selectedStateTextur
     defaultStateTexture(TextureManager::LoadTexture(defaultStateTexture_)),
     activeStateTexture(TextureManager::LoadTexture(selectedStateTexture)) {}
 Switch::~Switch() {
-    if (defaultStateTexture) delete defaultStateTexture;
-    if (activeStateTexture) delete activeStateTexture;
+    SDL_DestroyTexture(defaultStateTexture);
+    SDL_DestroyTexture(activeStateTexture);
 }
 
 bool Switch::checkSelected(Mouse* mouse) {

@@ -12,6 +12,10 @@ Text::Text(std::string fontPath, int fontSize, const SDL_Color color_) :
     }
 }
 
+Text::~Text() {
+    SDL_DestroyTexture(textTex);
+}
+
 void Text::SetMessage(std::string message_) {
     message = message_;
     auto textSurface = TTF_RenderText_Solid(font, message.c_str(), color);
