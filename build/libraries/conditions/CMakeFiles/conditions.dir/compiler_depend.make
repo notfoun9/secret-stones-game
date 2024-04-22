@@ -749,6 +749,9 @@ libraries/conditions/CMakeFiles/conditions.dir/conditions.cpp.o: /Users/maksim/S
   /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include/stdint.h \
   /Users/maksim/Study/C++/gameTest/libraries/conditions/conditions.hpp \
   /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL.h \
+  /Users/maksim/Study/C++/gameTest/src/inc/SDL2/begin_code.h \
+  /Users/maksim/Study/C++/gameTest/src/inc/SDL2/close_code.h \
+  /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL.h \
   /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_assert.h \
   /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_atomic.h \
   /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_audio.h \
@@ -795,6 +798,7 @@ libraries/conditions/CMakeFiles/conditions.dir/conditions.cpp.o: /Users/maksim/S
   /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_thread.h \
   /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_timer.h \
   /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_touch.h \
+  /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_ttf.h \
   /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_version.h \
   /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_video.h \
   /Users/maksim/Study/C++/gameTest/src/inc/SDL2/begin_code.h \
@@ -813,7 +817,9 @@ libraries/conditions/CMakeFiles/conditions.dir/conditions.cpp.o: /Users/maksim/S
 
 /Users/maksim/Study/C++/gameTest/libraries/texture_manager/texture_manager.hpp:
 
-/Users/maksim/Study/C++/gameTest/src/inc/SDL2/close_code.h:
+/Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_video.h:
+
+/Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_version.h:
 
 /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_timer.h:
 
@@ -868,8 +874,6 @@ libraries/conditions/CMakeFiles/conditions.dir/conditions.cpp.o: /Users/maksim/S
 /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_assert.h:
 
 /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include/stddef.h:
-
-/Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_version.h:
 
 /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include/stdarg.h:
 
@@ -1415,6 +1419,8 @@ libraries/conditions/CMakeFiles/conditions.dir/conditions.cpp.o: /Users/maksim/S
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__tuple:
 
+/Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_ttf.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__thread/timed_backoff_policy.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__thread/poll_with_backoff.h:
@@ -1678,6 +1684,8 @@ libraries/conditions/CMakeFiles/conditions.dir/conditions.cpp.o: /Users/maksim/S
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__type_traits/remove_const.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__concepts/regular.h:
+
+/Users/maksim/Study/C++/gameTest/src/inc/SDL2/close_code.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/nth_element.h:
 
@@ -2004,8 +2012,6 @@ libraries/conditions/CMakeFiles/conditions.dir/conditions.cpp.o: /Users/maksim/S
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/for_each.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__memory/construct_at.h:
-
-/Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_video.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/binary_search.h:
 

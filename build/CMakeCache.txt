@@ -219,6 +219,9 @@ SDL2_DIR:PATH=/Users/maksim/Study/C++/gameTest/src/lib/SDL2.framework/Resources/
 //The directory containing a CMake configuration file for SDL2_image.
 SDL2_image_DIR:PATH=/Users/maksim/Study/C++/gameTest/src/lib/SDL2_image.framework/Resources/CMake
 
+//The directory containing a CMake configuration file for SDL2_ttf.
+SDL2_ttf_DIR:PATH=/Users/maksim/Study/C++/gameTest/src/lib/SDL2_ttf.framework/Resources/CMake
+
 //Value Computed by CMake
 games_BINARY_DIR:STATIC=/Users/maksim/Study/C++/gameTest/build
 
@@ -327,7 +330,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=23
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=24
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

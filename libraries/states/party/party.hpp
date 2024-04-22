@@ -5,6 +5,8 @@
 #include <interface/interface.hpp>
 #include <turn/turn.hpp>
 #include <pull/pull.hpp>
+#include <text/text.hpp>
+
 
 class Party {
 public:
@@ -47,4 +49,7 @@ private:
     Deck* deck;
     Trash* trash;
     Hand* hand;
+
+    Text* cardsInDeck;
+    Text* cardsInTrash;
 } ;

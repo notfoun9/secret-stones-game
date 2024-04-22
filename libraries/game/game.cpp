@@ -48,6 +48,11 @@ void Game::init(const char* title, int xPos, int yPos, int width, int height, bo
     else {
         isRunning = false;
     }
+
+    if (TTF_Init() == -1) {
+        std::cerr << "failed to init ttf" << '\n';
+        return;
+    }
 }
 void Game::handleEvents() {
     while (inMenu) {
@@ -66,7 +71,8 @@ void Game::handleEvents() {
 
 void Game::clean() {
     delete mainMenu;
-    SDL_DestroyWindow(window);
+    TTF_Quit();
+    IMG_Quit();
     SDL_Quit();
 }
 bool Game::running() {

@@ -749,6 +749,9 @@ executables/CMakeFiles/main.dir/main.cpp.o
  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include/stddef.h
  /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include/stdint.h
  /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL.h
+ /Users/maksim/Study/C++/gameTest/src/inc/SDL2/begin_code.h
+ /Users/maksim/Study/C++/gameTest/src/inc/SDL2/close_code.h
+ /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL.h
  /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_assert.h
  /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_atomic.h
  /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_audio.h
@@ -795,6 +798,7 @@ executables/CMakeFiles/main.dir/main.cpp.o
  /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_thread.h
  /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_timer.h
  /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_touch.h
+ /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_ttf.h
  /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_version.h
  /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_video.h
  /Users/maksim/Study/C++/gameTest/src/inc/SDL2/begin_code.h

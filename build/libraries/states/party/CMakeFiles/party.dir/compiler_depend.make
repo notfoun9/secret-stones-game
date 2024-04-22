@@ -755,6 +755,9 @@ libraries/states/party/CMakeFiles/party.dir/party.cpp.o: /Users/maksim/Study/C++
   /Users/maksim/Study/C++/gameTest/libraries/states/party/turn/turn.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/conditions/conditions.hpp \
   /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL.h \
+  /Users/maksim/Study/C++/gameTest/src/inc/SDL2/begin_code.h \
+  /Users/maksim/Study/C++/gameTest/src/inc/SDL2/close_code.h \
+  /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL.h \
   /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_assert.h \
   /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_atomic.h \
   /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_audio.h \
@@ -801,23 +804,24 @@ libraries/states/party/CMakeFiles/party.dir/party.cpp.o: /Users/maksim/Study/C++
   /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_thread.h \
   /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_timer.h \
   /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_touch.h \
+  /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_ttf.h \
   /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_version.h \
   /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_video.h \
   /Users/maksim/Study/C++/gameTest/src/inc/SDL2/begin_code.h \
   /Users/maksim/Study/C++/gameTest/src/inc/SDL2/close_code.h \
   /Users/maksim/Study/C++/gameTest/libraries/game/game.hpp \
+  /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_ttf.h \
+  /Users/maksim/Study/C++/gameTest/libraries/text/text.hpp \
   /Users/maksim/Study/C++/gameTest/libraries/texture_manager/texture_manager.hpp
 
 
 /Users/maksim/Study/C++/gameTest/libraries/texture_manager/texture_manager.hpp:
 
-/Users/maksim/Study/C++/gameTest/src/inc/SDL2/close_code.h:
-
-/Users/maksim/Study/C++/gameTest/src/inc/SDL2/begin_code.h:
-
 /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_video.h:
 
 /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_version.h:
+
+/Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_ttf.h:
 
 /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_touch.h:
 
@@ -825,13 +829,7 @@ libraries/states/party/CMakeFiles/party.dir/party.cpp.o: /Users/maksim/Study/C++
 
 /Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_thread.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__concepts/class_or_enum.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_ssize_t.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__type_traits/is_member_object_pointer.h:
-
-/Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_system.h:
+/Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_surface.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__type_traits/is_fundamental.h:
 
@@ -1315,6 +1313,14 @@ libraries/states/party/CMakeFiles/party.dir/party.cpp.o: /Users/maksim/Study/C++
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__type_traits/is_member_pointer.h:
 
+/Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_system.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__concepts/class_or_enum.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_ssize_t.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__type_traits/is_member_object_pointer.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__type_traits/is_member_function_pointer.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__type_traits/is_literal_type.h:
@@ -1503,6 +1509,8 @@ libraries/states/party/CMakeFiles/party.dir/party.cpp.o: /Users/maksim/Study/C++
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__memory/concepts.h:
 
+/Users/maksim/Study/C++/gameTest/libraries/text/text.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/ranges_partial_sort_copy.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/find_first_of.h:
@@ -1689,6 +1697,8 @@ libraries/states/party/CMakeFiles/party.dir/party.cpp.o: /Users/maksim/Study/C++
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__concepts/regular.h:
 
+/Users/maksim/Study/C++/gameTest/src/inc/SDL2/close_code.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/nth_element.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__concepts/movable.h:
@@ -1710,6 +1720,8 @@ libraries/states/party/CMakeFiles/party.dir/party.cpp.o: /Users/maksim/Study/C++
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__config_site:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/_types/_uint64_t.h:
+
+/Users/maksim/Study/C++/gameTest/src/inc/SDL2/begin_code.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__chrono/file_clock.h:
 
@@ -2320,8 +2332,6 @@ libraries/states/party/CMakeFiles/party.dir/party.cpp.o: /Users/maksim/Study/C++
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__type_traits/promote.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/copy_n.h:
-
-/Users/maksim/Study/C++/gameTest/src/inc/SDL2/SDL_surface.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/copy_if.h:
 

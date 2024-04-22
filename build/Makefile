@@ -318,6 +318,19 @@ conditions/fast:
 .PHONY : conditions/fast
 
 #=============================================================================
+# Target rules for targets named text
+
+# Build rule for target.
+text: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 text
+.PHONY : text
+
+# fast build rule for target.
+text/fast:
+	$(MAKE) $(MAKESILENT) -f libraries/text/CMakeFiles/text.dir/build.make libraries/text/CMakeFiles/text.dir/build
+.PHONY : text/fast
+
+#=============================================================================
 # Target rules for targets named main
 
 # Build rule for target.
@@ -353,6 +366,7 @@ help:
 	@echo "... party"
 	@echo "... pull"
 	@echo "... rules"
+	@echo "... text"
 	@echo "... texture_manager"
 	@echo "... turn"
 .PHONY : help

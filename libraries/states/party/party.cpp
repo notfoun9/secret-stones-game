@@ -58,6 +58,11 @@ Party::Party(SDL_Renderer* renderer_, SDL_Window* window_, Game* thisGame_, Pull
     hand = new Hand(deck, trash);
 
     currentTurn = new Turn(field, deck, trash, hand, mouse);
+
+    cardsInDeck = new Text("../../assets/SomeFont.ttf", 100, {0,0,0,255});
+    cardsInDeck->SetDest(810,240,40,40);
+    cardsInTrash = new Text("../../assets/SomeFont.ttf", 100, {0,0,0,255});
+    cardsInTrash->SetDest(940,240,40,40);
 }
 Party::~Party() {
     delete deck;
@@ -161,6 +166,22 @@ void Party::HandleMouseLeftClick() {
 }
 
 void Party::Update() {
+    cardsInDeck->SetMessage(std::to_string(deck->Size()));
+    if (deck->Size() > 9) {
+        cardsInDeck->SetDest(802,240,40,45);
+    }
+    else {
+        cardsInDeck->SetDest(813,240,20,45);
+    }
+
+    cardsInTrash->SetMessage(std::to_string(trash->Size()));
+    if (trash->Size() > 9) {
+        cardsInTrash->SetDest(945,240,40,45);
+    }
+    else {
+        cardsInTrash->SetDest(955,240,20,45);
+    }
+
     exitButton->Update(mouse);
     dropGetButton->Update(mouse);
 
@@ -186,6 +207,10 @@ void Party::Render() {
     deck->Render();
     field->Render();
     hand->Render();
+
+    if (deck->Size()) cardsInDeck->Render();
+    if (trash->Size()) cardsInTrash->Render();
+
     mouse->Render();
     SDL_RenderPresent(renderer);
 }

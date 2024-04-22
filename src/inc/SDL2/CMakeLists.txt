@@ -5,4 +5,4 @@
 
 include_directories("./SDL.h")
 include_directories("./SDL_image.h")
-
+include_directories("./SDL_ttf.h")

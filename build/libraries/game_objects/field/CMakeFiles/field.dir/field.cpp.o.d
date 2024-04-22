@@ -324,6 +324,10 @@ libraries/game_objects/field/CMakeFiles/field.dir/field.cpp.o: \
   /Users/maksim/Study/C++/gameTest/libraries/game/../game/../../src/inc/SDL2/SDL_locale.h \
   /Users/maksim/Study/C++/gameTest/libraries/game/../game/../../src/inc/SDL2/SDL_misc.h \
   /Users/maksim/Study/C++/gameTest/libraries/game/../game/../../src/inc/SDL2/SDL_image.h \
+  /Users/maksim/Study/C++/gameTest/libraries/game/../game/../../src/inc/SDL2/SDL_ttf.h \
+  /Users/maksim/Study/C++/gameTest/libraries/game/../game/../../src/inc/SDL2/./SDL.h \
+  /Users/maksim/Study/C++/gameTest/libraries/game/../game/../../src/inc/SDL2/./begin_code.h \
+  /Users/maksim/Study/C++/gameTest/libraries/game/../game/../../src/inc/SDL2/./close_code.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/string \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/max.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/comp.h \

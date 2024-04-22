@@ -8,10 +8,12 @@ file(COPY activeRulesButton.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
 file(COPY exitButton.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
 file(COPY activeExitButton.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
 
-# file(COPY goBackButton.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
 file(COPY activeGoBack.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
 file(COPY rules.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
 file(COPY note.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
+
+file(COPY SomeFont.ttf DESTINATION ${CMAKE_BINARY_DIR}/assets)
+file(COPY SFNSMono.ttf DESTINATION ${CMAKE_BINARY_DIR}/assets)
 
 file(COPY toMenu.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
 file(COPY toMenuSelected.png DESTINATION ${CMAKE_BINARY_DIR}/assets)

@@ -100,6 +100,7 @@ executables/bin/main: libraries/states/party/libparty.a
 executables/bin/main: libraries/game_objects/card/libcard.a
 executables/bin/main: libraries/game_objects/interface/libinterface.a
 executables/bin/main: libraries/states/gameOver/libgameOver.a
+executables/bin/main: libraries/text/libtext.a
 executables/bin/main: libraries/states/party/turn/libturn.a
 executables/bin/main: libraries/game_objects/pull/libpull.a
 executables/bin/main: libraries/conditions/libconditions.a
@@ -111,6 +112,7 @@ executables/bin/main: libraries/states/party/libparty.a
 executables/bin/main: libraries/game_objects/card/libcard.a
 executables/bin/main: libraries/game_objects/interface/libinterface.a
 executables/bin/main: libraries/states/gameOver/libgameOver.a
+executables/bin/main: libraries/text/libtext.a
 executables/bin/main: libraries/states/party/turn/libturn.a
 executables/bin/main: libraries/game_objects/pull/libpull.a
 executables/bin/main: libraries/conditions/libconditions.a

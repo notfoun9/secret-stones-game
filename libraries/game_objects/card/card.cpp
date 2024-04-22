@@ -54,7 +54,7 @@ void Deck::Render() {
 
 Trash::Trash() {
     setBoarders(0,0, 128, 192);
-    setPos(900, 283, 128, 192);
+    setPos(900, 277, 136, 204);
 }
 void Trash::Clear() {
     cards.clear();

@@ -137,6 +137,7 @@ libraries/all: libraries/game_objects/all
 libraries/all: libraries/texture_manager/all
 libraries/all: libraries/states/all
 libraries/all: libraries/conditions/all
+libraries/all: libraries/text/all
 .PHONY : libraries/all
 
 # Recursive "preinstall" directory target.
@@ -145,6 +146,7 @@ libraries/preinstall: libraries/game_objects/preinstall
 libraries/preinstall: libraries/texture_manager/preinstall
 libraries/preinstall: libraries/states/preinstall
 libraries/preinstall: libraries/conditions/preinstall
+libraries/preinstall: libraries/text/preinstall
 .PHONY : libraries/preinstall
 
 # Recursive "clean" directory target.
@@ -153,6 +155,7 @@ libraries/clean: libraries/game_objects/clean
 libraries/clean: libraries/texture_manager/clean
 libraries/clean: libraries/states/clean
 libraries/clean: libraries/conditions/clean
+libraries/clean: libraries/text/clean
 .PHONY : libraries/clean
 
 #=============================================================================
@@ -371,6 +374,21 @@ libraries/states/rules/clean: libraries/states/rules/CMakeFiles/rules.dir/clean
 .PHONY : libraries/states/rules/clean
 
 #=============================================================================
+# Directory level rules for directory libraries/text
+
+# Recursive "all" directory target.
+libraries/text/all: libraries/text/CMakeFiles/text.dir/all
+.PHONY : libraries/text/all
+
+# Recursive "preinstall" directory target.
+libraries/text/preinstall:
+.PHONY : libraries/text/preinstall
+
+# Recursive "clean" directory target.
+libraries/text/clean: libraries/text/CMakeFiles/text.dir/clean
+.PHONY : libraries/text/clean
+
+#=============================================================================
 # Directory level rules for directory libraries/texture_manager
 
 # Recursive "all" directory target.
@@ -460,7 +478,7 @@ libraries/game/CMakeFiles/game.dir/all: libraries/game_objects/pull/CMakeFiles/p
 
 # Build rule for subdir invocation for target.
 libraries/game/CMakeFiles/game.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles 24
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles 26
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/game/CMakeFiles/game.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles 0
 .PHONY : libraries/game/CMakeFiles/game.dir/rule
@@ -486,7 +504,7 @@ libraries/game_objects/pull/CMakeFiles/pull.dir/all: libraries/game_objects/card
 
 # Build rule for subdir invocation for target.
 libraries/game_objects/pull/CMakeFiles/pull.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles 24
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/game_objects/pull/CMakeFiles/pull.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles 0
 .PHONY : libraries/game_objects/pull/CMakeFiles/pull.dir/rule
@@ -512,7 +530,7 @@ libraries/game_objects/card/CMakeFiles/card.dir/all: libraries/game_objects/fiel
 
 # Build rule for subdir invocation for target.
 libraries/game_objects/card/CMakeFiles/card.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles 20
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles 22
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/game_objects/card/CMakeFiles/card.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles 0
 .PHONY : libraries/game_objects/card/CMakeFiles/card.dir/rule
@@ -538,7 +556,7 @@ libraries/game_objects/field/CMakeFiles/field.dir/all: libraries/game_objects/in
 
 # Build rule for subdir invocation for target.
 libraries/game_objects/field/CMakeFiles/field.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles 18
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles 20
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/game_objects/field/CMakeFiles/field.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles 0
 .PHONY : libraries/game_objects/field/CMakeFiles/field.dir/rule
@@ -564,7 +582,7 @@ libraries/game_objects/interface/CMakeFiles/interface.dir/all: libraries/states/
 
 # Build rule for subdir invocation for target.
 libraries/game_objects/interface/CMakeFiles/interface.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles 18
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/game_objects/interface/CMakeFiles/interface.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles 0
 .PHONY : libraries/game_objects/interface/CMakeFiles/interface.dir/rule
@@ -585,7 +603,7 @@ libraries/game_objects/interface/CMakeFiles/interface.dir/clean:
 libraries/texture_manager/CMakeFiles/texture_manager.dir/all:
 	$(MAKE) $(MAKESILENT) -f libraries/texture_manager/CMakeFiles/texture_manager.dir/build.make libraries/texture_manager/CMakeFiles/texture_manager.dir/depend
 	$(MAKE) $(MAKESILENT) -f libraries/texture_manager/CMakeFiles/texture_manager.dir/build.make libraries/texture_manager/CMakeFiles/texture_manager.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/gameTest/build/CMakeFiles --progress-num=23,24 "Built target texture_manager"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/gameTest/build/CMakeFiles --progress-num=25,26 "Built target texture_manager"
 .PHONY : libraries/texture_manager/CMakeFiles/texture_manager.dir/all
 
 # Build rule for subdir invocation for target.
@@ -616,7 +634,7 @@ libraries/states/menu/CMakeFiles/menu.dir/all: libraries/states/party/CMakeFiles
 
 # Build rule for subdir invocation for target.
 libraries/states/menu/CMakeFiles/menu.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles 16
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/states/menu/CMakeFiles/menu.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles 0
 .PHONY : libraries/states/menu/CMakeFiles/menu.dir/rule
@@ -642,7 +660,7 @@ libraries/states/party/CMakeFiles/party.dir/all: libraries/states/party/turn/CMa
 
 # Build rule for subdir invocation for target.
 libraries/states/party/CMakeFiles/party.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles 12
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles 14
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/states/party/CMakeFiles/party.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles 0
 .PHONY : libraries/states/party/CMakeFiles/party.dir/rule
@@ -663,12 +681,12 @@ libraries/states/party/CMakeFiles/party.dir/clean:
 libraries/states/party/turn/CMakeFiles/turn.dir/all: libraries/states/rules/CMakeFiles/rules.dir/all
 	$(MAKE) $(MAKESILENT) -f libraries/states/party/turn/CMakeFiles/turn.dir/build.make libraries/states/party/turn/CMakeFiles/turn.dir/depend
 	$(MAKE) $(MAKESILENT) -f libraries/states/party/turn/CMakeFiles/turn.dir/build.make libraries/states/party/turn/CMakeFiles/turn.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/gameTest/build/CMakeFiles --progress-num=25,26 "Built target turn"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/gameTest/build/CMakeFiles --progress-num=27,28 "Built target turn"
 .PHONY : libraries/states/party/turn/CMakeFiles/turn.dir/all
 
 # Build rule for subdir invocation for target.
 libraries/states/party/turn/CMakeFiles/turn.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles 12
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/states/party/turn/CMakeFiles/turn.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles 0
 .PHONY : libraries/states/party/turn/CMakeFiles/turn.dir/rule
@@ -694,7 +712,7 @@ libraries/states/rules/CMakeFiles/rules.dir/all: libraries/states/gameOver/CMake
 
 # Build rule for subdir invocation for target.
 libraries/states/rules/CMakeFiles/rules.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/states/rules/CMakeFiles/rules.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles 0
 .PHONY : libraries/states/rules/CMakeFiles/rules.dir/rule
@@ -720,7 +738,7 @@ libraries/states/gameOver/CMakeFiles/gameOver.dir/all: libraries/conditions/CMak
 
 # Build rule for subdir invocation for target.
 libraries/states/gameOver/CMakeFiles/gameOver.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/states/gameOver/CMakeFiles/gameOver.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles 0
 .PHONY : libraries/states/gameOver/CMakeFiles/gameOver.dir/rule
@@ -738,7 +756,7 @@ libraries/states/gameOver/CMakeFiles/gameOver.dir/clean:
 # Target rules for target libraries/conditions/CMakeFiles/conditions.dir
 
 # All Build rule for target.
-libraries/conditions/CMakeFiles/conditions.dir/all: libraries/texture_manager/CMakeFiles/texture_manager.dir/all
+libraries/conditions/CMakeFiles/conditions.dir/all: libraries/text/CMakeFiles/text.dir/all
 	$(MAKE) $(MAKESILENT) -f libraries/conditions/CMakeFiles/conditions.dir/build.make libraries/conditions/CMakeFiles/conditions.dir/depend
 	$(MAKE) $(MAKESILENT) -f libraries/conditions/CMakeFiles/conditions.dir/build.make libraries/conditions/CMakeFiles/conditions.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/gameTest/build/CMakeFiles --progress-num=3,4 "Built target conditions"
@@ -746,7 +764,7 @@ libraries/conditions/CMakeFiles/conditions.dir/all: libraries/texture_manager/CM
 
 # Build rule for subdir invocation for target.
 libraries/conditions/CMakeFiles/conditions.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/conditions/CMakeFiles/conditions.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles 0
 .PHONY : libraries/conditions/CMakeFiles/conditions.dir/rule
@@ -761,6 +779,32 @@ libraries/conditions/CMakeFiles/conditions.dir/clean:
 .PHONY : libraries/conditions/CMakeFiles/conditions.dir/clean
 
 #=============================================================================
+# Target rules for target libraries/text/CMakeFiles/text.dir
+
+# All Build rule for target.
+libraries/text/CMakeFiles/text.dir/all: libraries/texture_manager/CMakeFiles/texture_manager.dir/all
+	$(MAKE) $(MAKESILENT) -f libraries/text/CMakeFiles/text.dir/build.make libraries/text/CMakeFiles/text.dir/depend
+	$(MAKE) $(MAKESILENT) -f libraries/text/CMakeFiles/text.dir/build.make libraries/text/CMakeFiles/text.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/maksim/Study/C++/gameTest/build/CMakeFiles --progress-num=23,24 "Built target text"
+.PHONY : libraries/text/CMakeFiles/text.dir/all
+
+# Build rule for subdir invocation for target.
+libraries/text/CMakeFiles/text.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/text/CMakeFiles/text.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles 0
+.PHONY : libraries/text/CMakeFiles/text.dir/rule
+
+# Convenience name for target.
+text: libraries/text/CMakeFiles/text.dir/rule
+.PHONY : text
+
+# clean rule for target.
+libraries/text/CMakeFiles/text.dir/clean:
+	$(MAKE) $(MAKESILENT) -f libraries/text/CMakeFiles/text.dir/build.make libraries/text/CMakeFiles/text.dir/clean
+.PHONY : libraries/text/CMakeFiles/text.dir/clean
+
+#=============================================================================
 # Target rules for target executables/CMakeFiles/main.dir
 
 # All Build rule for target.
@@ -773,7 +817,7 @@ executables/CMakeFiles/main.dir/all: libraries/texture_manager/CMakeFiles/textur
 
 # Build rule for subdir invocation for target.
 executables/CMakeFiles/main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles 26
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles 28
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 executables/CMakeFiles/main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksim/Study/C++/gameTest/build/CMakeFiles 0
 .PHONY : executables/CMakeFiles/main.dir/rule
