@@ -67,7 +67,6 @@ void GameOver::HandleEvents() {
             default : break;
         }
     }
-
     const Uint8 *keystates = SDL_GetKeyboardState(NULL);
     if (keystates[SDL_SCANCODE_ESCAPE]) {
         thisGame->inGameOver = 0;

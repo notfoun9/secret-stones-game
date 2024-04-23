@@ -15,7 +15,7 @@ Field::Field() {
     constructRandomField();
 }
 Field::~Field() {
-    for (Tile* t : allTiles) {
+    for (Tile* &t : allTiles) {
         delete t;
     }
 }

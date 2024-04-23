@@ -16,7 +16,7 @@ Menu::Menu(SDL_Renderer* renderer_, SDL_Window* window_, Game* thisGame_) : rend
 }
 Menu::~Menu() {
     delete mouse;
-    delete button[START];
+    for (auto& b : button) delete b;
 }
 
 
@@ -95,7 +95,7 @@ void Menu::Update() {
 }
 
 void Menu::Render() {
-    SDL_RenderClear(renderer);
+    SDL_RenderClear(Game::renderer);
     for (Button* but : button) {
         but->Render();
     }

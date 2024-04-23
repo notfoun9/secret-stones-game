@@ -64,8 +64,8 @@ Party::~Party() {
     delete trash;
     delete hand;
 
-    for (auto move : movesLeft) SDL_DestroyTexture(move);
-    for (auto s : strikes) SDL_DestroyTexture(s);
+    for (auto& move : movesLeft) SDL_DestroyTexture(move);
+    for (auto& s : strikes) SDL_DestroyTexture(s);
     delete currentTurn;
     delete exitButton;
     delete field;
@@ -134,13 +134,11 @@ void Party::HandleMouseLeftClick() {
             ++badTurns;
         }
         if (hand->Empty() && deck->Empty() && trash->Empty()) {
-            std::cout << "YOU WIN!" << '\n';
             thisGame->isWin = 1;
             thisGame->inGameOver = 1;
             thisGame->inParty = 0;
         }
-        else if (badTurns > 3) {
-            std::cout << "GAME OVER" << '\n';
+        else if (badTurns > 100) {
             thisGame->inGameOver = 1;
             thisGame->inParty = 0;
         }
@@ -172,7 +170,7 @@ void Party::Update() {
 }
 
 void Party::Render() {
-    SDL_RenderClear(renderer);
+    SDL_RenderClear(Game::renderer);
     
     if (badTurns < 4) SDL_RenderCopy(Game::renderer, strikes[badTurns], NULL, &strikesDest);
     SDL_RenderCopy(Game::renderer, movesLeft[currentTurn->ActionsAvailable()], &moovesLeftSrc, &movesLeftDest);

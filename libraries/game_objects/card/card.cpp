@@ -11,16 +11,16 @@ Deck::Deck(Pull* pull) {
     setPos(760, 283, 128, 192); 
     srand(time(0));
     std::vector<std::pair<int, Card*>> cards;
-    for (int i = 0; i < 8; ++i) {
+    for (int i = 0; i < 6; ++i) {
         cards.push_back({rand() % 100, pull->Take1()});
     }
-    for (int i = 0; i < 4; ++i) {
+    for (int i = 0; i < 0; ++i) {
         cards.push_back({rand() % 100, pull->Take2()});
     }
-    for (int i = 0; i < 3; ++i) {
+    for (int i = 0; i < 0; ++i) {
         cards.push_back({rand() % 100, pull->Take3()});
     }
-    for (int i = 0; i < 1; ++i) {
+    for (int i = 0; i < 0; ++i) {
         cards.push_back({rand() % 100, pull->Take5()});
     }
     std::sort(cards.begin(), cards.end(), [](std::pair<int, Card*> a, std::pair<int, Card*> b) {

@@ -23,7 +23,7 @@ void Turn::HandleEvents() {
 }
 
 void Turn::HandleDropAction() {
-    for (Card* card : hand->cardsInHand) {
+    for (Card* &card : hand->cardsInHand) {
         if (card && card->selected) {
             hand->Remove(card);
             card->Drop(trash);
@@ -33,7 +33,7 @@ void Turn::HandleDropAction() {
     }
 }
 void Turn::HandleAchieveAction() {
-    for (Card* card : hand->cardsInHand) {
+    for (Card* &card : hand->cardsInHand) {
         if (card && card->selected && card->CardIsAchievable(field)) {
             isGoodTurn = 1; 
             std::cout << "Turn is good" << '\n';

@@ -21,6 +21,8 @@ Conditions* conditions = new Conditions();
 Game::Game() {
 }
 Game::~Game() {
+    SDL_DestroyRenderer(Game::renderer);
+    SDL_DestroyWindow(window);
 }
 
 void Game::init(const char* title, int xPos, int yPos, int width, int height, bool fullscreen) {
@@ -39,11 +41,11 @@ void Game::init(const char* title, int xPos, int yPos, int width, int height, bo
         
         isRunning = true;
 
-        mainMenu = new Menu(renderer, window, this);
-        rules = new Rules(renderer, window, this);
+        mainMenu = new Menu(Game::renderer, window, this);
+        rules = new Rules(Game::renderer, window, this);
         pull = new Pull(conditions);
-        party = new Party(renderer, window, this, pull);
-        gameOver = new GameOver(renderer, window, this);
+        party = new Party(Game::renderer, window, this, pull);
+        gameOver = new GameOver(Game::renderer, window, this);
     }
     else {
         isRunning = false;
@@ -55,16 +57,20 @@ void Game::init(const char* title, int xPos, int yPos, int width, int height, bo
     }
 }
 void Game::handleEvents() {
-    while (inMenu) {
+    if (inMenu) {
+        std::cout << "In menu" << '\n';
         mainMenu->Run();
     }
-    while (inRules) {
+    if (inRules) {
+        std::cout << "In rules" << '\n';
         rules->Run();
     }
-    while (inParty) {
+    if (inParty) {
+        std::cout << "Party started" << '\n';
         party->Run();
     }
-    while (inGameOver) {
+    if (inGameOver) {
+        std::cout << "Game over" << '\n';
         gameOver->Run();
     }
 }
