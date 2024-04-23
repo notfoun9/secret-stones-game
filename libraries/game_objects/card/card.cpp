@@ -14,13 +14,13 @@ Deck::Deck(Pull* pull) {
     for (int i = 0; i < 6; ++i) {
         cards.push_back({rand() % 100, pull->Take1()});
     }
-    for (int i = 0; i < 0; ++i) {
+    for (int i = 0; i < 6; ++i) {
         cards.push_back({rand() % 100, pull->Take2()});
     }
-    for (int i = 0; i < 0; ++i) {
+    for (int i = 0; i < 4; ++i) {
         cards.push_back({rand() % 100, pull->Take3()});
     }
-    for (int i = 0; i < 0; ++i) {
+    for (int i = 0; i < 2; ++i) {
         cards.push_back({rand() % 100, pull->Take5()});
     }
     std::sort(cards.begin(), cards.end(), [](std::pair<int, Card*> a, std::pair<int, Card*> b) {
